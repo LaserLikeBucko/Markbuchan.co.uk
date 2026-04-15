@@ -1,3 +1,6 @@
+"use client"
+
+import { useState, type FormEvent } from "react"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
@@ -5,6 +8,34 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
 export default function HomeV2Page() {
+  const [email, setEmail] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvnddyz"
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    if (!email) return
+
+    const res = await fetch(FORMSPREE_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        source: "homepage",
+        page: "home",
+      }),
+    })
+
+    if (res.ok) {
+      setSubmitted(true)
+      setEmail("")
+    }
+  }
+
   return (
     <>
       <Navigation />
@@ -25,7 +56,6 @@ export default function HomeV2Page() {
           />
 
           <div className="relative z-10 mx-auto max-w-5xl px-6 text-center">
-
             <div className="mx-auto mt-10 w-full max-w-[340px]">
               <div className="relative overflow-hidden rounded-lg bg-white shadow-[0_30px_80px_rgba(0,0,0,0.18)] ring-1 ring-black/5">
                 <Image
@@ -42,18 +72,39 @@ export default function HomeV2Page() {
                 Available April 2026
               </p>
 
-              <div className="mt-6 flex flex-col gap-3">
-                <Input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="h-12 border-black/10 bg-white text-foreground placeholder:text-muted-foreground"
-                />
-                <Button className="h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base font-medium">
-                  Get the first chapter
-                </Button>
-                <p className="text-sm text-muted-foreground">
-                  Free chapter. No spam. Unsubscribe anytime.
-                </p>
+              <div className="mt-6">
+                {submitted ? (
+                  <div className="rounded-lg border border-black/10 bg-white px-6 py-5 text-center">
+                    <p className="font-medium text-foreground">
+                      You’re on the list.
+                    </p>
+                    <p className="mt-2 text-sm text-muted-foreground">
+                      I’ll send the first chapter as soon as it’s ready.
+                    </p>
+                  </div>
+                ) : (
+                  <>
+                    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        className="h-12 border-black/10 bg-white text-foreground placeholder:text-muted-foreground"
+                      />
+                      <Button
+                        type="submit"
+                        className="h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base font-medium"
+                      >
+                        Get the first chapter
+                      </Button>
+                    </form>
+                    <p className="mt-3 text-sm text-muted-foreground">
+                      Free chapter. No spam. Unsubscribe anytime.
+                    </p>
+                  </>
+                )}
               </div>
             </div>
           </div>

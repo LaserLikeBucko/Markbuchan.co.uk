@@ -16,7 +16,7 @@ export default function WorkWithMePage() {
             </h1>
 
             <p className="mt-6 text-xl leading-relaxed text-stone-700 max-w-2xl mx-auto">
-              If you’re seeing the gap between what is said and what actually happens,
+              If you’re seeing The Hidden Gap between what is said and what actually happens,
               there are a number of ways we can work together to make it visible and begin to shift it.
             </p>
           </div>
@@ -54,7 +54,7 @@ export default function WorkWithMePage() {
                 </h3>
                 <p className="mt-4 text-stone-700 leading-relaxed">
                   Facilitated sessions exploring the Human Alignment Problem,
-                  helping teams and organisations surface and work with the gap together.
+                  helping teams and organisations surface and work with the Hidden Gap together.
                 </p>
               </div>
 
