@@ -1,16 +1,15 @@
 import { Separator } from "@/components/ui/separator"
 
 const footerLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Book", href: "#book" },
-  { label: "Values", href: "#values" },
-  { label: "Coaching", href: "#coaching" },
-  { label: "Contact", href: "#newsletter" },
+  { label: "Home", href: "/" },
+  { label: "Work With Me", href: "/work-with-me" },
+  { label: "Resources", href: "/resources" },
+  { label: "Book", href: "/book" },
+  { label: "About", href: "/about" },
 ]
 
 const socialLinks = [
-  { label: "LinkedIn", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/theagileleader" },
   { label: "Twitter / X", href: "#" },
   { label: "Instagram", href: "#" },
 ]
@@ -29,9 +28,9 @@ export function Footer() {
             <br />
             Author of <span className="italic">The Hidden Gap</span>
             <br />
-            A practical framework for clarifying what truly matters —
+            Solving the Human Alignment Problem.
             <br />
-            and leading with purpose, at work and in life.
+            How operating values drive behaviour, conflict and culture.
           </p>
           </div>
 
@@ -45,6 +44,8 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-primary-foreground/60 transition-colors hover:text-primary-foreground"
                   >
                     {link.label}
@@ -81,7 +82,7 @@ export function Footer() {
             &copy; {currentYear} Mark Buchan. All rights reserved.
           </p>
           <p className="text-xs text-primary-foreground/30">
-            Built with purpose.
+            Built with purpose and alignment.
           </p>
         </div>
       </div>

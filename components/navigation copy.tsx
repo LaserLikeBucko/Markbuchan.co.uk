@@ -5,11 +5,12 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Work With Me", href: "/work-with-me" },
-  { label: "Resources", href: "/resources" },
-  { label: "Book", href: "/book" },
-  { label: "About", href: "/about" },
+  { label: "Home", href: "#hero" },
+  { label: "The Work", href: "#values" },
+  { label: "About", href: "#about" },
+  { label: "Book", href: "#book" },
+  { label: "Coaching", href: "#coaching" },
+  { label: "Get First Chapter", href: "#newsletter" },
 ]
 
 export function Navigation() {
@@ -19,14 +20,14 @@ export function Navigation() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
-          href="/"
-          className="text-xl font-semibold text-foreground tracking-tight"
+          href="#hero"
+          className="font-serif text-xl font-bold text-foreground tracking-tight"
         >
           Mark Buchan
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
+          {navLinks.slice(0, 5).map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
@@ -43,7 +44,7 @@ export function Navigation() {
           className="hidden bg-accent text-accent-foreground hover:bg-accent/90 md:inline-flex"
           size="sm"
         >
-          <a href="/book">Get First Chapter</a>
+          <a href="#newsletter">Get First Chapter</a>
         </Button>
 
         <button
@@ -74,7 +75,7 @@ export function Navigation() {
                 asChild
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <a href="/book" onClick={() => setMobileOpen(false)}>
+                <a href="#newsletter" onClick={() => setMobileOpen(false)}>
                   Get First Chapter
                 </a>
               </Button>
