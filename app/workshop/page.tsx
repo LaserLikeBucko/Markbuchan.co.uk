@@ -1,6 +1,26 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
+export const metadata = {
+  title: "Leadership & Team Alignment Workshop UK | The Hidden Gap",
+  description:
+    "A 90-minute workshop helping leaders uncover the real cause of team conflict and misalignment. Practical, direct, and immediately applicable.",
+  openGraph: {
+    title: "Leadership & Team Alignment Workshop UK | The Hidden Gap",
+    description: "A 90-minute workshop helping leaders uncover the real cause of team conflict and misalignment. Practical, direct, and immediately applicable.",
+    url: "https://markbuchan.co.uk",
+    siteName: "The Human Alignment Co.",
+    images: [
+      {
+        url: "https://mark.buchan.co.uk/images/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  };
+
 export default function WorkshopPage() {
   return (
     <>

@@ -7,6 +7,26 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
+export const metadata = {
+  title: "Why Teams Struggle With Culture and Conflict | The Hidden Gap",
+  description:
+    "Most organisations don’t have a behaviour problem — they have a values misalignment problem. Discover why teams struggle and how to fix it at the source.",
+  openGraph: {
+    title: "Why Teams Struggle With Culture and Conflict | The Hidden Gap",
+    description: "Most organisations don’t have a behaviour problem — they have a values misalignment problem. Discover why teams struggle and how to fix it at the source.",
+    url: "https://markbuchan.co.uk",
+    siteName: "The Human Alignment Co.",
+    images: [
+      {
+        url: "https://mark.buchan.co.uk/images/og-image.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  };
+
 export default function HomeV2Page() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)

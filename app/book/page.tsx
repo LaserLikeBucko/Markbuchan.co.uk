@@ -7,6 +7,26 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
+export const metadata = {
+  title: "The Hidden Gap Book | Why Values Drive Behaviour at Work",
+  description:
+    "A practical guide for leaders to understand why team conflict happens and how values drive behaviour. Fix the root cause, not the symptoms.",
+  openGraph: {
+    title: "The Hidden Gap Book | Why Values Drive Behaviour at Work",
+    description: "A practical guide for leaders to understand why team conflict happens and how values drive behaviour. Fix the root cause, not the symptoms.",
+    url: "https://markbuchan.co.uk",
+    siteName: "The Human Alignment Co.",
+    images: [
+      {
+        url: "https://mark.buchan.co.uk/images/og-image-book.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
+  };
+
 export default function BookPage() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
