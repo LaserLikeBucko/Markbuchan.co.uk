@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import { Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import Script from "next/script"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,18 +44,32 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
 }
+import { ReactNode } from "react";
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: ReactNode;
+}) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased" suppressHydrationWarning>
+    <html lang="en">
+      <body>
         {children}
-        <Analytics />
+
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-Q5HFCQMSCL`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-Q5HFCQMSCL');
+          `}
+        </Script>
       </body>
     </html>
-  )
+  );
 }
+
