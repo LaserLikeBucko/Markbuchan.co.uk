@@ -69,7 +69,7 @@ export default function HomeV2Page() {
               </div>
 
               <p className="mt-6 text-base font-medium text-stone-600">
-                Available April 2026
+                Available May 2026
               </p>
 
               <div className="mt-6">
