@@ -87,7 +87,7 @@ export function HeroSection() {
 
           {/* Date below book (larger) */}
           <p className="mt-16 text-center text-base font-medium text-muted-foreground md:text-lg">
-            Available April 2026
+            Available May 2026
           </p>
 
           {/* Email + CTA below date */}

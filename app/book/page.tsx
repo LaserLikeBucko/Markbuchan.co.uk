@@ -103,7 +103,7 @@ export default function BookPage() {
               </p>
 
               <p className="mt-5 text-lg leading-relaxed text-stone-700">
-                Available April 2026.
+                Available May 2026.
               </p>
             </div>
           </div>
