@@ -41,7 +41,7 @@ export function HeroSection() {
   return (
     <section id="hero" className="relative bg-white overflow-hidden">
       {/* Ivory band (fixed, does NOT move with book) */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[680px] bg-[#F6F1E8]" />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[680px] bg-white" />
 
       {/* Grain only on the ivory band */}
       <div
@@ -87,7 +87,7 @@ export function HeroSection() {
 
           {/* Date below book (larger) */}
           <p className="mt-16 text-center text-base font-medium text-muted-foreground md:text-lg">
-            Available May 2026
+            Available June 19th, 2026
           </p>
 
           {/* Email + CTA below date */}

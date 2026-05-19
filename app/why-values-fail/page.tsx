@@ -8,13 +8,13 @@ export default function HiddenGapWorkshopPage() {
       <Navigation />
 
       <main>
-        <section className="bg-stone-50 border-b border-stone-200">
+        <section className="bg-whiteborder-b border-[rgba(17,17,16,0.15)]">
           <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
                 90-Minute Workshop with Mark Buchan
               </p>
-              <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-stone-900">
+              <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#111110]">
                 The Hidden Gap:
                 <br />
                 Solving the Human Alignment Problem
@@ -29,13 +29,13 @@ export default function HiddenGapWorkshopPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#register"
-                  className="inline-flex items-center rounded-md bg-stone-900 px-6 py-3 text-white hover:bg-stone-800"
+                  className="inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-white hover:bg-[#ff3131]"
                 >
                   Register interest
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex items-center rounded-md border border-stone-300 px-6 py-3 text-stone-800 hover:bg-stone-100"
+                  className="inline-flex items-center rounded-md border border-[rgba(17,17,16,0.2)] px-6 py-3 text-[#111110] hover:bg-white"
                 >
                   About Mark
                 </a>
@@ -43,7 +43,7 @@ export default function HiddenGapWorkshopPage() {
             </div>
 
             <div className="relative">
-              <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+              <div className="overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
                 <Image
                   src="/images/workshop-image.jpg"
                   alt="Mark Buchan workshop"
@@ -58,7 +58,7 @@ export default function HiddenGapWorkshopPage() {
 
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               What goes wrong
             </h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -81,27 +81,27 @@ export default function HiddenGapWorkshopPage() {
           </div>
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 Declared values
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The words on the wall, the website and the leadership slide deck.
               </p>
             </div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 Operating values
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The values people learn through what gets rewarded, tolerated and reinforced.
               </p>
             </div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 The hidden gap
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The space where tension, mistrust and stalled change quietly take hold.
               </p>
             </div>
@@ -110,7 +110,7 @@ export default function HiddenGapWorkshopPage() {
 
         <section className="bg-amber-50 border-y border-amber-100">
           <div className="max-w-5xl mx-auto px-6 py-20">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               What you will start to see differently
             </h2>
             <div className="mt-8 grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ export default function HiddenGapWorkshopPage() {
                   key={item}
                   className="rounded-2xl bg-white border border-amber-100 p-6 shadow-sm"
                 >
-                  <p className="text-lg leading-relaxed text-stone-800">{item}</p>
+                  <p className="text-lg leading-relaxed text-[#111110]">{item}</p>
                 </div>
               ))}
             </div>
@@ -134,7 +134,7 @@ export default function HiddenGapWorkshopPage() {
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
-              <h2 className="text-3xl font-semibold text-stone-900">
+              <h2 className="text-3xl font-semibold text-[#111110]">
                 Inside the workshop
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -163,7 +163,7 @@ export default function HiddenGapWorkshopPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-stone-900 p-8 text-stone-50 shadow-sm">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-[#111110] p-8 text-stone-50 shadow-sm">
               <p className="text-sm uppercase tracking-[0.2em] text-stone-300">
                 Signature ideas
               </p>
@@ -182,10 +182,10 @@ export default function HiddenGapWorkshopPage() {
 
         <section
           id="about"
-          className="bg-stone-100 border-y border-stone-200"
+          className="bg-white border-y border-[rgba(17,17,16,0.15)]"
         >
           <div className="max-w-5xl mx-auto px-6 py-20 grid md:grid-cols-[1fr_1.4fr] gap-10 items-center">
-            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
               <Image
                 src="/images/mb.jpg"
                 alt="Mark Buchan"
@@ -199,7 +199,7 @@ export default function HiddenGapWorkshopPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
                 About Mark
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-stone-900">
+              <h2 className="mt-3 text-3xl font-semibold text-[#111110]">
                 Mark Buchan
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -225,7 +225,7 @@ export default function HiddenGapWorkshopPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
                 Forthcoming book
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-stone-900">
+              <h2 className="mt-3 text-3xl font-semibold text-[#111110]">
                 The thinking behind the workshop is becoming a book
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -241,7 +241,7 @@ export default function HiddenGapWorkshopPage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
               <Image
                 src="/images/book-cover.jpg"
                 alt="The Hidden Gap book cover"
@@ -253,7 +253,7 @@ export default function HiddenGapWorkshopPage() {
           </div>
         </section>
 
-        <section id="register" className="bg-stone-900">
+        <section id="register" className="bg-[#111110]">
           <div className="max-w-5xl mx-auto px-6 py-20">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold text-white">
@@ -295,7 +295,7 @@ export default function HiddenGapWorkshopPage() {
                 className="min-h-[140px] rounded-md border border-stone-700 bg-stone-800 p-3 text-white placeholder:text-stone-400"
               />
 
-              <button className="mt-2 inline-flex w-fit items-center rounded-md bg-amber-300 px-6 py-3 text-stone-900 hover:bg-amber-200">
+              <button className="mt-2 inline-flex w-fit items-center rounded-md bg-amber-300 px-6 py-3 text-[#111110] hover:bg-amber-200">
                 Join the first workshop cohort
               </button>
 

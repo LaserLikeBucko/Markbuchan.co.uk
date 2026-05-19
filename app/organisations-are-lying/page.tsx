@@ -8,7 +8,7 @@ export default function OrganisationsAreLyingPage() {
       <Navigation />
 
       <main>
-        <section className="bg-stone-900 text-white border-b border-stone-800">
+        <section className="bg-[#111110] text-white border-b border-stone-800">
           <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">
@@ -29,13 +29,13 @@ export default function OrganisationsAreLyingPage() {
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#register"
-                  className="inline-flex items-center rounded-md bg-amber-300 px-6 py-3 text-stone-900 hover:bg-amber-200"
+                  className="inline-flex items-center rounded-md bg-amber-300 px-6 py-3 text-[#111110] hover:bg-amber-200"
                 >
                   Register interest
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex items-center rounded-md border border-stone-600 px-6 py-3 text-white hover:bg-stone-800"
+                  className="inline-flex items-center rounded-md border border-stone-600 px-6 py-3 text-white hover:bg-[#ff3131]"
                 >
                   About Mark
                 </a>
@@ -58,7 +58,7 @@ export default function OrganisationsAreLyingPage() {
 
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="max-w-3xl">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               The uncomfortable truth
             </h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -78,29 +78,29 @@ export default function OrganisationsAreLyingPage() {
           </div>
 
           <div className="mt-12 grid md:grid-cols-3 gap-6">
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 Values theatre
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The polished version of the culture that sounds right but fails
                 to guide behaviour.
               </p>
             </div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 Underground values
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The unspoken rules people follow because they know they are the
                 ones that really matter.
               </p>
             </div>
-            <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-              <h3 className="text-xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-6 shadow-sm">
+              <h3 className="text-xl font-semibold text-[#111110]">
                 Repeating patterns
               </h3>
-              <p className="mt-3 text-stone-700 leading-relaxed">
+              <p className="mt-3 text-[#333330]leading-relaxed">
                 The games, tensions and defensive routines that keep the system
                 exactly where it is.
               </p>
@@ -110,7 +110,7 @@ export default function OrganisationsAreLyingPage() {
 
         <section className="bg-red-50 border-y border-red-100">
           <div className="max-w-5xl mx-auto px-6 py-20">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               What this workshop exposes
             </h2>
             <div className="mt-8 grid md:grid-cols-2 gap-6">
@@ -124,7 +124,7 @@ export default function OrganisationsAreLyingPage() {
                   key={item}
                   className="rounded-2xl bg-white border border-red-100 p-6 shadow-sm"
                 >
-                  <p className="text-lg leading-relaxed text-stone-800">{item}</p>
+                  <p className="text-lg leading-relaxed text-[#111110]">{item}</p>
                 </div>
               ))}
             </div>
@@ -134,7 +134,7 @@ export default function OrganisationsAreLyingPage() {
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="grid md:grid-cols-2 gap-10 items-start">
             <div>
-              <h2 className="text-3xl font-semibold text-stone-900">
+              <h2 className="text-3xl font-semibold text-[#111110]">
                 Inside the workshop
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -157,7 +157,7 @@ export default function OrganisationsAreLyingPage() {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-stone-950 p-8 text-stone-50 shadow-sm">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-stone-950 p-8 text-stone-50 shadow-sm">
               <p className="text-sm uppercase tracking-[0.2em] text-stone-400">
                 Why it matters
               </p>
@@ -172,10 +172,10 @@ export default function OrganisationsAreLyingPage() {
 
         <section
           id="about"
-          className="bg-stone-100 border-y border-stone-200"
+          className="bg-white border-y border-[rgba(17,17,16,0.15)]"
         >
           <div className="max-w-5xl mx-auto px-6 py-20 grid md:grid-cols-[1fr_1.4fr] gap-10 items-center">
-            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
               <Image
                 src="/images/mb.jpg"
                 alt="Mark Buchan"
@@ -189,7 +189,7 @@ export default function OrganisationsAreLyingPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
                 About Mark
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-stone-900">
+              <h2 className="mt-3 text-3xl font-semibold text-[#111110]">
                 Mark Buchan
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -214,7 +214,7 @@ export default function OrganisationsAreLyingPage() {
               <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
                 Forthcoming book
               </p>
-              <h2 className="mt-3 text-3xl font-semibold text-stone-900">
+              <h2 className="mt-3 text-3xl font-semibold text-[#111110]">
                 A book is coming that goes deeper into these ideas
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
@@ -230,7 +230,7 @@ export default function OrganisationsAreLyingPage() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div className="overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
               <Image
                 src="/images/book-cover.jpg"
                 alt="Forthcoming book teaser"
@@ -242,7 +242,7 @@ export default function OrganisationsAreLyingPage() {
           </div>
         </section>
 
-        <section id="register" className="bg-stone-900">
+        <section id="register" className="bg-[#111110]">
           <div className="max-w-5xl mx-auto px-6 py-20">
             <div className="max-w-2xl">
               <h2 className="text-3xl font-semibold text-white">
@@ -282,7 +282,7 @@ export default function OrganisationsAreLyingPage() {
     className="min-h-[140px] rounded-md border border-stone-700 bg-stone-800 p-3 text-white placeholder:text-stone400"
   />
 
-  <button className="mt-2 inline-flex w-fit items-center rounded-md bg-amber-300 px-6 py-3 text-stone-900 hover:bg-amber-200">
+  <button className="mt-2 inline-flex w-fit items-center rounded-md bg-amber-300 px-6 py-3 text-[#111110] hover:bg-amber-200">
     Find out what's really going on
   </button>
 <p className="text-sm text-stone-400 mt-2">

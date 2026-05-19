@@ -27,13 +27,13 @@ export default function WorkshopPage() {
       <Navigation />
 
       <main className="bg-white">
-        <section className="bg-[#F6F1E8] border-b border-stone-200">
+        <section className="bg-white border-b border-[rgba(17,17,16,0.15)]">
           <div className="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold text-stone-900">
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#111110]">
               The Hidden Gap Workshop
             </h1>
 
-            <p className="mt-6 text-xl leading-relaxed text-stone-700 max-w-3xl mx-auto">
+            <p className="mt-6 text-xl leading-relaxed text-[#333330]max-w-3xl mx-auto">
               A 90-minute session exploring the Human Alignment Problem —
               the gap between what we say matters and what actually drives
               behaviour in teams and organisations.
@@ -42,7 +42,7 @@ export default function WorkshopPage() {
         </section>
 
         <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-          <h2 className="text-3xl font-semibold text-stone-900">
+          <h2 className="text-3xl font-semibold text-[#111110]">
             Coming soon
           </h2>
 
@@ -62,7 +62,7 @@ export default function WorkshopPage() {
 
           <a
             href="mailto:iam@markbuchan.co.uk"
-            className="mt-8 inline-flex items-center rounded-md bg-stone-900 px-6 py-3 text-white hover:bg-stone-800"
+            className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-white hover:bg-[#ff3131]"
           >
             Register interest
           </a>

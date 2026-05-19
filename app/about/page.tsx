@@ -8,13 +8,13 @@ export default function AboutPage() {
       <Navigation />
 
       <main className="bg-white">
-        <section className="bg-[#F6F1E8] border-b border-stone-200">
+        <section className="bg-white border-b border-[rgba(17,17,16,0.15)]">
           <div className="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold text-stone-900">
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#111110]">
               About Mark Buchan
             </h1>
 
-            <p className="mt-6 text-xl leading-relaxed text-stone-700 max-w-3xl mx-auto">
+            <p className="mt-6 text-xl leading-relaxed text-[#333330]max-w-3xl mx-auto">
               I help leaders, teams and organisations work with what I call the
               Human Alignment Problem — the gap between what we say matters and
               what actually drives behaviour.
@@ -23,7 +23,7 @@ export default function AboutPage() {
         </section>
 
         <section className="max-w-5xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-[0.85fr_1.15fr] items-center">
-          <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+          <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
             <Image
               src="/images/mb.jpg"
               alt="Mark Buchan"
@@ -34,7 +34,7 @@ export default function AboutPage() {
           </div>
 
           <div>
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               The work behind The Hidden Gap
             </h2>
 
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 href="https://www.linkedin.com/in/theagileleader/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-md border border-stone-300 px-5 py-3 text-stone-800 hover:bg-stone-100"
+                className="inline-flex items-center rounded-md border border-[rgba(17,17,16,0.2)] px-5 py-3 text-[#111110] hover:bg-white"
               >
                 Connect with me on LinkedIn
               </a>
@@ -81,9 +81,9 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="border-y border-stone-200 bg-stone-50 py-20">
+        <section className="border-y border-[rgba(17,17,16,0.15)] bg-whitepy-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               What this work is for
             </h2>
 
@@ -103,12 +103,12 @@ export default function AboutPage() {
 
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Read the book
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   Explore the core ideas behind <em>The Hidden Gap</em> and join
                   the list for the first chapter and launch updates.
                 </p>
@@ -116,18 +116,18 @@ export default function AboutPage() {
 
               <a
                 href="/book"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Go to the book
               </a>
             </div>
 
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Work with me
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   Coaching, workshops, speaking and facilitated conversations for
                   people who want to work with the gap in real time.
                 </p>
@@ -135,18 +135,18 @@ export default function AboutPage() {
 
               <a
                 href="/work-with-me"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Explore working together
               </a>
             </div>
 
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Explore resources
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   Browse the growing collection of tools, reflections and companion
                   material being built around the work.
                 </p>
@@ -154,7 +154,7 @@ export default function AboutPage() {
 
               <a
                 href="/resources"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Go to resources
               </a>

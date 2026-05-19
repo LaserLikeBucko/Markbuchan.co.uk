@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import Script from "next/script"
+import type { ReactNode } from "react"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,9 @@ export const metadata: Metadata = {
     "ECHO framework",
   ],
   authors: [{ name: "Mark Buchan" }],
+  verification: {
+  google: "qrhAgHg0cDomVuNx-lg_oaarp6g3hKlMg4YwEJoYYA0",
+},
   openGraph: {
     title: "Mark Buchan — The Hidden Gap",
     description:
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#F8F5F0",
+  themeColor: "#ffff00",
   width: "device-width",
   initialScale: 1,
 }

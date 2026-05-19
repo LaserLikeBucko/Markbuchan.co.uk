@@ -16,11 +16,11 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#111110] backdrop-blur-md border-b border-[rgba(255,255,0,0.15)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="/"
-          className="text-xl font-semibold text-foreground tracking-tight"
+          className="text-xl font-semibold text-[#ffff00] tracking-tight"
         >
           Mark Buchan
         </a>
@@ -30,7 +30,7 @@ export function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="text-sm font-medium text-[rgba(255,255,0,0.7)] transition-colors hover:text-[#ffff00]"
               >
                 {link.label}
               </a>
@@ -56,14 +56,14 @@ export function Navigation() {
       </nav>
 
       {mobileOpen && (
-        <div className="border-t border-border bg-background px-6 pb-6 md:hidden">
+        <div className="block text-base font-medium text-[#ffff00]">
           <ul className="flex flex-col gap-4 pt-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-base font-medium text-foreground"
+                  className="block text-base font-medium text-[#ffff00]"
                 >
                   {link.label}
                 </a>

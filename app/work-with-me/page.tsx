@@ -9,13 +9,13 @@ export default function WorkWithMePage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#F6F1E8] border-b border-stone-200">
+        <section className="bg-white border-b border-[rgba(17,17,16,0.15)]">
           <div className="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold text-stone-900">
+            <h1 className="text-4xl md:text-5xl font-semibold text-[#111110]">
               Work With Me
             </h1>
 
-            <p className="mt-6 text-xl leading-relaxed text-stone-700 max-w-2xl mx-auto">
+            <p className="mt-6 text-xl leading-relaxed text-[#333330]max-w-2xl mx-auto">
               If you’re seeing The Hidden Gap between what is said and what actually happens,
               there are a number of ways we can work together to make it visible and begin to shift it.
             </p>
@@ -27,12 +27,12 @@ export default function WorkWithMePage() {
           <div className="grid gap-6 md:grid-cols-3">
 
             {/* COACHING */}
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Coaching
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   One-to-one or small group coaching for leaders and individuals
                   working with values, conflict, decision-making and change in real time.
                 </p>
@@ -40,19 +40,19 @@ export default function WorkWithMePage() {
 
               <a
                 href="#contact"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Register interest
               </a>
             </div>
 
             {/* WORKSHOPS */}
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Workshops
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   Facilitated sessions exploring the Human Alignment Problem,
                   helping teams and organisations surface and work with the Hidden Gap together.
                 </p>
@@ -60,19 +60,19 @@ export default function WorkWithMePage() {
 
               <a
                 href="/workshop"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 View workshop
               </a>
             </div>
 
             {/* SPEAKING */}
-            <div className="flex h-full flex-col rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
+            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
               <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-stone-900">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   Speaking & Facilitation
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   Talks and facilitated conversations for leadership teams,
                   events and organisations exploring values, behaviour and culture.
                 </p>
@@ -80,7 +80,7 @@ export default function WorkWithMePage() {
 
               <a
                 href="#contact"
-                className="mt-auto inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Register interest
               </a>
@@ -90,9 +90,9 @@ export default function WorkWithMePage() {
         </section>
 
         {/* POSITIONING BLOCK */}
-        <section className="border-y border-stone-200 bg-stone-50 py-20">
+        <section className="border-y border-[rgba(17,17,16,0.15)] bg-whitepy-20">
           <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               Where this work tends to land
             </h2>
 
@@ -114,7 +114,7 @@ export default function WorkWithMePage() {
         {/* CONTACT / INTEREST */}
         <section id="contact" className="py-20">
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-semibold text-stone-900">
+            <h2 className="text-3xl font-semibold text-[#111110]">
               Start a conversation
             </h2>
 
@@ -125,12 +125,12 @@ export default function WorkWithMePage() {
 
             <a
               href="mailto:iam@markbuchan.co.uk"
-              className="mt-8 inline-flex items-center rounded-md bg-stone-900 px-6 py-3 text-white hover:bg-stone-800"
+              className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-white hover:bg-[#ff3131]"
             >
               Get in touch
             </a>
 
-            <p className="mt-4 text-sm text-stone-500">
+            <p className="mt-4 text-sm text-[#777770]">
               Or reply to any email you’ve received.
             </p>
           </div>

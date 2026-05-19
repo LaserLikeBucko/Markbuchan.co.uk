@@ -7,26 +7,6 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 
-export const metadata = {
-  title: "The Hidden Gap Book | Why Values Drive Behaviour at Work",
-  description:
-    "A practical guide for leaders to understand why team conflict happens and how values drive behaviour. Fix the root cause, not the symptoms.",
-  openGraph: {
-    title: "The Hidden Gap Book | Why Values Drive Behaviour at Work",
-    description: "A practical guide for leaders to understand why team conflict happens and how values drive behaviour. Fix the root cause, not the symptoms.",
-    url: "https://markbuchan.co.uk",
-    siteName: "The Human Alignment Co.",
-    images: [
-      {
-        url: "https://mark.buchan.co.uk/images/og-image-book.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    type: "website",
-  },
-  };
-
 export default function BookPage() {
   const [email, setEmail] = useState("")
   const [submitted, setSubmitted] = useState(false)
@@ -62,7 +42,7 @@ export default function BookPage() {
 
       <main className="bg-white">
         <section className="relative overflow-hidden pt-24 pb-20">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-[#F6F1E8]" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[520px] bg-white" />
 
           <div
             aria-hidden="true"
@@ -90,11 +70,11 @@ export default function BookPage() {
             </div>
 
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-stone-600 font-medium">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#555550]font-medium">
                 Forthcoming book
               </p>
 
-              <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-stone-900">
+              <h1 className="mt-4 text-4xl md:text-5xl font-semibold leading-tight text-[#111110]">
                 The Hidden Gap
               </h1>
 
@@ -123,7 +103,7 @@ export default function BookPage() {
               </p>
 
               <p className="mt-5 text-lg leading-relaxed text-stone-700">
-                Available May 2026.
+                Available June 19th, 2026.
               </p>
             </div>
           </div>
@@ -132,7 +112,7 @@ export default function BookPage() {
         <section className="py-20">
           <div className="mx-auto max-w-5xl px-6">
             <div className="mx-auto max-w-3xl text-center">
-              <h2 className="text-3xl font-semibold text-stone-900">
+              <h2 className="text-3xl font-semibold text-[#111110]">
                 What the book helps you see
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-stone-700">
@@ -142,31 +122,31 @@ export default function BookPage() {
             </div>
 
             <div className="mt-12 grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold text-stone-900">
+              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   The gap
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   The difference between declared values and operating values —
                   between what is said and what is reinforced.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold text-stone-900">
+              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   The cost
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   How misalignment shows up as conflict, cynicism, stalled change,
                   energy drain and hidden patterns that keep repeating.
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-stone-200 bg-[#F6F1E8] p-8 shadow-sm">
-                <h3 className="text-2xl font-semibold text-stone-900">
+              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-semibold text-[#111110]">
                   The response
                 </h3>
-                <p className="mt-4 text-stone-700 leading-relaxed">
+                <p className="mt-4 text-[#333330]leading-relaxed">
                   A clearer way of understanding what is really going on — and a
                   more intentional way of working with it.
                 </p>
@@ -175,10 +155,10 @@ export default function BookPage() {
           </div>
         </section>
 
-        <section className="border-y border-stone-200 bg-stone-50 py-20">
+        <section className="border-y border-[rgba(17,17,16,0.15)] bg-whitepy-20">
           <div className="mx-auto max-w-4xl px-6">
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-semibold text-stone-900">
+              <h2 className="text-3xl font-semibold text-[#111110]">
                 Get the first chapter
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-stone-700">
@@ -227,33 +207,33 @@ export default function BookPage() {
 
         <section className="py-20">
           <div className="mx-auto max-w-5xl px-6 grid gap-8 md:grid-cols-2">
-            <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-[#111110]">
                 Want to experience the ideas live?
               </h3>
-              <p className="mt-4 text-stone-700 leading-relaxed">
+              <p className="mt-4 text-[#333330]leading-relaxed">
                 The 90-minute workshop is the fastest way to explore the core
                 ideas behind the book with others.
               </p>
               <a
                 href="/workshop"
-                className="mt-6 inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-6 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 View the workshop
               </a>
             </div>
 
-            <div className="rounded-2xl border border-stone-200 bg-white p-8 shadow-sm">
-              <h3 className="text-2xl font-semibold text-stone-900">
+            <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+              <h3 className="text-2xl font-semibold text-[#111110]">
                 Prefer practical tools?
               </h3>
-              <p className="mt-4 text-stone-700 leading-relaxed">
+              <p className="mt-4 text-[#333330]leading-relaxed">
                 Explore the resources, digital tools and companion material that
                 are growing around the work.
               </p>
               <a
                 href="/resources"
-                className="mt-6 inline-flex items-center rounded-md bg-stone-900 px-5 py-3 text-white hover:bg-stone-800"
+                className="mt-6 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
               >
                 Explore resources
               </a>

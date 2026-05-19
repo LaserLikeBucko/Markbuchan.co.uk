@@ -103,7 +103,7 @@ export function BookSection() {
               ) : (
                 <>
                   <p className="mb-3 text-sm font-medium text-foreground">
-                    Read the first chapter - available May 2026
+                    Read the first chapter - available June 19th, 2026
                   </p>
                   <form
                     onSubmit={handleSubmit}

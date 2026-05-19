@@ -6,24 +6,24 @@
 :root {
   /* Mark Buchan warm premium palette */
   --background: #FFFFFF;
-  --foreground: #1E293B;
+  --foreground: #111110;
   --card: #FFFFFF;
-  --card-foreground: #1E293B;
+  --card-foreground: #111110;
   --popover: #FFFFFF;
   --popover-foreground: #1E293B;
-  --primary: #1E293B;
+  --primary: #111110;
   --primary-foreground: #F8F5F0;
-  --secondary: #F0EBE3;
-  --secondary-foreground: #1E293B;
-  --muted: #F0EBE3;
-  --muted-foreground: #4B5563;
-  --accent: #ff4d4d;
+  --secondary: #FFFFFF;
+  --secondary-foreground: #111110;
+  --muted: rgba(255,255,255,0.6);
+  --muted-foreground: #444440;
+  --accent: #ff3131;
   --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
-  --border: #E2DDD5;
+  --border: rgba(17,17,16,0.15);
   --input: #E2DDD5;
-  --ring: #B45309;
+  --ring: #ff3131;
   --chart-1: #B45309;
   --chart-2: #4B5563;
   --chart-3: #1E293B;

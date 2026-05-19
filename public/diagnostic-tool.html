@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Hidden Gap Diagnostic — Mark Buchan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --yellow: #ffff00;
+      --red: #ff3131;
+      --black: #111110;
+      --white: #ffffff;
+      --mid-grey: #888880;
+      --border: rgba(17,17,16,0.15);
+      --radius: 8px;
+    }
+
+    html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--yellow);
+      color: var(--black);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      background: var(--black);
+      padding: 2rem 1.5rem 1.75rem;
+      text-align: center;
+    }
+
+    .zipper-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .zipper-tooth {
+      width: 8px; height: 8px;
+      background: var(--yellow);
+      clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      opacity: 0.5;
+    }
+    .zipper-tooth:nth-child(odd) { transform: rotate(180deg); }
+
+    .eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      opacity: 0.7;
+    }
+
+    .site-header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 8vw, 56px);
+      color: var(--yellow);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-header h1 span { color: var(--red); }
+
+    .site-header .tagline {
+      font-size: 14px;
+      color: rgba(255,255,0,0.6);
+      max-width: 420px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── PROGRESS ── */
+    .progress-wrap {
+      background: var(--black);
+      padding: 0 1.5rem 1.25rem;
+    }
+
+    .progress-bar {
+      display: flex;
+      gap: 4px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .progress-seg {
+      height: 3px; flex: 1;
+      background: rgba(255,255,0,0.15);
+      border-radius: 2px;
+      transition: background 0.4s ease;
+    }
+    .progress-seg.done { background: var(--yellow); }
+    .progress-seg.current { background: var(--red); }
+
+    /* ── MAIN ── */
+    .main {
+      max-width: 560px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+    }
+
+    /* ── PREAMBLE ── */
+    .preamble {
+      background: var(--black);
+      border-radius: var(--radius);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .preamble h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 26px;
+      color: var(--yellow);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+
+    .preamble p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.75;
+      margin-bottom: 0.85rem;
+    }
+
+    .preamble p:last-child { margin-bottom: 0; }
+
+    .preamble .highlight {
+      color: var(--yellow);
+      font-weight: 600;
+    }
+
+    .preamble .time-note {
+      display: inline-block;
+      background: rgba(255,255,0,0.12);
+      border: 1px solid rgba(255,255,0,0.25);
+      color: var(--yellow);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-top: 0.5rem;
+    }
+
+    /* ── STEPS ── */
+    .step { display: none; animation: fadeUp 0.3s ease; }
+    .step.active { display: block; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .step-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      font-weight: 600;
+      opacity: 0.45;
+      margin-bottom: 0.4rem;
+    }
+
+    .step h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(26px, 5vw, 34px);
+      color: var(--black);
+      letter-spacing: 0.02em;
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .step .subtitle {
+      font-size: 15px;
+      color: var(--black);
+      opacity: 0.7;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    blockquote {
+      border-left: 3px solid var(--red);
+      padding: 0.5rem 0 0.5rem 1rem;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--black);
+      opacity: 0.7;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    /* ── CONTEXT OPTIONS ── */
+    .context-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .context-option {
+      background: rgba(255,255,255,0.6);
+      border: 2px solid rgba(17,17,16,0.2);
+      border-radius: var(--radius);
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+      text-align: left;
+    }
+
+    .context-option:hover {
+      border-color: var(--red);
+      background: rgba(255,255,255,0.85);
+    }
+
+    .context-option.selected {
+      background: var(--black);
+      border-color: var(--black);
+    }
+
+    .context-option.selected .ctx-icon { color: var(--yellow); }
+    .context-option.selected .ctx-label { color: var(--yellow); }
+    .context-option.selected .ctx-desc { color: rgba(255,255,0,0.6); }
+
+    .ctx-icon {
+      font-size: 22px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .ctx-label {
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--black);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .ctx-desc {
+      font-size: 12px;
+      color: var(--mid-grey);
+      line-height: 1.4;
+    }
+
+    /* ── INPUTS ── */
+    label.field-label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 6px;
+      opacity: 0.7;
+    }
+
+    textarea, input[type="text"], input[type="email"] {
+      width: 100%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      color: var(--black);
+      background: rgba(255,255,255,0.8);
+      border: 2px solid rgba(17,17,16,0.2);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      transition: border-color 0.2s, background 0.2s;
+      line-height: 1.6;
+    }
+
+    textarea { min-height: 90px; resize: vertical; }
+
+    textarea:focus, input:focus {
+      outline: none;
+      border-color: var(--red);
+      background: var(--white);
+    }
+
+    /* ── CHIPS ── */
+    .chips-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .chip {
+      padding: 7px 16px;
+      border-radius: 24px;
+      border: 2px solid rgba(17,17,16,0.25);
+      font-size: 14px;
+      cursor: pointer;
+      color: var(--black);
+      background: rgba(255,255,255,0.5);
+      font-family: 'DM Sans', sans-serif;
+      transition: all 0.15s;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    .chip:hover { border-color: var(--red); background: rgba(255,255,255,0.8); }
+    .chip.selected { background: var(--black); border-color: var(--black); color: var(--yellow); font-weight: 600; }
+
+    .custom-add { display: flex; gap: 8px; margin-bottom: 0.75rem; }
+    .custom-add input { flex: 1; }
+
+    .count-note { font-size: 13px; color: var(--black); opacity: 0.5; margin-bottom: 1.25rem; }
+
+    /* ── VALUE ROWS ── */
+    .value-row {
+      background: rgba(255,255,255,0.7);
+      border: 2px solid rgba(17,17,16,0.12);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+
+    .value-name { font-weight: 700; font-size: 15px; margin-bottom: 10px; color: var(--black); }
+
+    .mini-opts { display: flex; flex-wrap: wrap; gap: 6px; }
+
+    .mini-opt {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1.5px solid rgba(17,17,16,0.25);
+      font-size: 13px;
+      cursor: pointer;
+      background: transparent;
+      font-family: 'DM Sans', sans-serif;
+      color: var(--black);
+      transition: all 0.15s;
+      font-weight: 500;
+    }
+
+    .mini-opt:hover { border-color: var(--red); }
+    .mini-opt.sel { background: var(--red); border-color: var(--red); color: var(--white); font-weight: 600; }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-block;
+      background: var(--black);
+      color: var(--yellow);
+      border: none;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.06em;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-top: 1.25rem;
+    }
+
+    .btn-primary:hover { background: var(--red); color: var(--white); transform: translateY(-1px); }
+    .btn-primary:disabled { opacity: 0.3; cursor: not-allowed; transform: none; }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--black);
+      border: 2px solid rgba(17,17,16,0.3);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all 0.15s;
+      margin-top: 1rem;
+    }
+
+    .btn-secondary:hover { border-color: var(--black); background: rgba(17,17,16,0.06); }
+
+    /* ── RESULTS ── */
+    .result-header {
+      background: var(--black);
+      color: var(--yellow);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .result-header h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.02em;
+      color: var(--yellow);
+      margin-bottom: 0.35rem;
+    }
+
+    .result-header p { font-size: 14px; color: rgba(255,255,0,0.65); line-height: 1.5; }
+
+    .vim-grid { display: grid; gap: 10px; margin-bottom: 1.5rem; }
+
+    .vim-card {
+      background: rgba(255,255,255,0.75);
+      border: 2px solid rgba(17,17,16,0.12);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .q-badge {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .q-core { background: var(--black); color: var(--yellow); }
+    .q-theatre { background: var(--red); color: var(--white); }
+    .q-aspirational { background: #2d7a2d; color: var(--white); }
+    .q-underground { background: #5a3a8a; color: var(--white); }
+    .q-void { background: var(--mid-grey); color: var(--white); }
+
+    .vim-card-content { flex: 1; }
+    .vim-value-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+    .vim-value-desc { font-size: 13px; opacity: 0.65; line-height: 1.5; }
+
+    .analysis-box {
+      background: rgba(255,255,255,0.75);
+      border: 2px solid rgba(17,17,16,0.12);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .analysis-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.75rem;
+      color: var(--black);
+    }
+
+    .analysis-box p {
+      font-size: 14px;
+      line-height: 1.75;
+      color: var(--black);
+      opacity: 0.82;
+      margin-bottom: 0.75rem;
+    }
+
+    .analysis-box p:last-child { margin-bottom: 0; }
+
+    /* ── CTA ── */
+    .cta-box {
+      background: var(--black);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      color: var(--yellow);
+      letter-spacing: 0.04em;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-box p { font-size: 14px; color: rgba(255,255,0,0.65); line-height: 1.6; margin-bottom: 1rem; }
+
+    .discount-code {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      letter-spacing: 0.1em;
+      padding: 8px 20px;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .cta-links { display: flex; flex-direction: column; gap: 8px; margin-top: 1rem; }
+
+    .cta-link {
+      display: block;
+      padding: 10px 16px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.15s;
+    }
+
+    .cta-link.primary { background: var(--red); color: var(--white); }
+    .cta-link.primary:hover { background: #e02020; }
+    .cta-link.secondary { background: rgba(255,255,0,0.12); color: var(--yellow); border: 1px solid rgba(255,255,0,0.25); }
+    .cta-link.secondary:hover { background: rgba(255,255,0,0.22); }
+
+    .error-msg { font-size: 13px; color: var(--red); margin-top: 6px; display: none; font-weight: 600; }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 12px;
+      opacity: 0.4;
+      color: var(--black);
+    }
+
+    @media (max-width: 480px) {
+      .main { padding: 1.5rem 1rem 3rem; }
+      .context-grid { grid-template-columns: 1fr; }
+      .mini-opts { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="zipper-line">
+    <div class="zipper-tooth"></div><div class="zipper-tooth"></div>
+    <div class="zipper-tooth"></div><div class="zipper-tooth"></div>
+    <div class="zipper-tooth"></div><div class="zipper-tooth"></div>
+    <div class="zipper-tooth"></div>
+  </div>
+  <p class="eyebrow">Mark Buchan MSc</p>
+  <h1>The <span>Hidden</span> Gap<br>Diagnostic</h1>
+  <p class="tagline">Locate where your values actually sit — not where you wish they did.</p>
+</header>
+
+<div class="progress-wrap">
+  <div class="progress-bar" id="progress-bar"></div>
+</div>
+
+<div class="main">
+
+  <!-- PREAMBLE -->
+  <div class="preamble" id="preamble-section">
+    <h2>What Is The Hidden Gap?</h2>
+    <p>Most organisations have values. Most leaders believe in them.</p>
+    <p>And yet — under pressure, in the moments that actually matter — <span class="highlight">something else tends to take over.</span> Decisions get made that quietly contradict what was agreed. Conversations that needed to happen get avoided. People align in meetings and disagree in corridors.</p>
+    <p>That distance — between the values you declare and the values that actually govern behaviour — is <span class="highlight">the hidden gap.</span></p>
+    <p>It exists in every human system. It costs more than most people realise. And once you can see it clearly, you cannot unsee it.</p>
+    <p>This diagnostic helps you locate it precisely — in yourself, your team, or your organisation. It uses the <span class="highlight">Values Integrity Model (VIM)</span> developed by Mark Buchan over more than twenty years of working inside organisations where the gap was quietly doing its damage.</p>
+    <span class="time-note">⏱ Takes about four minutes</span>
+  </div>
+
+  <!-- STEP 1: CONTEXT -->
+  <div class="step active" id="step-1">
+    <p class="step-label">Step 1 of 6</p>
+    <h2>Where Does The Gap Show Up Most?</h2>
+    <p class="subtitle">Choose the context where you feel the distance between what you value and how you actually operate most clearly.</p>
+    <div class="context-grid" id="context-grid">
+      <div class="context-option" onclick="selectContext('leadership', this)">
+        <span class="ctx-icon">🧭</span>
+        <span class="ctx-label">My Leadership</span>
+        <span class="ctx-desc">How I show up with my team — what I model, what I avoid</span>
+      </div>
+      <div class="context-option" onclick="selectContext('organisation', this)">
+        <span class="ctx-icon">🏢</span>
+        <span class="ctx-label">My Organisation</span>
+        <span class="ctx-desc">The gap between what we say we stand for and how we actually operate</span>
+      </div>
+      <div class="context-option" onclick="selectContext('relationships', this)">
+        <span class="ctx-icon">🤝</span>
+        <span class="ctx-label">Work Relationships</span>
+        <span class="ctx-desc">With colleagues, stakeholders, or people I find difficult</span>
+      </div>
+      <div class="context-option" onclick="selectContext('personal', this)">
+        <span class="ctx-icon">🪞</span>
+        <span class="ctx-label">My Personal Life</span>
+        <span class="ctx-desc">How I live my values outside work — in family, relationships, choices</span>
+      </div>
+    </div>
+    <button class="btn-primary" id="btn-1" onclick="next(1)" disabled>Continue →</button>
+  </div>
+
+  <!-- STEP 2: VALUES SELECTION -->
+  <div class="step" id="step-2">
+    <p class="step-label">Step 2 of 6</p>
+    <h2>What Matters To You?</h2>
+    <p class="subtitle">Select up to 5 values that feel most alive or most contested in your current situation. Or add your own — these are yours, not a list to perform.</p>
+    <div class="chips-grid" id="chips-container"></div>
+    <div class="custom-add">
+      <input type="text" id="custom-value" placeholder="Add your own value..." onkeydown="if(event.key==='Enter')addCustom()">
+      <button class="btn-secondary" onclick="addCustom()">Add</button>
+    </div>
+    <p class="count-note" id="selection-count">0 selected</p>
+    <button class="btn-primary" id="btn-2" onclick="next(2)" disabled>Continue →</button>
+  </div>
+
+  <!-- STEP 3: DECLARED -->
+  <div class="step" id="step-3">
+    <p class="step-label">Step 3 of 6</p>
+    <h2>Do You Name These?</h2>
+    <p class="subtitle">For each value — do you openly claim it? Name it to others? Or does it operate more in the background without being declared?</p>
+    <div id="declared-container"></div>
+    <button class="btn-primary" id="btn-3" onclick="next(3)" disabled>Continue →</button>
+  </div>
+
+  <!-- STEP 4: OPERATIONAL -->
+  <div class="step" id="step-4">
+    <p class="step-label">Step 4 of 6</p>
+    <h2>Do You Live These?</h2>
+    <p class="subtitle">Honestly now. Not what you intend — what actually happens when pressure rises and something real is at stake.</p>
+    <blockquote>"A value isn't a preference. It's what you are willing to pay for."</blockquote>
+    <div id="operational-container"></div>
+    <button class="btn-primary" id="btn-4" onclick="next(4)" disabled>Continue →</button>
+  </div>
+
+  <!-- STEP 5: GAP SIGNAL -->
+  <div class="step" id="step-5">
+    <p class="step-label">Step 5 of 6</p>
+    <h2>What Does The Gap Feel Like?</h2>
+    <p class="subtitle">The gap usually announces itself as a signal before it becomes a problem. What have you been noticing — however small?</p>
+    <blockquote>"The signal is rarely loud. It may be a flicker of discomfort. A slight hesitation before speaking."</blockquote>
+    <label class="field-label" for="signal-input">Describe what you have been noticing</label>
+    <textarea id="signal-input" placeholder="e.g. A low-level exhaustion I can't quite explain. I hesitate before certain conversations. Something feels slightly off but I haven't named it yet..."></textarea>
+    <br>
+    <button class="btn-primary" onclick="next(5)">Continue →</button>
+  </div>
+
+  <!-- STEP 6: EMAIL -->
+  <div class="step" id="step-6">
+    <p class="step-label">Step 6 of 6</p>
+    <h2>Almost There</h2>
+    <p class="subtitle">Your Hidden Gap profile is ready. Enter your name and email to see it — and to receive the occasional piece of genuinely useful thinking from Mark.</p>
+    <label class="field-label" for="email-name">First name</label>
+    <input type="text" id="email-name" placeholder="Your first name" style="margin-bottom:12px">
+    <label class="field-label" for="email-input">Email address</label>
+    <input type="email" id="email-input" placeholder="your@email.com">
+    <p class="error-msg" id="email-error">Please enter your name and a valid email address.</p>
+    <br>
+    <button class="btn-primary" onclick="next(6)">Show My Profile →</button>
+    <p style="font-size:12px;opacity:0.45;margin-top:0.75rem;">No spam. Unsubscribe any time.</p>
+  </div>
+
+  <!-- STEP 7: RESULTS -->
+  <div class="step" id="step-7">
+    <div class="result-header">
+      <h2 id="result-greeting">Your Hidden Gap Profile</h2>
+      <p id="result-subheading">Based on your Values Integrity Map.</p>
+    </div>
+
+    <div class="vim-grid" id="vim-results"></div>
+
+    <div class="analysis-box" id="journey-section"></div>
+
+    <div class="cta-box">
+      <h3>Go Deeper</h3>
+      <p>This diagnostic is the beginning. The Hidden Gap gives you the complete framework — the VIM, ECHO, the Inner Coach, and the Choice Triangle — with the practical tools to close the gap for good.</p>
+      <div class="discount-code">HIDDENGAP25</div>
+      <p style="font-size:12px;opacity:0.55;margin-bottom:0;">25% off the book at launch. Just for you.</p>
+      <div class="cta-links">
+        <a href="https://markbuchan.co.uk" class="cta-link primary">Get The Book →</a>
+        <a href="https://markbuchan.co.uk/living-appendix" class="cta-link secondary">Free Tools & Resources →</a>
+      </div>
+    </div>
+
+    <button class="btn-secondary" onclick="restart()" style="width:100%;margin-top:0.5rem;">Start Again</button>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  © 2026 Mark Buchan MSc · markbuchan.co.uk
+</footer>
+
+<script>
+  const VALUE_SUGGESTIONS = [
+    'Honesty','Integrity','Family','Loyalty','Courage','Growth','Learning',
+    'Collaboration','Autonomy','Security','Achievement','Contribution','Creativity',
+    'Fairness','Respect','Accountability','Trust','Excellence','Compassion',
+    'Freedom','Connection','Health','Purpose','Service','Innovation'
+  ];
+
+  const CONTEXT_LABELS = {
+    leadership: 'your leadership',
+    organisation: 'your organisation',
+    relationships: 'your work relationships',
+    personal: 'your personal life'
+  };
+
+  const CONTEXT_OPENERS = {
+    leadership: 'You said the gap shows up most in your leadership — in how you show up with your team.',
+    organisation: 'You said the gap shows up most in your organisation — in the distance between what is declared and what actually operates.',
+    relationships: 'You said the gap shows up most in your work relationships — in the interactions where values stop being ideas and become behaviour.',
+    personal: 'You said the gap shows up most in your personal life — where the values you live outside work reveal themselves most honestly.'
+  };
+
+  let state = {
+    currentStep: 1,
+    context: '',
+    selectedValues: [],
+    declared: {},
+    operational: {},
+    signal: '',
+    name: '',
+    email: ''
+  };
+
+  function buildProgress() {
+    const bar = document.getElementById('progress-bar');
+    bar.innerHTML = '';
+    for (let i = 1; i <= 6; i++) {
+      const seg = document.createElement('div');
+      seg.className = 'progress-seg' +
+        (i < state.currentStep ? ' done' : i === state.currentStep ? ' current' : '');
+      bar.appendChild(seg);
+    }
+  }
+
+  function showStep(n) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    const el = document.getElementById('step-' + n);
+    if (el) el.classList.add('active');
+    // Hide preamble once past step 1
+    if (n > 1) document.getElementById('preamble-section').style.display = 'none';
+    state.currentStep = n;
+    buildProgress();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function selectContext(ctx, el) {
+    state.context = ctx;
+    document.querySelectorAll('.context-option').forEach(o => o.classList.remove('selected'));
+    el.classList.add('selected');
+    document.getElementById('btn-1').disabled = false;
+  }
+
+  function next(from) {
+    if (from === 1) {
+      if (!state.context) return;
+      buildChips(); showStep(2);
+    } else if (from === 2) {
+      if (state.selectedValues.length < 2) return;
+      buildDeclared(); showStep(3);
+    } else if (from === 3) {
+      if (!allAnswered('declared')) return;
+      buildOperational(); showStep(4);
+    } else if (from === 4) {
+      if (!allAnswered('operational')) return;
+      showStep(5);
+    } else if (from === 5) {
+      state.signal = document.getElementById('signal-input').value.trim();
+      showStep(6);
+    } else if (from === 6) {
+      const nameVal = document.getElementById('email-name').value.trim();
+      const emailVal = document.getElementById('email-input').value.trim();
+      const errEl = document.getElementById('email-error');
+      if (!nameVal || !emailVal || !emailVal.includes('@')) {
+        errEl.style.display = 'block'; return;
+      }
+      errEl.style.display = 'none';
+      state.name = nameVal;
+      state.email = emailVal;
+
+      // ── FORMSPREE EMAIL CAPTURE ───────────────────────────
+      fetch('https://formspree.io/f/xwvnddyz', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: nameVal,
+          email: emailVal,
+          source: 'vim-diagnostic',
+        }),
+      });
+      // ──────────────────────────────────────────────────────
+
+      showStep(7);
+      generateResults();
+    }
+  }
+
+  function buildChips() {
+    const c = document.getElementById('chips-container');
+    c.innerHTML = '';
+    const all = [...VALUE_SUGGESTIONS, ...state.selectedValues.filter(v => !VALUE_SUGGESTIONS.includes(v))];
+    all.forEach(v => {
+      const chip = document.createElement('div');
+      chip.className = 'chip' + (state.selectedValues.includes(v) ? ' selected' : '');
+      chip.textContent = v;
+      chip.onclick = () => toggleValue(v, chip);
+      c.appendChild(chip);
+    });
+  }
+
+  function toggleValue(v, el) {
+    if (state.selectedValues.includes(v)) {
+      state.selectedValues = state.selectedValues.filter(x => x !== v);
+      el.classList.remove('selected');
+    } else {
+      if (state.selectedValues.length >= 5) return;
+      state.selectedValues.push(v);
+      el.classList.add('selected');
+    }
+    updateCount();
+  }
+
+  function addCustom() {
+    const inp = document.getElementById('custom-value');
+    const v = inp.value.trim();
+    if (!v || state.selectedValues.includes(v) || state.selectedValues.length >= 5) return;
+    state.selectedValues.push(v);
+    buildChips(); inp.value = ''; updateCount();
+  }
+
+  function updateCount() {
+    const n = state.selectedValues.length;
+    document.getElementById('selection-count').textContent =
+      n + ' selected' + (n >= 5 ? ' — maximum reached' : '');
+    document.getElementById('btn-2').disabled = n < 2;
+  }
+
+  function buildDeclared() {
+    const c = document.getElementById('declared-container');
+    c.innerHTML = '';
+    state.selectedValues.forEach(v => {
+      c.innerHTML += `<div class="value-row">
+        <div class="value-name">${v}</div>
+        <div class="mini-opts">
+          <button class="mini-opt${state.declared[v]==='yes'?' sel':''}" onclick="setAnswer('declared','${v}','yes',this)">Yes — I openly name this</button>
+          <button class="mini-opt${state.declared[v]==='no'?' sel':''}" onclick="setAnswer('declared','${v}','no',this)">No — it operates in the background</button>
+        </div></div>`;
+    });
+  }
+
+  function buildOperational() {
+    const c = document.getElementById('operational-container');
+    c.innerHTML = '';
+    state.selectedValues.forEach(v => {
+      c.innerHTML += `<div class="value-row">
+        <div class="value-name">${v}</div>
+        <div class="mini-opts">
+          <button class="mini-opt${state.operational[v]==='yes'?' sel':''}" onclick="setAnswer('operational','${v}','yes',this)">Yes — consistently, even under pressure</button>
+          <button class="mini-opt${state.operational[v]==='sometimes'?' sel':''}" onclick="setAnswer('operational','${v}','sometimes',this)">Sometimes — but not reliably</button>
+          <button class="mini-opt${state.operational[v]==='no'?' sel':''}" onclick="setAnswer('operational','${v}','no',this)">Honestly, not really</button>
+        </div></div>`;
+    });
+  }
+
+  function setAnswer(type, value, val, el) {
+    state[type][value] = val;
+    el.closest('.mini-opts').querySelectorAll('.mini-opt').forEach(s => s.classList.remove('sel'));
+    el.classList.add('sel');
+    if (type === 'declared') document.getElementById('btn-3').disabled = !allAnswered('declared');
+    if (type === 'operational') document.getElementById('btn-4').disabled = !allAnswered('operational');
+  }
+
+  function allAnswered(type) {
+    return state.selectedValues.every(v => state[type][v]);
+  }
+
+  function getQuadrant(v) {
+    const dec = state.declared[v] === 'yes';
+    const op = state.operational[v];
+    if (dec && op === 'yes') return 'core';
+    if (dec && op === 'sometimes') return 'aspirational';
+    if (dec && op === 'no') return 'theatre';
+    if (!dec && (op === 'yes' || op === 'sometimes')) return 'underground';
+    return 'void';
+  }
+
+  const QUADRANT_INFO = {
+    core: { label: 'Core', cls: 'q-core', desc: 'Declared and lived — holds even when it costs you something. This is your foundation.' },
+    theatre: { label: 'Theatre', cls: 'q-theatre', desc: 'Declared but not consistently lived — a gap between the claim and the behaviour.' },
+    aspirational: { label: 'Aspirational', cls: 'q-aspirational', desc: 'Declared and genuinely wanted — you are travelling toward this, not performing it.' },
+    underground: { label: 'Underground', cls: 'q-underground', desc: 'Operating without being named — running the show without declaration or accountability.' },
+    void: { label: 'Void', cls: 'q-void', desc: 'Not currently declared or operational. Neutral territory.' }
+  };
+
+  function generateResults() {
+    const vim = {};
+    state.selectedValues.forEach(v => { vim[v] = getQuadrant(v); });
+
+    const counts = { core: 0, theatre: 0, aspirational: 0, underground: 0, void: 0 };
+    state.selectedValues.forEach(v => counts[vim[v]]++);
+
+    const underground = state.selectedValues.filter(v => vim[v] === 'underground');
+    const theatre = state.selectedValues.filter(v => vim[v] === 'theatre');
+    const core = state.selectedValues.filter(v => vim[v] === 'core');
+    const aspirational = state.selectedValues.filter(v => vim[v] === 'aspirational');
+
+    const ctxOpener = CONTEXT_OPENERS[state.context] || '';
+
+    let profile = '';
+
+    // WHAT YOUR MAP IS SHOWING
+    profile += '<h3>What Your Map Is Showing</h3>';
+    profile += `<p>${ctxOpener} Here is what the Values Integrity Model reveals about how things are actually sitting.</p>`;
+
+    if (counts.core >= 3) {
+      profile += `<p>Your map shows a strong foundation — most of what you named is genuinely being lived. That is rarer than it sounds and suggests you have already done some of this work, even if not consciously. The question worth sitting with is whether you are being equally honest about what sits in the gaps.</p>`;
+    } else if (counts.underground >= 2) {
+      profile += `<p>Your map reveals something significant: there are values operating in your system that you have not fully named or owned. That is not a character flaw — it is exactly how underground values work. They drive behaviour without declaration, which means they drive behaviour without accountability.</p>`;
+    } else if (counts.theatre >= 2) {
+      profile += `<p>Your map shows a pattern that most leaders recognise but few name clearly: the gap between what you claim and what you consistently live. The values you identified as Theatre are not lies — they are probably genuine intentions. But intentions and operating values are two different things, and the distance between them is where energy drains.</p>`;
+    } else if (counts.aspirational >= 2) {
+      profile += `<p>Your map shows something genuinely healthy: values you have named honestly as directions you are travelling, not performances you are staging. The Aspirational quadrant is the healthiest starting point for a values journey — because the honesty is already there. The work now is practice under pressure.</p>`;
+    } else {
+      profile += `<p>Your map shows a mixed picture — values distributed across quadrants, each sitting somewhere different in terms of what you claim and what you live. This is the most common and most revealing pattern. The gap is not abstract for you. It is specific, locatable, and workable.</p>`;
+    }
+
+    // WHERE THE GAP LIVES
+    profile += '<h3>Where The Gap Lives</h3>';
+
+    if (theatre.length > 0 && underground.length > 0) {
+      profile += `<p>${theatre.join(' and ')} sit in Theatre — declared but not consistently backed by behaviour. Meanwhile ${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} operating underground — driving decisions without being named. That combination is the hidden gap in its classic form: what is performed publicly and what is actually running the show are pulling in different directions.</p>`;
+    } else if (theatre.length > 0) {
+      profile += `<p>${theatre.join(' and ')} ${theatre.length === 1 ? 'sits' : 'sit'} in Theatre — you have named ${theatre.length === 1 ? 'this value' : 'these values'} and believe in ${theatre.length === 1 ? 'it' : 'them'}, but under pressure ${theatre.length === 1 ? 'it does' : 'they do'} not consistently show up in behaviour. The gap here is not dishonesty. It is distance still to travel. The question is what gets in the way when something real is at stake.</p>`;
+    } else if (underground.length > 0) {
+      profile += `<p>${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} operating underground — consistently shaping what you do without being openly named. Underground values are not necessarily dark. Some are simply legitimate drivers that have not been brought into the light yet. But unnamed, they operate without accountability. That is where the cost accumulates.</p>`;
+    } else if (core.length > 0 && aspirational.length > 0) {
+      profile += `<p>The gap in your map is between what you are already living — ${core.join(', ')} — and what you are genuinely working toward — ${aspirational.join(', ')}. That is not a problem to solve. It is a journey to travel. The distance between Aspirational and Core closes through practice under pressure, not through declaration.</p>`;
+    } else {
+      profile += `<p>Your gap appears to be less about dramatic misalignment and more about the slow drift that happens when values are not regularly examined. The work here is clarification — making sure what you say you value is specific enough to actually constrain behaviour when something is at stake.</p>`;
+    }
+
+    // THE UNDERGROUND DYNAMIC
+    profile += '<h3>The Underground Dynamic</h3>';
+
+    if (underground.length > 0) {
+      profile += `<p>${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} doing real work in your system right now — shaping decisions, influencing what gets said and what stays silent. The task is not to eliminate ${underground.length === 1 ? 'it' : 'them'}. The task is to see ${underground.length === 1 ? 'it' : 'them'} clearly enough to choose consciously what to do with ${underground.length === 1 ? 'it' : 'them'}. Named, ${underground.length === 1 ? 'it' : 'they'} can be honoured or consciously constrained. Unnamed, ${underground.length === 1 ? 'it' : 'they'} simply keep running.</p>`;
+    } else if (theatre.length > 0) {
+      profile += `<p>There are no underground values in your current map — but that does not mean none exist. Theatre values often have underground counterparts: the value you declare can mask the value that is actually operating. It is worth asking honestly: what value is actually governing the decisions that ${theatre[0]} is supposed to govern? That question, sat with honestly, usually surfaces something worth naming.</p>`;
+    } else {
+      profile += `<p>Your current map does not show obvious underground activity — but underground values are, by definition, the ones hardest to see. The signal to watch for is the gap between your intentions and your actual behaviour under pressure. Where those diverge consistently, something undeclared is usually at work.</p>`;
+    }
+
+    // MOST IMPORTANT JOURNEY
+    profile += '<h3>Your Most Important Journey Right Now</h3>';
+
+    if (underground.length > 0) {
+      profile += `<p><strong>Bring It Into the Light</strong> — Underground → Core. The most important move available to you right now is naming what is already operating. For ${underground[0]}, that means bringing it into the open — not necessarily declaring it to everyone, but being honest with yourself about what it is and what it has been doing. Once named, you can decide whether to honour it openly, reframe it, or consciously constrain it. Right now it is making decisions for you.</p>`;
+    } else if (theatre.length > 0 && aspirational.length > 0) {
+      profile += `<p><strong>Tell the Truth</strong> — Theatre → Aspirational. The most useful move right now is an act of honesty rather than will. Stop claiming ${theatre[0]} as though you are already living it — and start holding it as a genuine direction you are travelling. That is not a demotion. It is more honest. And honest is where the work begins.</p>`;
+    } else if (theatre.length > 0) {
+      profile += `<p><strong>Tell the Truth or Drop the Act</strong> — Theatre → Aspirational or Void. For ${theatre[0]}, you have a choice: own it honestly as a genuine aspiration you are working toward, or stop claiming it altogether. Both are acts of integrity. Continuing to declare it while not backing it with behaviour — that is the one option that costs you without returning anything.</p>`;
+    } else if (aspirational.length > 0) {
+      profile += `<p><strong>Pay the Price</strong> — Aspirational → Core. You have already done the honest work of naming ${aspirational[0]} as something you are genuinely working toward. The journey now is practice under pressure — finding the specific moments where this value costs you something and choosing it anyway. A value is not a preference. It is what you are willing to pay for.</p>`;
+    } else {
+      profile += `<p><strong>Clarify Before You Journey.</strong> Your map shows mostly Core values — a strong foundation. Before choosing a journey, the most useful work may be clarification: making sure the values you are living are specific enough to guide behaviour in the moments that matter. Abstract values can be lived in contradictory ways. Clarified values constrain behaviour. That is where practical force comes from.</p>`;
+    }
+
+    // ONE THING TO NOTICE
+    profile += '<h3>One Thing To Notice Today</h3>';
+
+    if (underground.length > 0) {
+      profile += `<p>Pay attention today to the moment before a decision — any decision. Notice what value is actually operating in that moment. Not what you intend. What is actually driving it. That fraction of a second before behaviour is where ${underground[0]} tends to win without being named. Just noticing it — without judgement, without performance — is the beginning of everything else.</p>`;
+    } else if (theatre.length > 0) {
+      profile += `<p>Notice today the moment you use the language of ${theatre[0]} — in a conversation, a decision, a piece of writing. Then ask honestly: am I living this right now, or am I performing it? You do not have to do anything with the answer yet. Just see it clearly. Honest seeing is where agency begins.</p>`;
+    } else {
+      profile += `<p>Notice today where your energy goes when a decision costs you something. That is where the real hierarchy reveals itself — not in what you say you value, but in what you protect when something is actually at stake. The gap, when it appears, announces itself as a signal. Your job is simply to learn to recognise it.</p>`;
+    }
+
+    renderResults(vim, profile);
+  }
+
+  function renderResults(vim, analysisHtml) {
+    document.getElementById('result-greeting').textContent =
+      state.name + ', here is your Hidden Gap profile.';
+
+    const ctxLabel = CONTEXT_LABELS[state.context] || 'your current context';
+    document.getElementById('result-subheading').textContent =
+      'Based on your Values Integrity Map — focusing on ' + ctxLabel + '.';
+
+    const vimDiv = document.getElementById('vim-results');
+    vimDiv.innerHTML = '';
+    state.selectedValues.forEach(v => {
+      const q = vim[v];
+      const info = QUADRANT_INFO[q];
+      vimDiv.innerHTML += `<div class="vim-card">
+        <span class="q-badge ${info.cls}">${info.label}</span>
+        <div class="vim-card-content">
+          <div class="vim-value-name">${v}</div>
+          <div class="vim-value-desc">${info.desc}</div>
+        </div>
+      </div>`;
+    });
+
+    document.getElementById('journey-section').innerHTML = analysisHtml;
+    showStep(7);
+  }
+
+  function restart() {
+    state = {
+      currentStep: 1, context: '', selectedValues: [],
+      declared: {}, operational: {}, signal: '', name: '', email: ''
+    };
+    ['signal-input','email-name','email-input'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.value = '';
+    });
+    document.getElementById('preamble-section').style.display = 'block';
+    document.querySelectorAll('.context-option').forEach(o => o.classList.remove('selected'));
+    document.getElementById('btn-1').disabled = true;
+    buildChips();
+    showStep(1);
+  }
+
+  buildProgress();
+  buildChips();
+</script>
+</body>
+</html>
