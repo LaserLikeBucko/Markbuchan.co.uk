@@ -27,6 +27,7 @@ export default function LivingAppendixPage() {
           </div>
         </section>
 
+
         {/* DISCOUNT CODE */}
         <section className="bg-[#ffff00] py-12 border-b-4 border-dashed border-[#111110]">
           <div className="mx-auto max-w-3xl px-6 text-center">

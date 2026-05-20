@@ -2,6 +2,16 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
+export const metadata = {
+  title: "Leadership Alignment Diagnostic | Mark Buchan MSc",
+  description: "A two-week senior engagement that locates your organisation's hidden gap with precision. Find out what is actually driving behaviour — and co-design the solution. More humanity. Less PowerPoint.",
+openGraph: {
+  title: "Leadership Alignment Diagnostic | Mark Buchan MSc",
+  description: "A two-week senior engagement that locates your organisation's hidden gap with precision. More humanity. Less PowerPoint.",
+  images: [{ url: "/images/og/og-leadership-diagnostic.png", width: 1920, height: 1080 }],
+},
+}
+
 export default function DiagnosticEngagementPage() {
   return (
     <>
@@ -25,7 +35,7 @@ export default function DiagnosticEngagementPage() {
               href="#contact"
               className="mt-10 inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] transition-colors"
             >
-              Book a Discovery Call →
+              Book a Diagnostic Conversation →
             </a>
           </div>
         </section>
@@ -248,7 +258,7 @@ export default function DiagnosticEngagementPage() {
               href="mailto:iam@markbuchan.co.uk?subject=Discovery Call Request — Human Alignment Diagnostic"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
-              Book Your Discovery Call →
+              Book Your Diagnostic Conversation →
             </a>
             <p className="mt-6 text-sm text-white opacity-30">
               Or email iam@markbuchan.co.uk directly.

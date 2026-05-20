@@ -2,6 +2,16 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
+export const metadata = {
+  title: "Values Misalignment Support for HR Leaders | Mark Buchan MSc",
+  description: "Give HR the language and evidence to help leadership finally see culture as the business problem it actually is. The Human Alignment Diagnostic for HR teams.",
+openGraph: {
+  title: "Values Misalignment Support for HR Leaders | Mark Buchan MSc",
+  description: "Give HR the language and evidence to make leadership finally see culture as the business problem it actually is.",
+  images: [{ url: "/images/og/og-hr-values-alignment.png", width: 1920, height: 1080 }],
+},
+}
+
 export default function ForHRLeadersPage() {
   return (
     <>
@@ -19,7 +29,7 @@ export default function ForHRLeadersPage() {
               You already have the data.<br />Now get the language.
             </h1>
             <p className="mt-6 text-xl md:text-2xl leading-relaxed text-[#111110] opacity-75 max-w-2xl mx-auto">
-              HR has been naming the culture problem for years. The Human Alignment Diagnostic gives you the framework to make leadership finally see it as the business problem it actually is.
+              HR has been naming the culture problem for years. The Human Alignment Diagnostic gives you the framework to help leadership finally see it as the business problem it actually is.
             </p>
             <a
               href="#contact"
@@ -237,7 +247,7 @@ export default function ForHRLeadersPage() {
               href="mailto:iam@markbuchan.co.uk?subject=Discovery Call Request — HR Enquiry"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
-              Book Your Discovery Call →
+              Book Your Diagnostic Conversation →
             </a>
             <p className="mt-6 text-sm text-[#111110] opacity-40">
               Or email iam@markbuchan.co.uk directly.

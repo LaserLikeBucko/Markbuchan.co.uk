@@ -1,6 +1,17 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
+
+export const metadata = {
+  title: "About Mark Buchan MSc — Human Alignment Consultant & Author",
+  description: "Mark Buchan has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.",
+  openGraph: {
+    title: "About Mark Buchan MSc — Human Alignment Consultant & Author",
+    description: "Mark Buchan has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.",
+    images: [{ url: "/images/og/og-home.png", width: 1920, height: 1080 }],
+  },
+}
 
 export default function AboutPage() {
   return (
@@ -8,159 +19,171 @@ export default function AboutPage() {
       <Navigation />
 
       <main className="bg-white">
-        <section className="bg-white border-b border-[rgba(17,17,16,0.15)]">
-          <div className="max-w-5xl mx-auto px-6 py-24 md:py-32 text-center">
-            <h1 className="text-4xl md:text-5xl font-semibold text-[#111110]">
-              About Mark Buchan
-            </h1>
 
-            <p className="mt-6 text-xl leading-relaxed text-[#333330]max-w-3xl mx-auto">
-              I help leaders, teams and organisations work with what I call the
-              Human Alignment Problem — the gap between what we say matters and
-              what actually drives behaviour.
-            </p>
+        {/* HERO */}
+        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+          <div className="mx-auto max-w-5xl px-6 grid gap-14 md:grid-cols-[0.85fr_1.15fr] items-center">
+
+            {/* PHOTO */}
+            <div className="mx-auto w-full max-w-[280px] md:max-w-[320px]">
+              <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.2)] ring-2 ring-black/10">
+                <Image
+                  src="/images/mb.jpg"
+                  alt="Mark Buchan MSc"
+                  width={900}
+                  height={900}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* INTRO */}
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-[#111110] opacity-60 font-medium mb-4">
+                About
+              </p>
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111110] mb-6">
+                Mark Buchan MSc
+              </h1>
+              <p className="text-xl leading-relaxed text-[#111110] opacity-75 mb-4">
+                Consultant. Coach. Facilitator. Author of The Hidden Gap.
+              </p>
+              <p className="text-lg leading-relaxed text-[#111110] opacity-70">
+                More than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.
+              </p>
+              <div className="mt-8">
+                <a
+                  href="https://www.linkedin.com/in/theagileleader/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Connect on LinkedIn →
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section className="max-w-5xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-[0.85fr_1.15fr] items-center">
-          <div className="mx-auto max-w-sm overflow-hidden rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white shadow-sm">
-            <Image
-              src="/images/mb.jpg"
-              alt="Mark Buchan"
-              width={900}
-              height={900}
-              className="h-full w-full object-cover"
-            />
-          </div>
-
-          <div>
-            <h2 className="text-3xl font-semibold text-[#111110]">
+        {/* THE WORK */}
+        <section className="py-24">
+          <div className="mx-auto max-w-3xl px-6">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+              The work
+            </p>
+            <Separator className="mb-12 max-w-16 bg-accent/40" />
+            <h2 className="text-3xl font-bold text-[#111110] mb-8">
               The work behind The Hidden Gap
             </h2>
-
-            <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
+            <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                Over many years of working with leaders, teams and organisations,
-                I kept seeing the same pattern: people often talk about values as
-                if they are clear, shared and lived, while behaviour tells a more
-                complicated story.
+                Over many years of working with leaders, teams and organisations, the same pattern kept appearing: people talk about values as if they are clear, shared and lived — while behaviour tells a more complicated story.
               </p>
-
               <p>
-                That tension became the foundation for what I now call{" "}
-                <strong>The Hidden Gap</strong> — and for the wider challenge I
-                describe as the <strong>Human Alignment Problem</strong>.
+                That tension became the foundation for what I now call <strong className="text-[#111110]">The Hidden Gap</strong> — and for the wider challenge I describe as the <strong className="text-[#111110]">Human Alignment Problem</strong>.
               </p>
-
               <p>
-                My work is about helping people make that gap visible, understand
-                what keeps it in place, and respond to it with greater honesty,
-                intention and alignment.
+                My work is about helping people make that gap visible, understand what keeps it in place, and respond to it with greater honesty, intention and alignment.
               </p>
-
+              <p className="text-[#111110] font-semibold text-xl border-l-4 border-[#ff3131] pl-6">
+                This is not about changing people. It is about changing what drives behaviour.
+              </p>
               <p>
-                It sits at the intersection of values, behaviour, conflict,
-                communication, collaboration and change. 
+                It sits at the intersection of values, behaviour, conflict, communication, collaboration and change. It is the work I have been doing for twenty years — and the book I needed to write.
               </p>
-
-              <p>
-                This is not about changing people; it’s about changing what drives behaviour.
-              </p>
-            </div>
-
-            <div className="mt-8">
-              <a
-                href="https://www.linkedin.com/in/theagileleader/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center rounded-md border border-[rgba(17,17,16,0.2)] px-5 py-3 text-[#111110] hover:bg-white"
-              >
-                Connect with me on LinkedIn
-              </a>
             </div>
           </div>
         </section>
 
-        <section className="border-y border-[rgba(17,17,16,0.15)] bg-whitepy-20">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h2 className="text-3xl font-semibold text-[#111110]">
+        {/* QUOTE */}
+        <section className="bg-[#111110] py-16">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <p className="text-xl md:text-2xl font-semibold text-[#ffff00] leading-relaxed">
+              "Behaviour is not the problem to be fixed.<br />
+              It is the evidence of the values currently at work."
+            </p>
+            <p className="mt-4 text-sm text-white opacity-40">— The Hidden Gap</p>
+          </div>
+        </section>
+
+        {/* WHAT THIS WORK IS FOR */}
+        <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="text-3xl font-bold text-[#111110] mb-8">
               What this work is for
             </h2>
-
-            <p className="mt-6 text-lg leading-relaxed text-stone-700">
-              Sometimes the gap shows up as conflict. Sometimes as stalled change,
-              mixed messages, cynicism or energy drain. Sometimes it shows up in
-              a quieter way — as the nagging sense that something is not adding up.
-            </p>
-
-            <p className="mt-5 text-lg leading-relaxed text-stone-700">
-              The aim is not to fix behaviour at the surface, but to understand
-              what is driving it underneath and create the conditions for
-              alignment to become possible.
-            </p>
-          </div>
-        </section>
-
-        <section className="max-w-5xl mx-auto px-6 py-20">
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-              <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-[#111110]">
-                  Read the book
-                </h3>
-                <p className="mt-4 text-[#333330]leading-relaxed">
-                  Explore the core ideas behind <em>The Hidden Gap</em> and join
-                  the list for the first chapter and launch updates.
-                </p>
-              </div>
-
-              <a
-                href="/book"
-                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
-              >
-                Go to the book
-              </a>
-            </div>
-
-            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-              <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-[#111110]">
-                  Work with me
-                </h3>
-                <p className="mt-4 text-[#333330]leading-relaxed">
-                  Coaching, workshops, speaking and facilitated conversations for
-                  people who want to work with the gap in real time.
-                </p>
-              </div>
-
-              <a
-                href="/work-with-me"
-                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
-              >
-                Explore working together
-              </a>
-            </div>
-
-            <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-              <div className="min-h-[140px]">
-                <h3 className="text-2xl font-semibold text-[#111110]">
-                  Explore resources
-                </h3>
-                <p className="mt-4 text-[#333330]leading-relaxed">
-                  Browse the growing collection of tools, reflections and companion
-                  material being built around the work.
-                </p>
-              </div>
-
-              <a
-                href="/resources"
-                className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
-              >
-                Go to resources
-              </a>
+            <div className="flex flex-col gap-6 text-lg leading-relaxed text-[#111110] opacity-80">
+              <p>
+                Sometimes the gap shows up as conflict. Sometimes as stalled change, mixed messages, cynicism or energy drain. Sometimes it shows up in a quieter way — as the nagging sense that something is not adding up but nobody can quite name it.
+              </p>
+              <p>
+                The aim is not to fix behaviour at the surface, but to understand what is driving it underneath — and create the conditions for alignment to become possible.
+              </p>
+              <p>
+                That is the work. Whether it happens in a one-to-one coaching conversation, a leadership team workshop, a two-week organisational diagnostic, or through a book that gives someone language for what they have been sensing for years.
+              </p>
             </div>
           </div>
         </section>
+
+        {/* THREE WAYS IN */}
+        <section className="py-24">
+          <div className="mx-auto max-w-5xl px-6">
+            <h2 className="text-3xl font-bold text-[#111110] mb-12 text-center">
+              Three ways to go further
+            </h2>
+            <div className="grid gap-6 md:grid-cols-3">
+
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Read the book</h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    Explore the core ideas behind <em>The Hidden Gap</em> and join the list for the first chapter and launch updates.
+                  </p>
+                </div>
+                <a
+                  href="/book"
+                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Go to the book →
+                </a>
+              </div>
+
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Work with me</h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    The Human Alignment Diagnostic, coaching, workshops and facilitated conversations for leaders ready for the honest conversation.
+                  </p>
+                </div>
+                <a
+                  href="/work-with-me"
+                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Explore working together →
+                </a>
+              </div>
+
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Free diagnostic</h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    Take the free four-minute Hidden Gap Diagnostic. Locate where your values actually sit using the Values Integrity Model.
+                  </p>
+                </div>
+                <a
+                  href="/the-hidden-gap-diagnostic"
+                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Take the diagnostic →
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
       </main>
 
       <Footer />

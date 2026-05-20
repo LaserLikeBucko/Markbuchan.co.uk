@@ -1,6 +1,16 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
+export const metadata = {
+  title: "The Hidden Gap Diagnostic — Free Values Tool | Mark Buchan MSc",
+  description: "Locate where your values actually sit — not where you think or believe they are. Free four-minute diagnostic based on the Values Integrity Model.",
+openGraph: {
+  title: "The Hidden Gap Diagnostic — Free Values Tool | Mark Buchan MSc",
+  description: "Locate where your values actually sit — not where you wish they did. Free four-minute diagnostic.",
+  images: [{ url: "/images/og/og-the-hidden-gap-diagnostic.png", width: 1920, height: 1080 }],
+},
+}
+
 export default function DiagnosticPage() {
   return (
     <>
@@ -18,7 +28,7 @@ export default function DiagnosticPage() {
               The Hidden Gap Diagnostic
             </h1>
             <p className="text-xl leading-relaxed text-[#111110] opacity-75 max-w-xl mx-auto mb-4">
-              Locate where your values actually sit — not where you wish they did.
+              Locate where your values actually sit — not where you think or believe they are.
             </p>
             <p className="text-base text-[#111110] opacity-55 mb-10">
               Takes about four minutes. No login required.

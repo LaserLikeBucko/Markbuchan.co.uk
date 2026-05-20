@@ -16,9 +16,8 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Mark Buchan — The Hidden Gap",
-  description:
-    "A practical framework for clarifying what truly matters and leading with purpose — at work and in life. Explore why people clash, teams fracture, and change stalls (and what to do about it).",
+  title: "Mark Buchan MSc — Human Alignment Consultant & Author",
+  description: "Helping leaders close the gap between the values their organisation declares and the values actually running the show. Author of The Hidden Gap.",
   keywords: [
     "Mark Buchan",
     "The Hidden Gap",
@@ -35,12 +34,12 @@ export const metadata: Metadata = {
   google: "qrhAgHg0cDomVuNx-lg_oaarp6g3hKlMg4YwEJoYYA0",
 },
   openGraph: {
-    title: "Mark Buchan — The Hidden Gap",
-    description:
-      "A practical framework for clarifying what truly matters — why people clash, teams fracture, and change stalls (and what to do about it).",
-    type: "website",
-    url: "https://markbuchan.co.uk",
-  },
+  title: "Mark Buchan MSc — Human Alignment Consultant & Author",
+  description: "Helping leaders close the gap between declared values and operating reality. Author of The Hidden Gap.",
+  type: "website",
+  url: "https://markbuchan.co.uk",
+  images: [{ url: "/images/og/og-home.png", width: 1920, height: 1080 }],
+},
 }
 
 export const viewport: Viewport = {

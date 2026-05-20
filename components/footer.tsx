@@ -10,7 +10,7 @@ const footerLinks = [
 
 const socialLinks = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/theagileleader" },
-  { label: "Twitter / X", href: "#" },
+  { label: "Twitter / X", href: "https://x.com/thehiddengap" },
   { label: "Instagram", href: "#" },
 ]
 
