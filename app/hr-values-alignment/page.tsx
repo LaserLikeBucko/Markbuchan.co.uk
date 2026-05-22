@@ -244,7 +244,7 @@ export default function ForHRLeadersPage() {
               No pitch. No proposal. Just an honest conversation.
             </p>
             <a
-              href="mailto:iam@markbuchan.co.uk?subject=Discovery Call Request — HR Enquiry"
+              href="https://calendly.com/thehumanalignmentco/30min"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
               Book Your Diagnostic Conversation →

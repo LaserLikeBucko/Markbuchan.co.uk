@@ -196,7 +196,7 @@ export default function WorkWithMePage() {
               No pitch. No proposal. If this isn't the right intervention for you — I will tell you that too.
             </p>
             <a
-              href="mailto:iam@markbuchan.co.uk?subject=Diagnostic Conversation Request"
+              href="https://calendly.com/thehumanalignmentco/30min"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
               Book Your Diagnostic Conversation →
