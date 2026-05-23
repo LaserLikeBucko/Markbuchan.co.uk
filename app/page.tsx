@@ -68,8 +68,8 @@ export default function HomeV2Page() {
                 />
               </div>
 
-              <p className="mt-6 text-base font-medium text-stone-600">
-                Available June 19th, 2026
+              <p className="mt-6 text-base font-medium text-[#111110]">
+                🎂 Launching June 19th 2026
               </p>
 
               <div className="mt-6">
@@ -93,6 +93,7 @@ export default function HomeV2Page() {
                         required
                         className="h-12 border-black/10 bg-white text-foreground placeholder:text-muted-foreground"
                       />
+                      
                       <Button
                         type="submit"
                         className="h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base font-medium"
@@ -103,6 +104,8 @@ export default function HomeV2Page() {
                     <p className="mt-3 text-sm text-muted-foreground">
                       Free chapter. No spam. Unsubscribe anytime.
                     </p>
+
+                    
                   </>
                 )}
               </div>
@@ -149,8 +152,7 @@ export default function HomeV2Page() {
                 <div className="min-h-[140px]">
                   <h3 className="text-2xl font-semibold text-[#111110]">Book</h3>
                   <p className="mt-4 text-[#333330] leading-relaxed">
-                    Explore the core ideas behind The Hidden Gap and join the list
-                    for updates, excerpts and launch news.
+                     Pre-order now and get exclusive bonuses at launch. Available June 19th on Kindle.
                   </p>
                 </div>
                 <a

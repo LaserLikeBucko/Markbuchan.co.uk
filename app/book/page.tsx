@@ -86,7 +86,15 @@ export default function BookPage() {
                 <p className="font-semibold text-[#111110] opacity-100">
                   Available June 19th, 2026.
                 </p>
+
+                <a
+                href="/pre-order"
+                className="inline-flex items-center justify-center rounded-md bg-[#111110] px-6 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#111110] transition-colors"
+                >
+                  Available for Pre-Order Now
+                </a>
               </div>
+
 
               {/* EMAIL CAPTURE */}
               <div className="mt-6">

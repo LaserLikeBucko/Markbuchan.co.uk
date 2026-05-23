@@ -112,7 +112,7 @@ export default function LivingAppendixPage() {
                   The interactive Values Integrity Model diagnostic. Takes about four minutes. Locates where your values actually sit — not where you wish they did — and generates a personalised Hidden Gap profile with a recommended values journey.
                 </p>
                 <a
-                  href="/diagnostic"
+                  href="/the-hidden-gap-diagnostic"
                   className="mt-auto inline-flex items-center justify-center rounded-md bg-[#ff3131] px-5 py-3 text-white text-sm font-semibold hover:bg-[#111110] transition-colors"
                 >
                   Take the Diagnostic →
