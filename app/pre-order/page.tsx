@@ -92,7 +92,7 @@ export default function PreOrderPage() {
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Amazon Kindle</p>
                 <h3 className="text-2xl font-bold text-[#111110]">Digital</h3>
                 <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-[#111110]">£9.99</span>
+                  <span className="text-3xl font-bold text-[#111110]">$13.99</span>
                 </div>
                 <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
                   <li className="flex gap-2 items-start">
