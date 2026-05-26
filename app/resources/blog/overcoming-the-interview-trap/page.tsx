@@ -48,32 +48,41 @@ export default function InterviewTrapPage() {
             <div className="prose prose-lg max-w-none">
 
               <p className="text-xl leading-relaxed text-[#111110] font-medium mb-8">
-                I stopped doing interviews about two years ago.
-              </p>
+                I stopped doing selection interviews about two years ago, when I finally realised what was actually happening in them. This is what I now call the “Interview Trap”.
 
-              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                Not because I became too grand for them. Because I finally named what was actually happening in them — and what I named was the interview trap.
               </p>
 
               <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
-                How it works
+                What is the Interview Trap?
               </h2>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                A potential client asks for an exploratory chat. Reasonable enough. You arrive genuinely interested in their situation. They describe their problem — teams pulling in different directions, change initiatives stalling, communication breaking down in ways nobody can quite explain. You listen well. You ask good questions. You start to see the pattern. And then — because you are a professional who cares about the work — you begin to share what you are seeing.
+                The Interview Trap is a selection process where a potential client invites a consultant into an exploratory conversation, but in practice uses that conversation to access thinking, insight, and advice before any formal engagement exists.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                An hour later they thank you warmly and say they will be in touch.
+               It would often look like this. 
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                Sometimes they are. More often, the insight you offered was enough to get them through the next quarter — and the engagement never materialises.
+                A potential client would ask me for an exploratory chat. This was reasonable enough. I would arrive genuinely interested in their situation. They would describe their problem — such as teams pulling in different directions, change initiatives stalling, communication breaking down in ways nobody can quite explain. I would listen attentively. I would ask some good questions. I would ask some better ones. I would start to understand the problem in their organisation. And then — because I'm a professional who cares about the client — I would offer them my insights.
+              </p>
+
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                An hour later they would thank me warmly and say they would be in touch...
+              </p>
+
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                Sometimes they would contact me. Often though they wouldn’t. After a few rounds of unanswered calls, the engagement never materialised. I would look to see what I could have improved, I would learn some lessons and start the next conversation.
+              </p>
+
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                The leader would have received some of my thinking, often drawn from years of experience. I would receive a polite email suggesting a follow-up that rarely materialised.  
               </p>
 
               <div className="border-l-4 border-[#ff3131] pl-6 my-10">
                 <p className="text-xl font-semibold text-[#111110] leading-relaxed">
-                  That is consulting therapy. The leader gets a temporary fix. You get a polite email that goes nowhere. And the real problem — whatever was actually driving the dysfunction — remains unnamed.
+                  And the real issue — whatever prompted the conversation in the first place — would remain unchanged, even if it had been named. That is what free consulting looks like!
                 </p>
               </div>
 
@@ -82,11 +91,11 @@ export default function InterviewTrapPage() {
               </h2>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The interview dynamic misaligns the relationship before it has even begun. An interview implies an applicant and an employer — someone trying to win a role rather than someone being engaged to solve a problem.
+                The interview trap misaligned the relationship before it had even begun. An interview implies an applicant and an employer — someone trying to win a role rather than someone being engaged to solve a problem.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                In reality, the conversation that needs to happen is not "do I like this person?" It is "what is actually causing this dysfunction — and is this the right person to help us address it?"
+                In reality, the conversation that needed to happen is not "do I like this person?" It was "what is actually causing this dysfunction — and is this the right person to help us address it?"
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -94,27 +103,56 @@ export default function InterviewTrapPage() {
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                There is also what I call the black ball problem. After four rounds of interviews across the whole leadership team — each one a polite exploration, each one an opportunity to give away more free thinking — one person exercises a veto and the engagement disappears. You have spent weeks in the interview trap and have nothing to show for it except a slightly better understanding of their problems.
+                There was also what I now recognise as the Black Ball Problem. After four rounds of interviews across the whole leadership team — each one a polite exploration, each one an opportunity to give away more free thinking — one person would exercise a veto and the potential engagement would disappear. Weeks in the Interview Trap, and the only output would be a slightly better understanding of their problems — which they now had too — for free.
               </p>
+              <div className="border-l-8 border-[#ffff00] pl-12 my-10 italic opacity-80 bg-gray-100 p-6 rounded-lg">
+                <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+                  From the Trenches: The Black Ball Problem
+                </h2>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  A leader I had successfully delivered a major transformation for previously asked me to pitch for a new engagement. After positive early conversations with the CTO, I met with his full leadership team. The discussion was open and lively, with differing views across the department heads. When the CTO asked for my perspective, I shared it directly. There was clear disagreement from one senior stakeholder, which I invited into the open. We had a frank discussion.
+                </p>
+                
+                <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  Later, I learned that concerns had been raised with the CEO about both my diagnosis and proposed collaborative approach. The engagement was ultimately vetoed. One person’s dissent was enough.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  Compare that with a previous engagement for a different leader in a different organisation. That leader trusted her own judgment, made a fast decision over lunch, shook hands, and we delivered strong results together. No committee. No veto. Just clarity and momentum.
+                </p>
+
+                <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                  The difference was not my capability. It was the decision-making culture.
+                </p>
+               </div>
 
               <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
-                What I do instead
+                How I Work Differently Now
               </h2>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                I now propose one of two things when a leader reaches out.
+                I now propose one of two things when a leader asks for my help.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The first is a <strong className="text-[#111110]">Working Session</strong>. Rather than talking about the problem, we spend sixty minutes actually working on it. The leader sees how I navigate complexity in real time. I see how the organisation actually thinks and communicates. Both of us learn something useful — and both of us have skin in the game from the start.
+                The first is a <strong className="text-[#111110]">Working Session.</strong>
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The second is a <strong className="text-[#111110]">Diagnostic Conversation</strong>. This is a focused exchange designed to locate where leadership or operational friction is limiting performance. Not a vague exploration of symptoms. A structured conversation that begins to identify the root cause — the gap between what the organisation declares it values and what is actually driving behaviour.
+                Rather than talking about the problem, we spend sixty minutes actually working on it. The leader sees how I navigate complexity in real time. I see how the organisation actually thinks and communicates. Both of us learn something useful — and both of us are invested form the start.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                That conversation has a purpose. It has a direction. And it treats the leader's time — and mine — as something worth respecting.
+                The second is a <strong className="text-[#111110]">Diagnostic Conversation</strong>.
+              </p>
+
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                This is a focused exchange designed to locate where leadership or operational friction is limiting performance. Not a vague exploration of symptoms, but a structured conversation that begins to identify the root cause — the gap between what the organisation declares it values and what is actually driving behaviour.
+              </p>
+
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                That conversation has a purpose. It has a direction. And it treats the leader's time — and mine — as something to be respected.
               </p>
 
               <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
@@ -122,19 +160,25 @@ export default function InterviewTrapPage() {
               </h2>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                Leaders in high-pressure organisations don't need another exploratory chat. They need reduced friction, clearer decisions, and a more coherent leadership team.
+                Leaders in high-pressure organisations don’t need another exploratory conversation. They need reduced friction, sharper decisions, and a leadership team that actually pulls in the same direction.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The first conversation should signal what the working relationship will feel like — structured, honest, outcome-focused. Not an audition. An engagement.
+                The very first conversation should set the tone for the entire engagement: structured, honest, and outcome-focused. Not an audition. Not free consulting. Not an Interview Trap. A real engagement.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                If your organisation is experiencing transformation fatigue, leadership misalignment, or the persistent sense that something is off but nobody can quite name it — the answer is not another meeting.
+                If your organisation is stuck in transformation fatigue, leadership misalignment, or that nagging feeling that something is fundamentally off — stop scheduling more meetings.
               </p>
 
-              <p className="text-xl font-semibold text-[#111110] mt-8">
+              <p className="text-xl text-center font-semibold text-[#111110] mt-8 mb-6">
                 It is a diagnostic conversation.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                It’s the difference between hoping things improve and actively making them improve. One protects your time and delivers immediate clarity. The other wastes it.
+              </p>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+                Choose accordingly.
               </p>
 
             </div>
@@ -148,14 +192,17 @@ export default function InterviewTrapPage() {
               Book a Diagnostic Conversation
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              A focused 30-minute conversation to locate where the gap is sitting in your organisation — and whether a structured intervention is the right response. No pitch. No proposal.
+              A focused 30-minute conversation to locate where the gap is sitting in your organisation. Together we will explore what the most appropriate response would be to close that gap. 
             </p>
             <a
               href="https://calendly.com/thehumanalignmentco/30min"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
-              Book Yours →
+              Book Yours Now
             </a>
+            <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
+              You will be taken to Calendly to book your session 
+            </p>
           </div>
         </section>
 

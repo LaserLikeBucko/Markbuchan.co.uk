@@ -47,11 +47,19 @@ export default function AboutPage() {
                 Mark Buchan MSc
               </h1>
               <p className="text-xl leading-relaxed text-[#111110] opacity-75 mb-4">
-                Consultant. Coach. Facilitator. Author of The Hidden Gap.
+                Author of The Hidden Gap.
               </p>
-              <p className="text-lg leading-relaxed text-[#111110] opacity-70">
-                More than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.
+              <p className="text-lg flex-col leading-relaxed text-[#111110] opacity-70 mb-4">
+                Mark works at the intersection of organisational culture, behavioural dynamics, leadership psychology, and complex systems thinking.
               </p>
+              <p className="text-lg leading-relaxed text-[#111110] opacity-70 mb-4">
+                 Through years spent inside transformation programmes, leadership environments, and coaching conversations, he observed the same recurring pattern across industries: the growing gap between what institutions say they value and what they actually reward.
+              </p>
+              <p className="text-lg leading-relaxed text-[#111110] opacity-70 mb-4">
+                 The Hidden Gap is the name Mark gives to this pattern. He provides a framework for understanding it – and for those ready, a way to begin changing it.
+              </p>
+
+
               <div className="mt-8">
                 <a
                   href="https://www.linkedin.com/in/theagileleader/"
@@ -90,7 +98,7 @@ export default function AboutPage() {
                 This is not about changing people. It is about changing what drives behaviour.
               </p>
               <p>
-                It sits at the intersection of values, behaviour, conflict, communication, collaboration and change. It is the work I have been doing for twenty years — and the book I needed to write.
+                It sits at the intersection of values, behaviour, conflict, communication, collaboration and change. It is the work I have been doing for more than twenty years — and the book I needed to write.
               </p>
             </div>
           </div>
@@ -111,17 +119,20 @@ export default function AboutPage() {
         <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
           <div className="mx-auto max-w-3xl px-6">
             <h2 className="text-3xl font-bold text-[#111110] mb-8">
-              What this work is for
+              The Purpose of the Hidden Gap
             </h2>
             <div className="flex flex-col gap-6 text-lg leading-relaxed text-[#111110] opacity-80">
               <p>
                 Sometimes the gap shows up as conflict. Sometimes as stalled change, mixed messages, cynicism or energy drain. Sometimes it shows up in a quieter way — as the nagging sense that something is not adding up but nobody can quite name it.
               </p>
               <p>
-                The aim is not to fix behaviour at the surface, but to understand what is driving it underneath — and create the conditions for alignment to become possible.
+                The aim is not to fix behaviour at the surface, but to understand what is driving it underneath. This enables leaders to create the conditions for alignment to become possible. That is <strong>why</strong> we do the work.
               </p>
               <p>
-                That is the work. Whether it happens in a one-to-one coaching conversation, a leadership team workshop, a two-week organisational diagnostic, or through a book that gives someone language for what they have been sensing for years.
+                Whether it happens in a one-to-one coaching conversation, a leadership team workshop, a two-week organisational diagnostic, or through a book that gives someone language for what they have been sensing for some time. 
+              </p>
+              <p>
+                That is <strong>how</strong> we do the work.
               </p>
             </div>
           </div>
@@ -144,9 +155,9 @@ export default function AboutPage() {
                 </div>
                 <a
                   href="/book"
-                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
                 >
-                  Go to the book →
+                  Explore the book
                 </a>
               </div>
 
@@ -159,9 +170,9 @@ export default function AboutPage() {
                 </div>
                 <a
                   href="/work-with-me"
-                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
                 >
-                  Explore working together →
+                  Consider working with me
                 </a>
               </div>
 
@@ -174,9 +185,9 @@ export default function AboutPage() {
                 </div>
                 <a
                   href="/the-hidden-gap-diagnostic"
-                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-8 inline-flex items-center text-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
                 >
-                  Take the diagnostic →
+                  Take the free diagnostic
                 </a>
               </div>
 
