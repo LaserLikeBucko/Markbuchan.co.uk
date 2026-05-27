@@ -244,11 +244,14 @@ export default function ForHRLeadersPage() {
               No pitch. No proposal. Just an honest conversation.
             </p>
             <a
-              href="https://calendly.com/thehumanalignmentco/30min"
+              href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
               Book Your Diagnostic Conversation →
             </a>
+            <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
+              You will be taken to Calendly to book your session 
+            </p>
             <p className="mt-6 text-sm text-[#111110] opacity-40">
               Or email iam@markbuchan.co.uk directly.
             </p>

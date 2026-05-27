@@ -195,7 +195,7 @@ export default function InterviewTrapPage() {
               A focused 30-minute conversation to locate where the gap is sitting in your organisation. Together we will explore what the most appropriate response would be to close that gap. 
             </p>
             <a
-              href="https://calendly.com/thehumanalignmentco/30min"
+              href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
               Book Yours Now

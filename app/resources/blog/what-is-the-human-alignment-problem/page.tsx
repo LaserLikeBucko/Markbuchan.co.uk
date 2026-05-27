@@ -172,11 +172,14 @@ export default function HumanAlignmentProblemPage() {
               A focused 30-minute conversation to locate where the gap is sitting in your organisation — and whether a structured intervention is the right response.
             </p>
             <a
-              href="https://calendly.com/thehumanalignmentco/30min"
+              href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
               Book Yours →
             </a>
+            <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
+              You will be taken to Calendly to book your session 
+            </p>
           </div>
         </section>
 

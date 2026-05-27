@@ -255,11 +255,14 @@ export default function DiagnosticEngagementPage() {
               If it isn't — we will tell you that too.
             </p>
             <a
-              href="https://calendly.com/thehumanalignmentco/30min"
+              href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
               Book Your Diagnostic Conversation →
             </a>
+            <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
+              You will be taken to Calendly to book your session 
+            </p>
             <p className="mt-6 text-sm text-white opacity-30">
               Or email iam@markbuchan.co.uk directly.
             </p>
