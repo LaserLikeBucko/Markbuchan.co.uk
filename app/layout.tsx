@@ -16,6 +16,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://markbuchan.co.uk'),
   title: "Mark Buchan MSc — Human Alignment Consultant & Author",
   description: "Helping leaders close the gap between the values their organisation declares and the values actually running the show. Author of The Hidden Gap.",
   keywords: [
