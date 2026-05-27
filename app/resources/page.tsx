@@ -110,6 +110,23 @@ export default function ResourcesPage() {
                 </span>
               </a>
 
+              {/* IWHAT IS THE HUMAN ALIGNMENT PROBLEM */}
+              <a
+                href="/resources/blog/what-is-the-human-alignment-problem"
+                className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8 hover:border-[#ff3131] transition-colors group"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Leadership</p>
+                <h3 className="text-xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  What is the Human Alignment Problem?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm flex-1">
+                  Why human systems drift into misalignment, why organisational theatre emerges, and why you cannot automate your way out of a values problem.
+                </p>
+                <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  Read article →
+                </span>
+              </a>
+
               {/* GAMES ORGANISATIONS PLAY - COMING SOON */}
               <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white p-8 opacity-70">
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Organisation</p>

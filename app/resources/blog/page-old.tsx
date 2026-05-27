@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
@@ -9,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Blog — Articles on Human Alignment & Leadership | Mark Buchan MSc",
     description: "Articles on human alignment, values, leadership and organisational culture.",
-    images: [{ url: "/images/og/og-blog.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-overcoming-the-interview-trap.png", width: 1920, height: 1080 }],
   },
 }
 
@@ -56,14 +55,10 @@ export default function BlogIndexPage() {
                 href="/resources/blog/overcoming-the-interview-trap"
                 className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
               >
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
-                  <Image
-                    src="/images/og/og-overcoming-the-interview-trap.png"
-                    alt="Overcoming the Interview Trap"
-                    width={1920}
-                    height={1080}
-                    className="h-full w-full object-contain"
-                  />
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[#111110] flex items-center justify-center flex-shrink-0">
+                  <span className="font-bold text-[#ffff00] text-base tracking-wide uppercase px-6 text-center">
+                    The Interview Trap
+                  </span>
                 </div>
                 <div className="flex flex-col gap-3 p-8 flex-1">
                   <div className="flex items-center gap-3">
@@ -90,18 +85,15 @@ export default function BlogIndexPage() {
                 href="/resources/blog/what-is-the-human-alignment-problem"
                 className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
               >
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
-                  <Image
-                    src="/images/og/og-what-is-the-human-alignment-problem.png"
-                    alt="What is the Human Alignment Problem"
-                    width={1000}
-                    height={200}
-                    className="h-full w-full object-contain"
-                  />
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[#111110] flex items-center justify-center flex-shrink-0">
+                  <span className="font-bold text-[#ffff00] text-base tracking-wide uppercase px-6 text-center">
+                    What is the Human Alignment Problem?
+                  </span>
                 </div>
+                
                 <div className="flex flex-col gap-3 p-8 flex-1">
                   <div className="flex items-center gap-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Human Alignment</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Leadership</p>
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
                     <p className="text-xs text-muted-foreground">5 min read</p>
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
