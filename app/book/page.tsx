@@ -1,12 +1,73 @@
 "use client"
 
 import Image from "next/image"
-import { useState, type FormEvent } from "react"
+import { useState, useEffect, type FormEvent } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+
+const REVIEWS = [
+  {
+    quote: "Turns the light on. Leads you through the mistakes that resonate before unwrapping the reasons they are being made.",
+    name: "Mick Power",
+    title: "Programme & Transformation Leader",
+  },
+  {
+    quote: "A hugely insightful read. Organisational issues hiding in plain sight — a read that would benefit many organisations and leaders.",
+    name: "Mick Power",
+    title: "Programme & Transformation Leader",
+  },
+  {
+    quote: "Exposes a shortfall in organisations testing their capability to implement proposals and improve performance. A valuable subject.",
+    name: "John Wilson",
+    title: "Executive Transformation Consultant & Author | 35+ years in enterprise change",
+  },
+  // BECKY — uncomment when confirmed
+  // {
+  //   quote: "I love the bit about values being exercised not compromised.",
+  //   name: "Becky",
+  //   title: "Head of PMO | Financial Services",
+  // },
+]
+
+function ReviewCarousel() {
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % REVIEWS.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const r = REVIEWS[current]
+
+  return (
+    <div className="relative">
+      <div className="rounded-2xl border-2 border-[#111110] bg-white p-10 flex flex-col gap-6 min-h-[220px]">
+        <p className="text-[#111110] leading-relaxed text-xl flex-1">"{r.quote}"</p>
+        <div>
+          <p className="font-bold text-[#111110]">{r.name}</p>
+          <p className="text-sm text-[#111110] opacity-60">{r.title}</p>
+        </div>
+      </div>
+      <div className="flex justify-center gap-3 mt-6">
+        {REVIEWS.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-3 h-3 rounded-full border-2 border-[#111110] transition-all ${
+              i === current ? "bg-[#111110]" : "bg-transparent"
+            }`}
+            aria-label={`Go to review ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function BookPage() {
   const [email, setEmail] = useState("")
@@ -180,6 +241,36 @@ export default function BookPage() {
               It closes because they see more clearly."
             </p>
             <p className="mt-4 text-sm text-white opacity-40">— The Hidden Gap</p>
+          </div>
+        </section>
+
+        {/* REVIEWS */}
+        <section className="py-24 bg-white">
+          <div className="mx-auto max-w-3xl px-6">
+            <div className="text-center mb-16">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 mb-4">
+                Early readers
+              </p>
+              <h2 className="text-3xl font-bold text-[#111110]">
+                What people are saying
+              </h2>
+            </div>
+
+            {/* DESKTOP: CAROUSEL — MOBILE: STACKED */}
+            <div className="hidden md:block">
+              <ReviewCarousel />
+            </div>
+            <div className="md:hidden flex flex-col gap-6">
+              {REVIEWS.map((r, i) => (
+                <div key={i} className="rounded-2xl border-2 border-[#111110] bg-white p-8 flex flex-col gap-6">
+                  <p className="text-[#111110] leading-relaxed text-lg">"{r.quote}"</p>
+                  <div className="mt-auto">
+                    <p className="font-bold text-[#111110]">{r.name}</p>
+                    <p className="text-sm text-[#111110] opacity-60">{r.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

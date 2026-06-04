@@ -115,10 +115,23 @@ export default function HomeV2Page() {
 
         <hr className="border-0 border-t-4 border-dashed border-[#111110] m-0" />
 
+        {/* SOCIAL PROOF QUOTE */}
+        <section className="py-12 bg-white">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <p className="text-lg md:text-xl leading-relaxed text-[#111110] italic">
+              "Organisational issues hiding in plain sight — a hugely insightful read that would benefit many organisations and leaders."
+            </p>
+            <p className="mt-4 text-sm font-semibold text-[#111110]">Mick Power</p>
+            <p className="text-sm text-[#111110] opacity-50">Programme & Transformation Leader</p>
+          </div>
+        </section>
+
+        <hr className="border-0 border-t-2 border-dashed border-[#111110]/20 m-0" />
+
         <section className="pb-20 pt-16">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h1 className="mx-auto max-w-2xl text-2xl md:text-4xl font-semibold leading-snug text-[#111110]">
-              Organisations don’t have a dysfunctional behaviour problem.
+              Organisations don't have a dysfunctional behaviour problem.
               <br />
               They have a human alignment problem.
             </h1>

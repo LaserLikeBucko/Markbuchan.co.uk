@@ -125,10 +125,10 @@ export default function WorkWithMePage() {
                   </p>
                 </div>
                 <a
-                  href="#diagnostic-conversation"
+                  href="/coaching"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
                 >
-                  Start a conversation →
+                  Check out my coaching offers
                 </a>
               </div>
 
@@ -201,9 +201,7 @@ export default function WorkWithMePage() {
             >
               Book Your Diagnostic Conversation →
             </a>
-            <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              You will be taken to Calendly to book your session 
-            </p>
+            
             <p className="mt-6 text-sm text-white opacity-30">
               Or email iam@markbuchan.co.uk directly.
             </p>
