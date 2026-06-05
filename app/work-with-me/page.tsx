@@ -80,10 +80,16 @@ export default function WorkWithMePage() {
         <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
           <div className="mx-auto max-w-6xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
-              How we can work together
+              Where is the gap showing up?
             </p>
-            <h2 className="text-3xl font-bold text-[#111110] mb-16">
-              Three ways in. One direction.
+            <h2 className="text-2xl font-bold text-[#111110] mb-16">
+              Every organisation has a gap between what it says it values and what is actually driving behaviour.
+
+              Sometimes that gap shows up in organisational performance.
+              Sometimes it shows up in leadership.
+              Sometimes it shows up in teams and culture.
+
+              The first step is recognising where it is costing you.
             </h2>
 
             <div className="grid gap-6 md:grid-cols-3">
@@ -91,60 +97,57 @@ export default function WorkWithMePage() {
               {/* DIAGNOSTIC */}
               <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
                 <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Flagship offer</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Organisational Performance</p>
                   <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    The Human Alignment Diagnostic
+                    Why are we still stuck?
                   </h3>
                   <p className="text-[#333330] leading-relaxed">
-                    A two-week senior engagement. We gain access to your whole organisation, surface what is actually driving behaviour, and deliver a Situation Appraisal with options. Then we co-design the solution together.
-                  </p>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    For CEOs, MDs, and executive teams ready for the honest conversation.
-                  </p>
+                    Everything looks reasonable on paper.
+
+                    Yet progress is slower than expected. The same issues keep resurfacing. Change initiatives stall. Teams pull in different directions.
+
+                    When capable people keep producing disappointing outcomes, the problem is rarely capability. More often, it is alignment.</p>
+                  
                 </div>
                 <a
                   href="/leadership-alignment-diagnostic"
-                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
                 >
-                  Learn more →
+                  Investigate the Real Problem →
                 </a>
               </div>
 
               {/* COACHING */}
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8">
+              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
                 <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Individual work</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Leadership</p>
                   <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    Coaching
+                    When the map no longer works.
                   </h3>
                   <p className="text-[#333330] leading-relaxed">
-                    One-to-one coaching for leaders working with values conflicts, decision-making under pressure, and the gap between who they want to be and how they are showing up.
+                    You've achieved results before. But difficult decisions, competing priorities and values conflicts can make even experienced leaders question their direction. Sometimes the challenge isn't effort or capability. It's that the assumptions guiding your decisions no longer match the reality you're navigating.
                   </p>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Uses the ECHO framework and Inner Coach methodology from The Hidden Gap.
-                  </p>
+                  
                 </div>
                 <a
                   href="/coaching"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
                 >
-                  Check out my coaching offers
+                  Navigate Forward →
                 </a>
               </div>
 
               {/* WORKSHOPS */}
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8">
+              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
                 <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Team work</p>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Team & Culture</p>
                   <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    Workshops & Facilitation
+                    The conversation nobody is having.
                   </h3>
                   <p className="text-[#333330] leading-relaxed">
-                    Facilitated sessions for leadership teams and organisations exploring values, behaviour and culture. From 90-minute introductions to full-day team alignment sessions.
+                    Every organisation has issues everyone senses but nobody quite names. Misalignment. Conflicting priorities. Cultural contradictions. Frustrations hiding in plain sight. Facilitated workshops create the conditions for honest conversations that lead somewhere useful.
                   </p>
-                  <p className="mt-4 text-sm text-muted-foreground">
-                    Available as standalone sessions or as part of the Human Alignment Diagnostic.
-                  </p>
+                
                 </div>
                 <a
                   href="#diagnostic-conversation"

@@ -3,10 +3,10 @@ import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata = {
-  title: "Coaching — Values-Led Leadership | Mark Buchan MSc",
+  title: "Values-Led Leadership Coaching| Mark Buchan MSc",
   description: "One-to-one and group coaching for leaders who sense something is off but can't quite name it yet. Values-led coaching using the Hidden Gap methodology.",
   openGraph: {
-    title: "Coaching — Values-Led Leadership | Mark Buchan MSc",
+    title: "Values-Led Leadership Caoching| Mark Buchan MSc",
     description: "One-to-one and group coaching for leaders who sense something is off but can't quite name it yet.",
     images: [{ url: "/images/og/og-work-with-me.png", width: 1920, height: 1080 }],
   },
@@ -23,13 +23,13 @@ export default function CoachingPage() {
         <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
-              Coaching
+              Values-Led Leadership
             </p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#111110] text-balance mb-6">
-              Most coaching works on behaviour.<br />This works on what's driving it.
+              Have you been following the wrong map?
             </h1>
             <p className="text-xl leading-relaxed text-[#111110] opacity-75 max-w-2xl mx-auto mb-10">
-              Every client arrives with a different gap. The work is forensic — we find what is actually running you, name it, and give you a practical path to closing it.
+              You have experience. You have responsibility. You've achieved results before. But if the assumptions guiding your decisions no longer match the reality you're navigating, working harder won't solve the problem. The challenge may not be the territory. It may be the map.
             </p>
             <a
               href="#coaching-options"
@@ -52,19 +52,16 @@ export default function CoachingPage() {
             </h2>
             <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                Maybe it's the meeting that ends in agreement and changes nothing. The feedback you keep receiving and keep filing away. The decision that felt slightly wrong as you made it — but you made it anyway. The version of yourself that shows up in the boardroom and the version you'd prefer.
+                Maybe it's the meeting that ends in agreement and changes nothing. The feedback you keep receiving and keep filing away. The decision that felt slightly wrong as you made it — but you made it anyway. The version of yourself that shows up in the boardroom versus the version you'd prefer.
               </p>
               <p>
-                That feeling is the gap making itself known. The distance between the values you hold and the values that are actually driving your behaviour day to day. It shows up as a niggle. A drain. A sense that something is slightly out of alignment — and has been for a while.
+                That feeling is the hidden gap making itself known. The distance between the values you hold and the values that are actually driving your behaviour day to day. It shows up as a niggle. A drain. A sense that something is slightly out of alignment — and maybe has been for a while.
               </p>
               <p className="text-[#111110] font-semibold text-xl border-l-4 border-[#ff3131] pl-6">
-                The gap doesn't close because you try harder. It closes because you see more clearly.
+                The hidden gap doesn't close because you try harder. It closes because you see more clearly.
               </p>
               <p>
-                That's the work. Using the ECHO framework and Inner Coach methodology from <em>The Hidden Gap</em> — we surface what is running underground, bring it into the light, and give you a practical way to work with it.
-              </p>
-              <p>
-                Delivered online via WhatsApp. A real conversation when you need it.
+                That's the work. Using the VIM (Values Integrity Model) and Inner Coach methodology from <em>The Hidden Gap</em> — we surface what is running underground, bring it into the light, and give you a practical way to work with it.
               </p>
             </div>
           </div>
@@ -77,7 +74,7 @@ export default function CoachingPage() {
               Does any of this sound familiar?
             </p>
             <h2 className="text-3xl font-bold text-[#ffff00] mb-16 text-center">
-              The leaders I work with often say one of these things.
+              The leaders I work with often say one of these things...
             </h2>
             <div className="grid gap-8 md:grid-cols-3">
               <div className="border border-[#ffff00]/20 rounded-2xl p-8">
@@ -155,18 +152,39 @@ export default function CoachingPage() {
 
             <div className="grid gap-6 md:grid-cols-3">
 
+              {/* GROUP */}
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8">
+                <div className="flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Best value</p>
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
+                    Walk With Others
+                  </h3>
+                  <p className="text-[#333330] leading-relaxed mb-6">
+                    Small-group coaching for leaders exploring similar territory. Using The Hidden Gap Workbook as a guide, this sessions provide ad-hoc support for leaders navigating their own journey. Sessions delivered once monthly places restricted to ensure highest quality support.
+                  </p>
+                  <p className="text-4xl font-bold text-[#111110]">£97</p>
+                  <p className="text-sm text-muted-foreground mt-2">90 mins/Session  </p>
+                </div>
+                <a
+                  href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Register interest →
+                </a>
+              </div>
+
               {/* ONE-OFF */}
               <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
                 <div className="flex-1">
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Single session</p>
                   <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    One-off Session
+                    Find Your Bearings
                   </h3>
                   <p className="text-[#333330] leading-relaxed mb-6">
-                    A focused 60-minute session on whatever is live for you right now. A decision you're sitting with. A conflict you can't name. A pattern you keep repeating. We find the gap and you leave with something you can act on.
+                    A focused 60-minute session on whatever is live for you right now. A decision you're sitting with. A conflict you can't name. A pattern you keep repeating. We find your hidden gap and you leave with something you can act on.
                   </p>
                   <p className="text-4xl font-bold text-[#111110]">£300</p>
-                  <p className="text-sm text-muted-foreground mt-2">60 mins · Online via WhatsApp</p>
+                  <p className="text-sm text-muted-foreground mt-2">Book via Calendly</p>
                 </div>
                 <a
                   href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
@@ -180,49 +198,30 @@ export default function CoachingPage() {
               <div className="flex h-full flex-col rounded-2xl border-2 border-[#ff3131] bg-white p-8 relative">
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap">
                   <span className="bg-[#ff3131] text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full">
-                    Recommended
+                    Best value for longer term support
                   </span>
                 </div>
                 <div className="flex-1">
                   <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Full programme</p>
                   <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    Coaching Programme
+                    Navigate Forward
                   </h3>
                   <p className="text-[#333330] leading-relaxed mb-6">
-                    Six sessions over six weeks. Each one builds on the last. By the end you will have mapped your values, named what has been running underground, and made at least one choice you have been avoiding. The work that actually shifts something.
+                    Six sessions of structured leadership alignment coaching to uncover what is running underground and make lasting changes. Delivered at your pace to your goals. My most popular programme including the Inner Coach methodology.
                   </p>
                   <p className="text-4xl font-bold text-[#111110]">£1,200</p>
-                  <p className="text-sm text-muted-foreground mt-2">6 × 60 mins · Online via WhatsApp</p>
+                  <p className="text-sm text-muted-foreground mt-2">6 × 60 mins · Click below to book exploratory chat</p>
                   <p className="text-sm text-[#ff3131] font-medium mt-2">Save £600 vs individual sessions</p>
                 </div>
                 <a
                   href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#ff3131] px-5 py-3 text-white font-semibold hover:bg-[#111110] transition-colors"
                 >
-                  Book now →
+                  Book Exploratory Chat →
                 </a>
               </div>
 
-              {/* GROUP */}
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8">
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">Best value</p>
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    Group Session
-                  </h3>
-                  <p className="text-[#333330] leading-relaxed mb-6">
-                    A 90-minute facilitated session with a small group of leaders working on similar territory. The depth of real coaching with the added dimension of honest peer reflection. Numbers kept small deliberately. Dates announced regularly.
-                  </p>
-                  <p className="text-4xl font-bold text-[#111110]">£97</p>
-                  <p className="text-sm text-muted-foreground mt-2">90 mins · Per seat · Online via WhatsApp</p>
-                </div>
-                <a
-                  href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
-                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Register interest →
-                </a>
-              </div>
+              
 
             </div>
 
@@ -247,7 +246,7 @@ export default function CoachingPage() {
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ff3131]">
-              From the trenches
+              From the trenches <em>(copyright The Hidden Gap)</em>
             </p>
             <Separator className="mb-12 max-w-16 bg-[#ff3131]/40" />
             <h2 className="text-3xl font-bold text-[#111110] mb-8">
@@ -255,7 +254,7 @@ export default function CoachingPage() {
             </h2>
             <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted-foreground">
               <p>
-                Alisa arrived at coaching convinced her team was the problem. They were resistant. Mediocre. Not cutting it. She'd given the situation everything a committed leader gives — clearer direction, better processes, harder conversations.
+                Alisa arrived at coaching convinced her team was the problem. They were resistant. Mediocre. Not cutting it. She'd given the situation everything a committed leader gives — clearer direction, better processes, firmer conversations.
               </p>
               <p>
                 Over the course of our sessions, something became visible that she hadn't been able to see from inside it. The feedback she'd been receiving — and filing away as unfair — was pointing directly at something real. The mirror she'd been using to build her self-image as a leader was showing her a version of the room that wasn't quite accurate.
@@ -274,7 +273,7 @@ export default function CoachingPage() {
         <section className="bg-[#111110] py-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="text-lg leading-relaxed text-white/60 mb-6 max-w-xl mx-auto">
-              All coaching uses the ECHO framework and Inner Coach methodology from <em className="text-white/80">The Hidden Gap: Solving the Human Alignment Problem</em> — available now.
+              All coaching utilises the the VIM and ECHO frameworks and Inner Coach methodology from <em className="text-white/80">The Hidden Gap: Solving the Human Alignment Problem</em> — available now.
             </p>
             <a
               href="/book"
