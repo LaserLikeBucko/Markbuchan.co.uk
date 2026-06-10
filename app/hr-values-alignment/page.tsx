@@ -222,7 +222,7 @@ export default function ForHRLeadersPage() {
                 Mark has spent more than twenty years working inside organisations where the gap between declared and operating values was quietly doing its damage. As a consultant, coach, and facilitator he has worked at every level — from frontline teams to executive leadership — surfacing what is actually driving behaviour and creating the conditions for honest, lasting change.
               </p>
               <p>
-                He is the author of <em>The Hidden Gap: Solving the Human Alignment Problem</em> — the most complete account of the Values Integrity Model, ECHO framework, and the practical tools for closing the gap between declared values and operating reality.
+                He is the author of <em>The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</em> — the most complete account of the Values Integrity Model, ECHO framework, and the practical tools for closing the gap between declared values and operating reality.
               </p>
               <p className="text-[#ffff00] opacity-100 font-semibold">
                 He is not a soft skills trainer. He is an organisational diagnostician — and he will tell your leadership what HR has been trying to tell them for years.

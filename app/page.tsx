@@ -225,7 +225,7 @@ export default function HomeV2Page() {
                 The Hidden Gap
               </h2>
               <p className="mt-2 text-xl text-stone-700">
-                Solving the Human Alignment Problem
+                Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </p>
               <p className="mt-6 text-lg leading-relaxed text-stone-700">
                 A forthcoming book exploring how operating values drive

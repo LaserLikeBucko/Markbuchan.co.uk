@@ -273,7 +273,7 @@ export default function CoachingPage() {
         <section className="bg-[#111110] py-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="text-lg leading-relaxed text-white/60 mb-6 max-w-xl mx-auto">
-              All coaching utilises the the VIM and ECHO frameworks and Inner Coach methodology from <em className="text-white/80">The Hidden Gap: Solving the Human Alignment Problem</em> — available now.
+              All coaching utilises the the VIM and ECHO frameworks and Inner Coach methodology from <em className="text-white/80">The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</em> — available now.
             </p>
             <a
               href="/book"

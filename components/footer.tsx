@@ -28,7 +28,7 @@ export function Footer() {
             <br />
             Author of <span className="italic">The Hidden Gap</span>
             <br />
-            Solving the Human Alignment Problem.
+            Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture.
             <br />
             How operating values drive behaviour, conflict and culture.
           </p>

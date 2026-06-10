@@ -236,7 +236,7 @@ export default function DiagnosticEngagementPage() {
                 His Masters in Executive Coaching examined the real value organisations derive from coaching — giving academic grounding to what he was already seeing in practice.
               </p>
               <p>
-                He is the author of <em>The Hidden Gap: Solving the Human Alignment Problem</em> — the most complete account of the Values Integrity Model and how to use it in practice.
+                He is the author of <em>The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</em> — the most complete account of the Values Integrity Model and how to use it in practice.
               </p>
             </div>
           </div>

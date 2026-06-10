@@ -17,7 +17,7 @@ export default function HiddenGapWorkshopPage() {
               <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#111110]">
                 The Hidden Gap:
                 <br />
-                Solving the Human Alignment Problem
+                Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </h1>
               <p className="mt-6 text-xl leading-relaxed text-stone-700">
                 The gap between what we say matters… and what actually drives behaviour.
@@ -233,7 +233,7 @@ export default function HiddenGapWorkshopPage() {
                   on values, behaviour, conflict and culture.
                 </p>
                 <p>
-                  <strong>The Hidden Gap: Solving the Human Alignment Problem</strong>
+                  <strong>The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</strong>
                   <br />
                   <em>How operating values drive behaviour, conflict and culture</em>
                 </p>

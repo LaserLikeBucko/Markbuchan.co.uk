@@ -134,7 +134,7 @@ export default function HumanAlignmentProblemPage() {
             <div className="bg-[#ffff00] rounded-2xl border-2 border-[#111110] p-8 my-10">
               <h3 className="text-xl font-bold text-[#111110] mb-4">The Hidden Gap</h3>
               <p className="text-lg leading-relaxed text-[#111110] opacity-80 mb-4">
-                My book — <em>The Hidden Gap: Solving the Human Alignment Problem</em> — is published on June 19th.
+                My book — <em>The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</em> — is published on June 19th.
               </p>
               <p className="text-[#111110] opacity-80 mb-2">In it, I explore:</p>
               <ul className="flex flex-col gap-2 mb-6">

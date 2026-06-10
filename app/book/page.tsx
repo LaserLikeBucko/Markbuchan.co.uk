@@ -131,7 +131,7 @@ export default function BookPage() {
                 The Hidden Gap
               </h1>
               <p className="text-xl md:text-2xl text-[#111110] opacity-75 mb-2">
-                Solving the Human Alignment Problem
+                Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </p>
               <p className="text-base text-[#111110] opacity-60 mb-8">
                 How operating values drive behaviour, conflict and culture
