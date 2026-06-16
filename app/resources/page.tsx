@@ -145,6 +145,39 @@ export default function ResourcesPage() {
           </div>
         </section>
 
+        {/* COMMUNITY SECTION */}
+        <section className="bg-[#111110] py-24 border-t-4 border-b-4 border-dashed border-[#ffff00]">
+          <div className="mx-auto max-w-3xl px-6 text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+              Community
+            </p>
+            <Separator className="mx-auto mb-8 max-w-16 bg-[#ffff00]/40" />
+            <h2 className="text-3xl font-bold text-[#ffff00] mb-6">
+              From Our Trenches
+            </h2>
+            <p className="text-lg leading-relaxed text-white opacity-65 mb-4 max-w-xl mx-auto">
+              Most organisations have two sets of values. The ones on the wall. 
+              And the ones that actually run the show.
+            </p>
+            <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
+              From Our Trenches is the space for people who already know what's 
+              wrong — but can't say it out loud at work. A community for honest 
+              conversation about the gap between the two.
+            </p>
+            <a
+              href="https://thehumanalignmentco.substack.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
+            >
+              Join the Community →
+            </a>
+            <p className="mt-6 text-sm text-white opacity-30">
+              Free to join. No spam. Unsubscribe any time.
+            </p>
+          </div>
+        </section>
+
         {/* BOOK CTA */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">

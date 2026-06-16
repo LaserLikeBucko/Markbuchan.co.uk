@@ -10,26 +10,35 @@ import { Separator } from "@/components/ui/separator"
 
 const REVIEWS = [
   {
+    quote: "Mark Buchan has written a thoughtful and insightful book that challenges us to look beyond what people say and examine the deeper forces that drive behaviour. The Hidden Gap offers valuable perspectives on leadership, culture, change and human systems, while also providing practical advice for recognising and addressing the gaps that can emerge between intention and action. It will leave many readers reflecting on their own assumptions long after they have finished the final chapter.",
+    name: "Jason Wright",
+    title: "Director, Agile Business Consortium",
+  },
+  {
     quote: "Turns the light on. Leads you through the mistakes that resonate before unwrapping the reasons they are being made.",
     name: "Mick Power",
     title: "Programme & Transformation Leader",
   },
   {
     quote: "A hugely insightful read. Organisational issues hiding in plain sight — a read that would benefit many organisations and leaders.",
-    name: "Mick Power",
-    title: "Programme & Transformation Leader",
+    name: "Paul Underdownr",
+    title: "Senior Product Owner",
   },
   {
     quote: "Exposes a shortfall in organisations testing their capability to implement proposals and improve performance. A valuable subject.",
     name: "John Wilson",
     title: "Executive Transformation Consultant & Author | 35+ years in enterprise change",
   },
-  // BECKY — uncomment when confirmed
-  // {
-  //   quote: "I love the bit about values being exercised not compromised.",
-  //   name: "Becky",
-  //   title: "Head of PMO | Financial Services",
-  // },
+  {
+    quote: "Great at raising awareness and providing practical tools to be more true to yourself and how you work with others.",
+    name: "Mick Power",
+    title: "Programme & Transformation Leader",
+  },
+  {
+    quote: "An excellent book and a pleasure to read it. ",
+    name: "Becky Davis",
+    title: "Head of PMO | Financial Services",
+ },
 ]
 
 function ReviewCarousel() {
@@ -156,40 +165,20 @@ export default function BookPage() {
                 </a>
               </div>
 
+            {/* FREE CHAPTER */}
+            <div className="mt-6">
+              <a
+                href="/free-chapter"
+                className="inline-flex items-center justify-center rounded-md bg-[#ff3131] px-6 py-4 text-white text-lg font-semibold hover:bg-[#111110] hover:text-[#ffff00] transition-colors"
+              >
+                Read the first chapter free →
+              </a>
+              <p className="mt-3 text-sm text-[#111110] opacity-50">
+                No email required. Just read.
+              </p>
+            </div>
 
-              {/* EMAIL CAPTURE */}
-              <div className="mt-6">
-                {submitted ? (
-                  <div className="rounded-lg border-2 border-[#111110] bg-white px-6 py-5">
-                    <p className="font-semibold text-[#111110]">You're on the list.</p>
-                    <p className="mt-1 text-sm text-[#111110] opacity-60">
-                      I'll send the first chapter as soon as it is ready.
-                    </p>
-                  </div>
-                ) : (
-                  <>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="h-12 flex-1 border-2 border-[#111110] bg-white text-[#111110] placeholder:text-[#111110]/40 focus:border-[#ff3131]"
-                      />
-                      <Button
-                        type="submit"
-                        className="h-12 bg-[#111110] text-[#ffff00] hover:bg-[#ff3131] px-6 text-base font-semibold"
-                      >
-                        Get the first chapter
-                      </Button>
-                    </form>
-                    <p className="mt-3 text-sm text-[#111110] opacity-50">
-                      Free chapter. No spam. Unsubscribe anytime.
-                    </p>
-                  </>
-                )}
-              </div>
+              
             </div>
           </div>
         </section>

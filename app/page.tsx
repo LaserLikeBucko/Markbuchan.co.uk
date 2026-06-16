@@ -42,7 +42,7 @@ export default function HomeV2Page() {
 
       <main className="bg-white">
         <section className="relative overflow-hidden pt-24 pb-16">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-[400px] bg-[#ffff00] border-b-4 border-dashed border-[#111110]" />
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-[400px] bg-[#ffff00]" style={{borderBottom: '2px solid #ffffff', boxShadow: '0 4px 12px 2px rgba(255,49,49,0.5)'}} />
 
           <div
             aria-hidden="true"
@@ -113,7 +113,7 @@ export default function HomeV2Page() {
           </div>
         </section>
 
-        <hr className="border-0 border-t-4 border-dashed border-[#111110] m-0" />
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 8px 2px rgba(255,255,255,0.6)'}} />
 
         {/* SOCIAL PROOF QUOTE */}
         <section className="py-12 bg-white">
