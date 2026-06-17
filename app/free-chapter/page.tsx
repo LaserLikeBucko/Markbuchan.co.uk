@@ -5,7 +5,11 @@ import { Separator } from "@/components/ui/separator"
 export const metadata = {
   title: "Free Chapter — The Hidden Gap | Mark Buchan MSc",
   description: "Read the first chapter of The Hidden Gap by Mark Buchan MSc. Free download. Discover the gap between what organisations say they value and what actually drives behaviour.",
-}
+openGraph: {
+    title: "Free Chapter — The Hidden Gap | Mark Buchan MSc",
+    description: "Read the first chapter of The Hidden Gap by Mark Buchan MSc. Free download. Discover the gap between what organisations say they value and what actually drives behaviour.",
+    images: [{ url: "/images/og/og-free-chapter", width: 1200, height: 630 }],
+  },}
 
 export default function FreeChapterPage() {
   return (
