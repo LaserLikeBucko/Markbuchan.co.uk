@@ -8,7 +8,7 @@ export const metadata = {
 openGraph: {
     title: "Free Chapter — The Hidden Gap | Mark Buchan MSc",
     description: "Read the first chapter of The Hidden Gap by Mark Buchan MSc. Free download. Discover the gap between what organisations say they value and what actually drives behaviour.",
-    images: [{ url: "/images/og/og-free-chapter", width: 1200, height: 630 }],
+    images: [{ url: "/images/og/og-free-chapter.jpg", width: 1200, height: 630 }],
   },}
 
 export default function FreeChapterPage() {

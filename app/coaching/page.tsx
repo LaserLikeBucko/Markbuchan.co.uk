@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Values-Led Leadership Caoching| Mark Buchan MSc",
     description: "One-to-one and group coaching for leaders who sense something is off but can't quite name it yet.",
-    images: [{ url: "/images/og/og-work-with-me.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
   },
 }
 

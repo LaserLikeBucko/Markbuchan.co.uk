@@ -8,7 +8,7 @@ export const metadata = {
 openGraph: {
   title: "Leadership Alignment Diagnostic | Mark Buchan MSc",
   description: "A two-week senior engagement that locates your organisation's hidden gap with precision. More humanity. Less PowerPoint.",
-  images: [{ url: "/images/og/og-leadership-diagnostic.png", width: 1920, height: 1080 }],
+  images: [{ url: "/images/og/og-leadership-diagnostic.jpg", width: 1920, height: 1080 }],
 },
 }
 

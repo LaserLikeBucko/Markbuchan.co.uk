@@ -4,7 +4,7 @@ export const metadata = {
   openGraph: {
     title: "Pre-Order The Hidden Gap — Mark Buchan MSc",
     description: "Pre-order The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture. Available June 19th 2026.",
-    images: [{ url: "/images/og/og-book.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-book.jpg", width: 1920, height: 1080 }],
   },
 }
 

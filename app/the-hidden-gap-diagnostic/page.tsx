@@ -7,7 +7,7 @@ export const metadata = {
 openGraph: {
   title: "The Hidden Gap Diagnostic — Free Values Tool | Mark Buchan MSc",
   description: "Locate where your values actually sit — not where you wish they did. Free four-minute diagnostic.",
-  images: [{ url: "/images/og/og-the-hidden-gap-diagnostic.png", width: 1920, height: 1080 }],
+  images: [{ url: "/images/og/og-the-hidden-gap-diagnostic.jpg", width: 1920, height: 1080 }],
 },
 }
 

@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Blog — Articles on Human Alignment & Leadership | Mark Buchan MSc",
     description: "Articles on human alignment, values, leadership and organisational culture.",
-    images: [{ url: "/images/og/og-overcoming-the-interview-trap.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-overcoming-the-interview-trap.jpg", width: 1920, height: 1080 }],
   },
 }
 

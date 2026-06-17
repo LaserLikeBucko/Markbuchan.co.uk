@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   description: "Helping leaders close the gap between declared values and operating reality. Author of The Hidden Gap.",
   type: "website",
   url: "https://markbuchan.co.uk",
-  images: [{ url: "/images/og/og-home.png", width: 1920, height: 1080 }],
+  images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],
 },
 }
 

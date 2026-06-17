@@ -7,7 +7,7 @@ export const metadata = {
 openGraph: {
   title: "Why I Don't Do Interviews Anymore | Mark Buchan MSc",
   description: "The interview trap — why exploratory chats become consulting therapy, and what I do instead.",
-  images: [{ url: "/images/og/og-interview-trap.png", width: 1920, height: 1080 }],
+  images: [{ url: "/images/og/og-interview-trap.jpg", width: 1920, height: 1080 }],
 },
 }
 

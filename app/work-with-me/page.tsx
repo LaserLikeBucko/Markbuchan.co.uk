@@ -8,7 +8,7 @@ export const metadata = {
 openGraph: {
   title: "Work With Me — Human Alignment Diagnostic | Mark Buchan MSc",
   description: "Senior advisory engagements for leaders and organisations navigating the gap between declared values and operating reality.",
-  images: [{ url: "/images/og/og-work-with-me.png", width: 1920, height: 1080 }],
+  images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
 },
 }
 
@@ -68,7 +68,7 @@ export default function WorkWithMePage() {
               </p>
             </div>
             <a
-              href="/resources/blog/interview-trap"
+              href="/resources/blog/overcoming-the-interview-trap"
               className="mt-8 inline-flex items-center text-[#ff3131] font-semibold hover:text-[#111110] transition-colors"
             >
               Read the full article: Why I Don't Do Interviews Anymore →

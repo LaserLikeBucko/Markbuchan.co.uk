@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
               >
                 <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
                   <Image
-                    src="/images/og/og-overcoming-the-interview-trap.png"
+                    src="/images/og/og-overcoming-the-interview-trap.jpg"
                     alt="Overcoming the Interview Trap"
                     width={1920}
                     height={1080}
@@ -92,7 +92,7 @@ export default function BlogIndexPage() {
               >
                 <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
                   <Image
-                    src="/images/og/og-what-is-the-human-alignment-problem.png"
+                    src="/images/og/og-what-is-the-human-alignment-problem.jpg"
                     alt="What is the Human Alignment Problem"
                     width={1000}
                     height={200}

@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "About Mark Buchan MSc — Human Alignment Consultant & Author",
     description: "Mark Buchan has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.",
-    images: [{ url: "/images/og/og-home.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],
   },
 }
 

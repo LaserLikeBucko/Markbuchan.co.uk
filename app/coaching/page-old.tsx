@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Coaching — Values-Led Leadership | Mark Buchan MSc",
     description: "One-to-one and group coaching for leaders working with values conflicts, decision-making under pressure, and the gap between who they want to be and how they are showing up.",
-    images: [{ url: "/images/og/og-work-with-me.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
   },
 }
 

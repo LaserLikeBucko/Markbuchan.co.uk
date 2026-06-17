@@ -12,7 +12,7 @@ export const metadata = {
     siteName: "The Human Alignment Co.",
     images: [
       {
-        url: "https://mark.buchan.co.uk/images/og/og-image.png",
+        url: "https://mark.buchan.co.uk/images/og/og-image.jpg",
         width: 1200,
         height: 630,
       },

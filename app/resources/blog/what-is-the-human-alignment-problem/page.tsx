@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "What Is The Human Alignment Problem? | Mark Buchan MSc",
     description: "Why human systems drift into misalignment, why organisational theatre emerges, and why you cannot automate your way out of a values problem.",
-    images: [{ url: "/images/og/og-what-is-the-human-alignment-problem.png", width: 1920, height: 1080 }],
+    images: [{ url: "/images/og/og-what-is-the-human-alignment-problem.jpg", width: 1920, height: 1080 }],
   },
 }
 
