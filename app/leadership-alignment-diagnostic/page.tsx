@@ -20,7 +20,7 @@ export default function DiagnosticEngagementPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               The Human Alignment Co.
@@ -39,6 +39,8 @@ export default function DiagnosticEngagementPage() {
             </a>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* OPENING PROBLEM */}
         <section className="py-24">
@@ -86,7 +88,9 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* WHAT IT IS */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-3xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               What this is
@@ -107,6 +111,8 @@ export default function DiagnosticEngagementPage() {
             </div>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* HOW IT WORKS */}
         <section className="py-24">
@@ -222,7 +228,9 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* ABOUT MARK */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-3xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               Who you are working with

@@ -19,7 +19,7 @@ export default function DiagnosticPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               Free diagnostic tool
@@ -41,6 +41,8 @@ export default function DiagnosticPage() {
             </a>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* WHAT YOU GET */}
         <section className="py-20">
@@ -85,7 +87,9 @@ export default function DiagnosticPage() {
         </section>
 
         {/* CTA TO TOOL */}
-        <section id="start" className="py-24 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section id="start" className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-2xl font-bold text-[#111110] mb-4">
               Ready to locate your gap?
@@ -103,7 +107,9 @@ export default function DiagnosticPage() {
         </section>
 
         {/* BOOK CTA */}
-        <section className="bg-[#ffff00] py-20 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl font-bold text-[#111110] mb-4">
               Go deeper with the book

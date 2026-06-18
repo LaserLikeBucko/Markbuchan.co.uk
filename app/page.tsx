@@ -1,41 +1,8 @@
-"use client"
-
-import { useState, type FormEvent } from "react"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 export default function HomeV2Page() {
-  const [email, setEmail] = useState("")
-  const [submitted, setSubmitted] = useState(false)
-
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvnddyz"
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    if (!email) return
-
-    const res = await fetch(FORMSPREE_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        source: "homepage",
-        page: "home",
-      }),
-    })
-
-    if (res.ok) {
-      setSubmitted(true)
-      setEmail("")
-    }
-  }
-
   return (
     <>
       <Navigation />
@@ -73,47 +40,18 @@ export default function HomeV2Page() {
               </p>
 
               <div className="mt-6">
-                {submitted ? (
-                  <div className="rounded-lg border border-black/10 bg-white px-6 py-5 text-center">
-                    <p className="font-medium text-foreground">
-                      You’re on the list.
-                    </p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      I’ll send the first chapter as soon as it’s ready.
-                    </p>
-                  </div>
-                ) : (
-                  <>
-                    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                        className="h-12 border-black/10 bg-white text-foreground placeholder:text-muted-foreground"
-                      />
-                      
-                      <Button
-                        type="submit"
-                        className="h-12 bg-accent text-accent-foreground hover:bg-accent/90 text-base font-medium"
-                      >
-                        Get the first chapter
-                      </Button>
-                    </form>
-                    <p className="mt-3 text-sm text-muted-foreground">
-                      Free chapter. No spam. Unsubscribe anytime.
-                    </p>
-
-                    
-                  </>
-                )}
+                <a
+                  href="/free-chapter"
+                  className="inline-flex h-12 w-full items-center justify-center rounded-md bg-accent px-5 text-base font-medium text-accent-foreground hover:bg-accent/90"
+                >
+                  Read the first chapter free
+                </a>
               </div>
             </div>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 8px 2px rgba(255,255,255,0.6)'}} />
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* SOCIAL PROOF QUOTE */}
         <section className="py-12 bg-white">
@@ -126,7 +64,7 @@ export default function HomeV2Page() {
           </div>
         </section>
 
-        <hr className="border-0 border-t-2 border-dashed border-[#111110]/20 m-0" />
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 3px 0px rgba(255,255,255,0.8), 0 0 8px 2px rgba(255,49,49,0.4), 0 0 16px 4px rgba(255,49,49,0.15)'}} />
 
         <section className="pb-20 pt-16">
           <div className="mx-auto max-w-4xl px-6 text-center">
@@ -148,7 +86,7 @@ export default function HomeV2Page() {
           </div>
         </section>
 
-        <section className="border-t-4 border-dashed border-[#111110] bg-[#ffff00] py-20">
+        <section className="bg-[#ffff00] py-20">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="text-3xl font-semibold text-[#111110]">

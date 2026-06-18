@@ -19,7 +19,7 @@ export default function InterviewTrapPage() {
       <main className="bg-white">
 
         {/* ARTICLE HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-3xl px-6">
             <a
               href="/resources"
@@ -41,6 +41,8 @@ export default function InterviewTrapPage() {
             </p>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* ARTICLE BODY */}
         <article className="py-24">
@@ -207,7 +209,9 @@ export default function InterviewTrapPage() {
         </section>
 
         {/* RELATED */}
-        <section className="py-20 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="py-20">
           <div className="mx-auto max-w-3xl px-6">
             <h3 className="text-xl font-bold text-[#111110] mb-8">Related</h3>
             <div className="grid gap-6 md:grid-cols-2">

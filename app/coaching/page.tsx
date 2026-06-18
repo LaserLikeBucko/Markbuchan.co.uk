@@ -20,7 +20,7 @@ export default function CoachingPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               Values-Led Leadership
@@ -39,6 +39,8 @@ export default function CoachingPage() {
             </a>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* YOU ALREADY KNOW */}
         <section className="py-24">
@@ -106,7 +108,7 @@ export default function CoachingPage() {
         </section>
 
         {/* THREE OUTCOMES */}
-        <section className="py-24 border-b-4 border-dashed border-[#111110]">
+        <section className="py-24">
           <div className="mx-auto max-w-5xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ff3131]">
               What shifts
@@ -141,7 +143,9 @@ export default function CoachingPage() {
         </section>
 
         {/* COACHING OPTIONS */}
-        <section id="coaching-options" className="bg-[#ffff00] py-24 border-b-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section id="coaching-options" className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-6xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
               How we can work together
@@ -242,6 +246,8 @@ export default function CoachingPage() {
           </div>
         </section>
 
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
         {/* FROM THE TRENCHES — ALISA */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6">
@@ -285,7 +291,9 @@ export default function CoachingPage() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-[#111110] mb-6">
               Ready to find out where your gap is sitting?

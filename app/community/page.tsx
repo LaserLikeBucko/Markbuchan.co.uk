@@ -15,7 +15,7 @@ export default function CommunityPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#111110] pt-32 pb-20 border-b-4 border-dashed border-[#ffff00]">
+        <section className="bg-[#111110] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
               Community
@@ -28,6 +28,8 @@ export default function CommunityPage() {
             </p>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* WHAT IT IS */}
         <section className="py-24">
@@ -56,7 +58,9 @@ export default function CommunityPage() {
         </section>
 
         {/* WHO IT'S FOR */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-4xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 text-center">
               Who it's for
@@ -100,6 +104,8 @@ export default function CommunityPage() {
             </div>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* JOIN */}
         <section className="bg-[#111110] py-24">

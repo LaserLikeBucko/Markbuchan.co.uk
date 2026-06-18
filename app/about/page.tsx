@@ -21,7 +21,7 @@ export default function AboutPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-5xl px-6 grid gap-14 md:grid-cols-[0.85fr_1.15fr] items-center">
 
             {/* PHOTO */}
@@ -74,6 +74,8 @@ export default function AboutPage() {
           </div>
         </section>
 
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
         {/* THE WORK */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6">
@@ -116,7 +118,9 @@ export default function AboutPage() {
         </section>
 
         {/* WHAT THIS WORK IS FOR */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-3xl px-6">
             <h2 className="text-3xl font-bold text-[#111110] mb-8">
               The Purpose of the Hidden Gap
@@ -137,6 +141,8 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* THREE WAYS IN */}
         <section className="py-24">

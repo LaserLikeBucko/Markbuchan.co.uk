@@ -114,7 +114,7 @@ export default function BookPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-6xl px-6 grid gap-14 md:grid-cols-[0.9fr_1.1fr] items-center">
 
             {/* BOOK COVER */}
@@ -182,6 +182,8 @@ export default function BookPage() {
             </div>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* WHAT THE BOOK HELPS YOU SEE */}
         <section className="py-24">
@@ -264,7 +266,9 @@ export default function BookPage() {
         </section>
 
         {/* FIVE PARTS */}
-        <section className="bg-[#ffff00] py-24 border-t-4 border-b-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-4xl px-6">
             <h2 className="text-3xl font-bold text-[#111110] mb-16 text-center">
               Five parts. One through line.
@@ -291,6 +295,8 @@ export default function BookPage() {
             </div>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* NEXT STEPS */}
         <section className="py-24">

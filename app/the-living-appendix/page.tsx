@@ -10,7 +10,7 @@ export default function LivingAppendixPage() {
       <main className="bg-white min-h-screen">
 
         {/* HEADER */}
-        <section className="bg-[#111110] pt-20 pb-16 border-b-4 border-dashed border-[#ffff00]">
+        <section className="bg-[#111110] pt-20 pb-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
               The Hidden Gap
@@ -28,8 +28,10 @@ export default function LivingAppendixPage() {
         </section>
 
 
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
         {/* DISCOUNT CODE */}
-        <section className="bg-[#ffff00] py-12 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] py-12">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 mb-4">
               Reader offer
@@ -48,6 +50,8 @@ export default function LivingAppendixPage() {
             </p>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* TOOLS & DOWNLOADS */}
         <section className="py-24">
@@ -186,8 +190,10 @@ export default function LivingAppendixPage() {
           </div>
         </section>
 
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
         {/* FOOTER SIMPLE */}
-        <section className="bg-[#ffff00] py-8 border-t-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] py-8">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="text-sm text-[#111110] opacity-60">
               © 2026 Mark Buchan MSc · <a href="https://markbuchan.co.uk" className="underline hover:opacity-100">markbuchan.co.uk</a>

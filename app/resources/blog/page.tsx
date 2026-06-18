@@ -21,7 +21,7 @@ export default function BlogIndexPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20 border-b-4 border-dashed border-[#111110]">
+        <section className="bg-[#ffff00] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6">
             <a
               href="/resources"
@@ -40,6 +40,8 @@ export default function BlogIndexPage() {
             </p>
           </div>
         </section>
+
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
         {/* ARTICLES LIST */}
         <section className="py-24">
@@ -199,7 +201,9 @@ export default function BlogIndexPage() {
         </section>
 
         {/* EMAIL CAPTURE */}
-        <section className="bg-[#ffff00] py-20 border-t-4 border-dashed border-[#111110]">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl font-bold text-[#111110] mb-4">
               Get new articles when they land
