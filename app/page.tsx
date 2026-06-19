@@ -1,10 +1,12 @@
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { LaunchConfetti } from "@/components/launch-confetti"
 
 export default function HomeV2Page() {
   return (
     <>
+      <LaunchConfetti />
       <Navigation />
 
       <main className="bg-white">
@@ -36,7 +38,7 @@ export default function HomeV2Page() {
               </div>
 
               <p className="mt-6 text-base font-medium text-[#111110]">
-                🎂 Launching June 19th 2026
+                🎂 Launching today, June 19th
               </p>
 
               <div className="mt-6">
