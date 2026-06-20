@@ -1,12 +1,10 @@
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { LaunchConfetti } from "@/components/launch-confetti"
 
 export default function HomeV2Page() {
   return (
     <>
-      <LaunchConfetti />
       <Navigation />
 
       <main className="bg-white">
@@ -36,10 +34,6 @@ export default function HomeV2Page() {
                   priority
                 />
               </div>
-
-              <p className="mt-6 text-base font-medium text-[#111110]">
-                🎂 Launching today, June 19th
-              </p>
 
               <div className="mt-6">
                 <a
@@ -105,14 +99,14 @@ export default function HomeV2Page() {
                 <div className="min-h-[140px]">
                   <h3 className="text-2xl font-semibold text-[#111110]">Book</h3>
                   <p className="mt-4 text-[#333330] leading-relaxed">
-                     Pre-order now and get exclusive bonuses at launch. Available June 19th on Kindle.
+                    Available now on Kindle and direct. Buy direct for exclusive bonuses and to support the work.
                   </p>
                 </div>
                 <a
                   href="/book"
                   className="mt-auto inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-white hover:bg-[#ff3131]"
                 >
-                  Explore the book
+                  Buy the book
                 </a>
               </div>
 
@@ -159,7 +153,7 @@ export default function HomeV2Page() {
           <div className="mx-auto max-w-5xl px-6 grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.2em] text-[#555550] font-medium">
-                Forthcoming book
+                Available now
               </p>
               <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-[#111110]">
                 The Hidden Gap
@@ -168,9 +162,9 @@ export default function HomeV2Page() {
                 Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </p>
               <p className="mt-6 text-lg leading-relaxed text-stone-700">
-                A forthcoming book exploring how operating values drive
-                behaviour, conflict and culture — and why so much of what we try
-                to fix at the surface is actually being shaped somewhere deeper.
+                A book exploring how operating values drive behaviour, conflict
+                and culture — and why so much of what we try to fix at the
+                surface is actually being shaped somewhere deeper.
               </p>
               <a
                 href="/book"
