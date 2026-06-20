@@ -44,7 +44,7 @@ export function Navigation() {
           className="hidden bg-accent text-accent-foreground hover:bg-accent/90 md:inline-flex"
           size="sm"
         >
-          <a href="/free-chapter">Get First Chapter</a>
+          <a href="/free-chapter">Get First Chapter Free</a>
         </Button>
 
         <button
@@ -75,8 +75,8 @@ export function Navigation() {
                 asChild
                 className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
               >
-                <a href="/book" onClick={() => setMobileOpen(false)}>
-                  Get First Chapter
+                <a href="/free-chapter" onClick={() => setMobileOpen(false)}>
+                  Get First Chapter Free
                 </a>
               </Button>
             </li>
