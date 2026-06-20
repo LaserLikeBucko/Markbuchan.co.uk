@@ -8,10 +8,9 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "Work With Me", href: "/work-with-me" },
   { label: "Resources", href: "/resources" },
-  { label: "Book", href: "/book" },
   { label: "Community", href: "/community" },
   { label: "About", href: "/about" },
-  { label: "Pre-Order Book", href: "/pre-order" },
+  { label: "Buy the Book", href: "/book" },
 ]
 
 export function Navigation() {
