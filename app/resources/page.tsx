@@ -131,19 +131,22 @@ export default function ResourcesPage() {
                 </span>
               </a>
 
-              {/* GAMES ORGANISATIONS PLAY - COMING SOON */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white p-8 opacity-70">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Organisation</p>
-                <h3 className="text-xl font-bold text-[#111110]">
-                  Games Organisations Play
+              {/* THATS WHEN CULTURE CHANGES */}
+              <a
+                href="/resources/blog/thats-when-culture-changes"
+                className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8 hover:border-[#ff3131] transition-colors group"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Culture</p>
+                <h3 className="text-xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  That's When Culture Changes
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1">
-                  Ten of the most common organisational scripts — mapped across declared value, intended behaviour, and actual behaviour. The full diagnostic table from The Hidden Gap.
+                  A story about leadership, values and the question that changed everything — and what actually happens in the moment culture shifts.
                 </p>
-                <span className="text-sm font-semibold text-muted-foreground">
-                  Coming soon
+                <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  Read article →
                 </span>
-              </div>
+              </a>
 
             </div>
           </div>

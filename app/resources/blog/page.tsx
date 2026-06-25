@@ -121,30 +121,39 @@ export default function BlogIndexPage() {
                 </div>
               </a>
 
-              {/* GAMES ORGANISATIONS PLAY - COMING SOON */}
-              <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white overflow-hidden opacity-60">
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[rgba(17,17,16,0.06)] flex items-center justify-center flex-shrink-0">
-                  <span className="font-bold text-[#111110] text-base tracking-wide uppercase px-6 text-center opacity-40">
-                    Coming Soon
-                  </span>
+              {/* THATS WHEN CULTURE CHANGES - LIVE */}
+              <a
+                href="/resources/blog/thats-when-culture-changes"
+                className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
+              >
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
+                  <Image
+                    src="/images/og/og-home.jpg"
+                    alt="That's When Culture Changes"
+                    width={1920}
+                    height={1080}
+                    className="h-full w-full object-contain"
+                  />
                 </div>
                 <div className="flex flex-col gap-3 p-8 flex-1">
                   <div className="flex items-center gap-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Organisation</p>
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Culture</p>
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Coming Soon</p>
+                    <p className="text-xs text-muted-foreground">4 min read</p>
+                    <span className="text-xs text-muted-foreground opacity-50">·</span>
+                    <p className="text-xs text-muted-foreground">June 2026</p>
                   </div>
-                  <h2 className="text-2xl font-bold text-[#111110]">
-                    Games Organisations Play
+                  <h2 className="text-2xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                    That's When Culture Changes
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-sm flex-1">
-                    Ten of the most common organisational scripts — mapped across declared value, intended behaviour, and actual behaviour. The full diagnostic table from The Hidden Gap with commentary on what each pattern costs and how to interrupt it.
+                    A story about leadership, values and the question that changed everything — and what actually happens in the moment culture shifts.
                   </p>
-                  <span className="text-sm font-semibold text-muted-foreground">
-                    Coming soon
+                  <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                    Read article →
                   </span>
                 </div>
-              </div>
+              </a>
 
               {/* TRANSFORMATION FATIGUE - COMING SOON */}
               <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white overflow-hidden opacity-60">
