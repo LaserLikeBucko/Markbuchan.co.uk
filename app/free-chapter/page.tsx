@@ -90,13 +90,13 @@ export default function FreeChapterPage() {
               leave without saying why.
             </p>
             <a
-              href="/pre-order"
+              href="/book"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
-              Pre-Order The Book →
+              Buy The Book →
             </a>
             <p className="mt-4 text-sm text-[#111110] opacity-50">
-              Publishes 19th June 2026 — use code LINKEDIN25 for 25% off.
+              Available now — use code LINKEDIN25 for 25% off.
             </p>
           </div>
         </section>

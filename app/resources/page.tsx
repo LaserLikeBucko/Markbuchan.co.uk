@@ -196,7 +196,7 @@ export default function ResourcesPage() {
               Go deeper with the book
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              The Hidden Gap — the complete framework behind all of these tools and articles. Available June 19th 2026.
+              The Hidden Gap — the complete framework behind all of these tools and articles. Available now.
             </p>
             <a
               href="/book"
