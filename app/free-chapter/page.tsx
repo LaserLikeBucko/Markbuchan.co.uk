@@ -96,7 +96,7 @@ export default function FreeChapterPage() {
               Buy The Book →
             </a>
             <p className="mt-4 text-sm text-[#111110] opacity-50">
-              Available now — use code LINKEDIN25 for 25% off.
+              Available now.
             </p>
           </div>
         </section>
