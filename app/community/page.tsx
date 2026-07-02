@@ -147,14 +147,14 @@ export default function CommunityPage() {
               Want to go deeper?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
-              The Hidden Gap names the problem, maps the territory, and gives 
-              you the tools to close the distance. Available 19th June 2026.
+              The Hidden Gap names the problem, maps the territory, and gives
+              you the tools to close the distance. Available now.
             </p>
             <a
-              href="/pre-order"
+              href="/book"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
-              Pre-Order The Book →
+              Buy The Book →
             </a>
           </div>
         </section>
