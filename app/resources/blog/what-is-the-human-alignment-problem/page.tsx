@@ -203,7 +203,7 @@ export default function HumanAlignmentProblemPage() {
                 <p className="text-sm text-muted-foreground">The interview trap and what I do instead.</p>
               </a>
               <a
-                href="/diagnostic"
+                href="/the-hidden-gap-diagnostic"
                 className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#ff3131] transition-colors group"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Free tool</p>

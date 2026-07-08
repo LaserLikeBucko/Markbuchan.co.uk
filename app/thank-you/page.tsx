@@ -8,7 +8,7 @@ export default function ThankYou() {
         Your copy of The Hidden Gap is ready. Click below to download.
       </p>
       <a
-        href="/downloads/the-hidden-gap-with-cover-19-06-2026-qw34th9.epub"
+        href="/downloads/The-Hidden-Gap-Mark-Buchan-19062026EPUB.epub"
         download
         className="bg-[#111110] text-[#ffff00] font-bold px-8 py-4 mb-6 inline-block hover:bg-[#ff3131] transition-colors"
       >

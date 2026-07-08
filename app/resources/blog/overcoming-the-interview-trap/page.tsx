@@ -224,7 +224,7 @@ export default function InterviewTrapPage() {
                 <p className="text-sm text-muted-foreground">The two-week senior engagement that locates your organisation's hidden gap with precision.</p>
               </a>
               <a
-                href="/diagnostic"
+                href="/the-hidden-gap-diagnostic"
                 className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#ff3131] transition-colors group"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Free tool</p>
