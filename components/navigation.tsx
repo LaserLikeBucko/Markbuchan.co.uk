@@ -17,11 +17,11 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#111110] backdrop-blur-md border-b border-[rgba(255,255,0,0.15)]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1C1B18] backdrop-blur-md border-b border-[rgba(58,74,70,0.5)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="/"
-          className="text-xl font-semibold text-[#ffff00] tracking-tight"
+          className="text-xl font-semibold text-[#EDE8DE] tracking-tight"
         >
           Mark Buchan
         </a>
@@ -31,7 +31,7 @@ export function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-[rgba(255,255,0,0.7)] transition-colors hover:text-[#ffff00]"
+                className="text-sm font-medium text-[rgba(237,232,222,0.65)] transition-colors hover:text-[#EDE8DE]"
               >
                 {link.label}
               </a>
@@ -41,15 +41,15 @@ export function Navigation() {
 
         <Button
           asChild
-          className="hidden bg-accent text-accent-foreground hover:bg-accent/90 md:inline-flex"
+          className="hidden bg-[#3A4A46] text-[#EDE8DE] hover:bg-[#2E3B37] md:inline-flex"
           size="sm"
         >
-          <a href="/free-chapter">Get First Chapter Free</a>
+          <a href="/work-with-me/#diagnostic-conversation">Book a Free Diagnostic Conversation</a>
         </Button>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-[#EDE8DE] md:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -57,14 +57,14 @@ export function Navigation() {
       </nav>
 
       {mobileOpen && (
-        <div className="block text-base font-medium text-[#ffff00]">
+        <div className="block border-t border-[rgba(58,74,70,0.5)] px-6 pb-6 text-base font-medium text-[#EDE8DE]">
           <ul className="flex flex-col gap-4 pt-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-base font-medium text-[#ffff00]"
+                  className="block text-base font-medium text-[#EDE8DE]"
                 >
                   {link.label}
                 </a>
@@ -73,10 +73,10 @@ export function Navigation() {
             <li>
               <Button
                 asChild
-                className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
+                className="w-full bg-[#3A4A46] text-[#EDE8DE] hover:bg-[#2E3B37]"
               >
-                <a href="/free-chapter" onClick={() => setMobileOpen(false)}>
-                  Get First Chapter Free
+                <a href="/work-with-me/#diagnostic-conversation" onClick={() => setMobileOpen(false)}>
+                  Book a Free Diagnostic Conversation
                 </a>
               </Button>
             </li>
