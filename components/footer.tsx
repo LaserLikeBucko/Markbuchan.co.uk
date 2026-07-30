@@ -2,10 +2,10 @@ import { Separator } from "@/components/ui/separator"
 
 const footerLinks = [
   { label: "Home", href: "/" },
-  { label: "Work With Me", href: "/work-with-me" },
-  { label: "Resources", href: "/resources" },
-  { label: "Book", href: "/book" },
+  { label: "Work with Me", href: "/work-with-me" },
   { label: "About", href: "/about" },
+  { label: "Insights & Media", href: "/insights" },
+  { label: "Contact", href: "/contact" },
 ]
 
 const socialLinks = [
@@ -46,8 +46,6 @@ export function Footer() {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="text-sm text-[rgba(27,75,128,0.65)] transition-colors hover:text-[#1b4b80]"
                   >
                     {link.label}

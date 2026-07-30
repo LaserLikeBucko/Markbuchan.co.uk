@@ -1,16 +1,43 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-const navLinks = [
+interface NavChild {
+  label: string
+  href: string
+}
+
+interface NavItem {
+  label: string
+  href: string
+  children?: NavChild[]
+}
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Work With Me", href: "/work-with-me" },
-  { label: "Resources", href: "/resources" },
-  { label: "Community", href: "/community" },
+  {
+    label: "Work with Me",
+    href: "/work-with-me",
+    children: [
+      { label: "Transformation Advisory", href: "/transformation-advisory" },
+      { label: "Leadership Alignment", href: "/leadership-alignment" },
+      { label: "Embedding Change", href: "/embedding-change" },
+    ],
+  },
   { label: "About", href: "/about" },
-  { label: "Buy the Book", href: "/book" },
+  {
+    label: "Insights & Media",
+    href: "/insights",
+    children: [
+      { label: "Articles", href: "/resources/blog" },
+      { label: "Speaking & Media", href: "/speaking-media" },
+      { label: "Books", href: "/book" },
+      { label: "Tools & Frameworks", href: "/tools-and-frameworks" },
+    ],
+  },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
@@ -27,14 +54,36 @@ export function Navigation() {
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
+          {navItems.map((item) => (
+            <li key={item.href} className="group relative">
               <a
-                href={link.href}
-                className="text-sm font-bold text-[rgba(28,27,24,0.65)] transition-colors hover:text-[#1C1B18]"
+                href={item.href}
+                className="flex items-center gap-1 text-sm font-bold text-[rgba(28,27,24,0.65)] transition-colors hover:text-[#1C1B18]"
               >
-                {link.label}
+                {item.label}
+                {item.children && (
+                  <ChevronDown
+                    className="h-3.5 w-3.5 transition-transform group-hover:rotate-180"
+                    aria-hidden="true"
+                  />
+                )}
               </a>
+
+              {item.children && (
+                <div className="invisible absolute left-1/2 top-full w-64 -translate-x-1/2 pt-3 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100">
+                  <div className="rounded-xl border border-[rgba(28,27,24,0.1)] bg-white p-2 shadow-lg">
+                    {item.children.map((child) => (
+                      <a
+                        key={child.href}
+                        href={child.href}
+                        className="block rounded-lg px-4 py-2.5 text-sm font-medium text-[#1C1B18] transition-colors hover:bg-[#EDE8DE]"
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
             </li>
           ))}
         </ul>
@@ -59,15 +108,30 @@ export function Navigation() {
       {mobileOpen && (
         <div className="block border-t border-[rgba(27,75,128,0.5)] px-6 pb-6 text-base font-bold text-[#1C1B18]">
           <ul className="flex flex-col gap-4 pt-4">
-            {navLinks.map((link) => (
-              <li key={link.href}>
+            {navItems.map((item) => (
+              <li key={item.href}>
                 <a
-                  href={link.href}
+                  href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className="block text-base font-bold text-[#1C1B18]"
                 >
-                  {link.label}
+                  {item.label}
                 </a>
+                {item.children && (
+                  <ul className="mt-2 flex flex-col gap-2 border-l border-[rgba(27,75,128,0.3)] pl-4">
+                    {item.children.map((child) => (
+                      <li key={child.href}>
+                        <a
+                          href={child.href}
+                          onClick={() => setMobileOpen(false)}
+                          className="block text-sm font-medium text-[rgba(28,27,24,0.7)]"
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </li>
             ))}
             <li>
