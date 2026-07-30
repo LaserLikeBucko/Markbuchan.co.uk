@@ -34,3 +34,7 @@ Direct, second-person, punchy short sentences mixed with longer reflective ones.
 ## SEO / content context
 
 See `claude/keyword-research.md` for real UK search-volume data (from Google Ads Keyword Planner) and `claude/page-build-plan.md` for the prioritized list of what to build vs. what already exists and just needs optimizing. Read both before creating any new marketing/SEO page — several proposed keyword targets are already served by `/coaching` or `/work-with-me` and should be optimized in place, not duplicated.
+
+## Burnout section (new — co-branded with Dr Catherine Buchan)
+
+Mark's wife, Dr Catherine Buchan (Doctorate in Counselling Psychology, published author of *The 5 Keys to Burnout Recovery*), is joining the business to co-lead a new burnout-focused section of the site. This is being treated as an experiment before any decision about a separate site/brand for her. See `claude/burnout-section-plan.md` for the full plan — her bio, the section's information architecture, article priorities, and open items that need her direct sign-off before drafting. Also see `claude/competitor-research-executive-burnout-coaching.md` for competitive positioning research on this specific topic. Do not draft content under her byline, or treat her book's framework as a site-wide methodology, without confirming with Mark/Catherine first — flagged explicitly in the plan file.

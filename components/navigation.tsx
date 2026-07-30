@@ -17,13 +17,13 @@ export function Navigation() {
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1C1B18] backdrop-blur-md border-b border-[rgba(58,74,70,0.5)]">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#EDE8DE] backdrop-blur-md border-b border-[rgba(27,75,128,0.5)]">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="/"
-          className="text-xl font-semibold text-[#EDE8DE] tracking-tight"
+          className="text-xl font-semibold text-[#1C1B18] tracking-tight"
         >
-          Mark Buchan
+          Mark Buchan MSc.
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -31,7 +31,7 @@ export function Navigation() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-[rgba(237,232,222,0.65)] transition-colors hover:text-[#EDE8DE]"
+                className="text-sm font-bold text-[rgba(28,27,24,0.65)] transition-colors hover:text-[#1C1B18]"
               >
                 {link.label}
               </a>
@@ -41,15 +41,15 @@ export function Navigation() {
 
         <Button
           asChild
-          className="hidden bg-[#3A4A46] text-[#EDE8DE] hover:bg-[#2E3B37] md:inline-flex"
+          className="hidden bg-[#1b4b80] font-bold text-[#EDE8DE] hover:bg-[#163C66] md:inline-flex"
           size="sm"
         >
-          <a href="/work-with-me/#diagnostic-conversation">Book a Free Diagnostic Conversation</a>
+          <a href="/work-with-me/#diagnostic-conversation">Book a Diagnostic Call</a>
         </Button>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-[#EDE8DE] md:hidden"
+          className="inline-flex items-center justify-center rounded-md p-2 text-[#1C1B18] md:hidden"
           aria-label={mobileOpen ? "Close menu" : "Open menu"}
         >
           {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
@@ -57,14 +57,14 @@ export function Navigation() {
       </nav>
 
       {mobileOpen && (
-        <div className="block border-t border-[rgba(58,74,70,0.5)] px-6 pb-6 text-base font-medium text-[#EDE8DE]">
+        <div className="block border-t border-[rgba(27,75,128,0.5)] px-6 pb-6 text-base font-bold text-[#1C1B18]">
           <ul className="flex flex-col gap-4 pt-4">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-base font-medium text-[#EDE8DE]"
+                  className="block text-base font-bold text-[#1C1B18]"
                 >
                   {link.label}
                 </a>
@@ -73,10 +73,10 @@ export function Navigation() {
             <li>
               <Button
                 asChild
-                className="w-full bg-[#3A4A46] text-[#EDE8DE] hover:bg-[#2E3B37]"
+                className="w-full bg-[#1b4b80] font-bold text-[#EDE8DE] hover:bg-[#163C66]"
               >
                 <a href="/work-with-me/#diagnostic-conversation" onClick={() => setMobileOpen(false)}>
-                  Book a Free Diagnostic Conversation
+                  Book a Diagnostic Call
                 </a>
               </Button>
             </li>

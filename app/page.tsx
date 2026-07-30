@@ -1,8 +1,10 @@
-import type { ReactNode } from "react"
 import type { Metadata } from "next"
 import Image from "next/image"
+import { Cpu, RefreshCw, Building2, Users } from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
+import { Underline } from "@/components/animated-underline"
+import { AnimatedSteps } from "@/components/animated-steps"
 
 export const metadata: Metadata = {
   title: "Mark Buchan MSc — Transformation Advisory for Leaders",
@@ -19,53 +21,11 @@ export const metadata: Metadata = {
 const DIAGNOSTIC_CALL_URL =
   "https://calendly.com/thehumanalignmentco/diagnostic-conversation"
 
-function Underline({ children }: { children: ReactNode }) {
-  return (
-    <span className="relative inline-block whitespace-nowrap">
-      {children}
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 120 12"
-        preserveAspectRatio="none"
-        className="pointer-events-none absolute left-0 -bottom-1 h-[0.3em] w-full -rotate-1"
-      >
-        <path
-          d="M2 8 C 30 3, 70 10, 118 5"
-          fill="none"
-          stroke="#F2C230"
-          strokeWidth="6"
-          strokeLinecap="round"
-        />
-      </svg>
-    </span>
-  )
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      aria-hidden="true"
-      viewBox="0 0 20 20"
-      fill="none"
-      className="mt-0.5 h-5 w-5 shrink-0 text-[#EDE8DE]"
-    >
-      <circle cx="10" cy="10" r="9" stroke="currentColor" strokeWidth="1.5" />
-      <path
-        d="M6 10.5l2.5 2.5L14 7.5"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 const supportAreas = [
-  "Digital and technology-enabled change",
-  "New ways of working",
-  "Organisational transformation",
-  "Change adoption and team alignment",
+  { label: "Digital and technology-enabled change", icon: Cpu },
+  { label: "Organisational transformation", icon: Building2 },
+  { label: "Change adoption & team alignment", icon: Users },
+  { label: "New ways of working", icon: RefreshCw },
 ]
 
 const challenges = [
@@ -110,15 +70,19 @@ const services = [
 const trustPoints = [
   {
     headline: "20+ years",
-    body: "Helping senior leaders deliver complex organisational transformation and navigate critical moments of change.",
+    body: ["Helping senior leaders deliver complex organisational transformation and navigate critical moments of change."],
   },
   {
     headline: "International & cross-sector",
-    body: "Supporting transformation across Fintech, Aerospace, Telecoms and Technology, working with organisations facing significant change challenges.",
+    body: ["Supporting transformation across Fintech, Aerospace, Telecoms and Technology, working with organisations facing significant change challenges."],
   },
   {
     headline: "Author & speaker",
-    body: "Author of two books on organisational transformation and a trusted speaker on leadership, change and transformation.",
+    body: [
+      "Author of two books on organisational transformation, including The Hidden Gap.",
+      "Trusted speaker on leadership, organisational change and transformation.",
+    ],
+    cta: { label: "Explore the books", href: "/book" },
   },
 ]
 
@@ -175,8 +139,8 @@ export default function HomeV2Page() {
       <main className="bg-[#EDE8DE]">
         {/* HERO */}
         <section className="pt-32 pb-20 md:pt-40 md:pb-24">
-          <div className="mx-auto grid max-w-5xl gap-12 px-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
-            <div className="mx-auto w-full max-w-[260px] md:max-w-none">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+            <div className="mx-auto w-full max-w-[260px] md:order-2 md:max-w-none">
               <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(28,27,24,0.18)] ring-1 ring-[rgba(28,27,24,0.08)]">
                 <Image
                   src="/images/mb.jpg"
@@ -189,23 +153,23 @@ export default function HomeV2Page() {
               </div>
             </div>
 
-            <div className="text-center md:text-left">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
-                Transformation Advisory for Leaders
+            <div className="text-center md:order-1 md:text-left">
+              <p className="text-base md:text-lg font-bold tracking-[0.05em] text-[#1b4b80]">
+                Transformation Advisory for Leaders Facing Complex Change
               </p>
 
               <h1 className="mt-6 text-3xl md:text-5xl font-semibold leading-tight text-[#1C1B18] text-balance">
-                Helping leaders navigate transformation and bring their
-                people with them.
+                Helping leaders navigate transformation and bring their{" "}
+                <Underline>people</Underline> with them.
               </h1>
 
               <p className="mt-6 text-lg leading-relaxed text-[#1C1B18]/75">
-                Complex change requires more than a strategy. We work with
+                Complex change requires more than a strategy. I work with
                 leaders to diagnose challenges, align teams and create the
                 conditions for transformation to be adopted and sustained.
               </p>
 
-              <p className="mt-4 text-base leading-relaxed text-[#1C1B18]/60">
+              <p className="mt-4 text-base leading-relaxed text-[#1C1B18]/75">
                 20+ years supporting organisations through complex
                 transformation. Helping leadership teams move from
                 uncertainty and resistance to alignment and action.
@@ -214,20 +178,15 @@ export default function HomeV2Page() {
               <div className="mt-8">
                 <a
                   href={DIAGNOSTIC_CALL_URL}
-                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#1b4b80] px-8 text-base font-medium text-[#EDE8DE] transition-colors hover:bg-[#1C1B18]"
+                  className="inline-flex h-12 items-center justify-center rounded-md bg-[#1b4b80] px-8 text-base font-bold text-[#EDE8DE] transition-colors hover:bg-[#1C1B18]"
                 >
                   Book a Diagnostic Call
                 </a>
               </div>
 
-              <p className="mt-6 max-w-md text-sm leading-relaxed text-[#1C1B18]/60 mx-auto md:mx-0">
-                Not a sales call. Not a generic discovery chat, but a focused
-                conversation to understand your transformation challenges,
-                identify where the barriers are, and explore what support
-                would make the biggest difference.
-                <br />
-                No pitch. No pressure. If I&apos;m not the right person to
-                help, I&apos;ll tell you.
+              <p className="mt-6 max-w-md text-sm leading-relaxed text-[#1C1B18]/80 mx-auto md:mx-0">
+                A focused 30-minute conversation to discuss your
+                transformation challenges and potential next steps.
               </p>
             </div>
           </div>
@@ -237,33 +196,44 @@ export default function HomeV2Page() {
 
         {/* SUPPORTING LEADERSHIP TEAMS THROUGH */}
         <section className="bg-[#1b4b80] py-20">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#EDE8DE]">
+          <div className="mx-auto max-w-6xl px-6">
+            <h2 className="text-center text-3xl md:text-5xl font-semibold text-[#EDE8DE] text-balance md:whitespace-nowrap">
               Supporting leadership teams through:
             </h2>
 
-            <div className="mx-auto mt-10 grid max-w-2xl gap-4 sm:grid-cols-2">
+            <div className="mx-auto mt-10 grid max-w-4xl gap-6 sm:grid-cols-2 md:grid-cols-4">
               {supportAreas.map((area) => (
-                <div key={area} className="flex items-start gap-3">
-                  <CheckIcon />
-                  <p className="text-base leading-relaxed text-[#EDE8DE]/85">
-                    {area}
+                <div
+                  key={area.label}
+                  className="flex h-full flex-col items-center rounded-2xl border border-[rgba(28,27,24,0.1)] bg-[#EDE8DE] p-6 text-center shadow-sm"
+                >
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1b4b80]/10">
+                    <area.icon
+                      className="h-6 w-6 text-[#1b4b80]"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <p className="mt-4 text-lg font-semibold leading-relaxed text-[#1C1B18]">
+                    {area.label}
                   </p>
                 </div>
               ))}
             </div>
 
-            <div className="mx-auto mt-14 max-w-2xl text-center">
-              <p className="text-lg leading-relaxed text-[#EDE8DE] italic">
-                &ldquo;Mark is&hellip; extremely adaptable in approach&hellip;
-                finding new and engaging ways to work with people of
-                differing levels of experience, seniority and
-                understanding.&rdquo;
+            <div className="mx-auto mt-14 max-w-4xl text-center">
+              <p className="text-base leading-relaxed text-[#EDE8DE] italic">
+                &ldquo;Mark is an excellent listener, extremely adaptable in
+                approach and above all an experienced coach. I would highly
+                recommend him to help drive change within an organisation.
+                Mark was able to educate through practical examples,
+                workshops and stories of experience, finding new and
+                engaging ways to work with people of differing levels of
+                experience, seniority and understanding.&rdquo;
               </p>
-              <p className="mt-4 text-sm font-semibold text-[#EDE8DE]">
+              <p className="mt-4 text-lg font-bold text-[#EDE8DE]">
                 Steven Shaw
               </p>
-              <p className="text-sm text-[#EDE8DE] opacity-60">
+              <p className="text-base font-semibold text-[#EDE8DE]">
                 Technical Director, Realise (at the time of engagement)
               </p>
             </div>
@@ -306,7 +276,7 @@ export default function HomeV2Page() {
                 </div>
                 <a
                   href="/work-with-me"
-                  className="mt-6 inline-flex items-center rounded-md border border-[rgba(28,27,24,0.2)] px-4 py-2.5 text-sm font-medium text-[#1C1B18] hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#1b4b80] px-4 py-2.5 text-sm font-medium text-[#EDE8DE] hover:bg-[#163C66] transition-colors"
                 >
                   {item.cta} →
                 </a>
@@ -412,9 +382,24 @@ export default function HomeV2Page() {
                   <p className="text-2xl font-semibold text-[#1b4b80]">
                     {point.headline}
                   </p>
-                  <p className="mt-3 text-sm leading-relaxed text-[#1C1B18]/75">
-                    {point.body}
-                  </p>
+                  <div className="mt-3 flex flex-col gap-3">
+                    {point.body.map((paragraph, i) => (
+                      <p
+                        key={i}
+                        className="text-sm leading-relaxed text-[#1C1B18]/75"
+                      >
+                        {paragraph}
+                      </p>
+                    ))}
+                  </div>
+                  {point.cta && (
+                    <a
+                      href={point.cta.href}
+                      className="mt-4 inline-flex items-center text-sm font-semibold text-[#1b4b80] hover:text-[#163C66]"
+                    >
+                      → {point.cta.label}
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
@@ -433,23 +418,7 @@ export default function HomeV2Page() {
               </h2>
             </div>
 
-            <div className="mt-16 flex flex-col gap-12">
-              {steps.map((step) => (
-                <div key={step.number} className="flex gap-6">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#1b4b80] text-lg font-semibold text-[#EDE8DE]">
-                    {step.number}
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-[#1C1B18]">
-                      {step.title}
-                    </h3>
-                    <p className="mt-2 text-base leading-relaxed text-[#1C1B18]/75">
-                      {step.body}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AnimatedSteps steps={steps} />
           </div>
         </section>
 
@@ -486,33 +455,30 @@ export default function HomeV2Page() {
         </section>
 
         {/* FINAL CTA */}
-        <section className="bg-[#1C1B18] py-24">
-          <div className="mx-auto max-w-2xl px-6 text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
+        <section className="bg-[#1b4b80] py-24">
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <p className="text-base font-bold uppercase tracking-[0.2em] text-[#EDE8DE]">
               The first step
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-[#EDE8DE]">
               Book a Diagnostic Call
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-[#EDE8DE]/70">
-              Not a sales call. Not a generic discovery chat, but a focused
-              conversation to understand your transformation challenges,
-              identify where the barriers are, and explore what support
-              would make the biggest difference.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed text-[#EDE8DE]/70">
-              No pitch. No pressure. If I&apos;m not the right person to
-              help, I&apos;ll tell you.
+              A focused 30-minute conversation to understand your
+              transformation challenge, discuss the context you&rsquo;re
+              working in, and determine whether my experience and approach
+              could help. This is not a generic discovery call or a sales
+              pitch. It is an opportunity to explore the challenge
+              you&rsquo;re facing and decide whether a further conversation
+              would be valuable. If I&rsquo;m not the right person to help,
+              I&rsquo;ll say so.
             </p>
             <a
               href={DIAGNOSTIC_CALL_URL}
-              className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#EDE8DE] px-8 text-base font-medium text-[#1C1B18] transition-colors hover:bg-[#1b4b80] hover:text-[#EDE8DE]"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#EDE8DE] px-8 text-lg font-bold text-[#1C1B18] transition-colors hover:bg-[#163C66] hover:text-[#EDE8DE]"
             >
-              Book Your Diagnostic Call →
+              Book a Diagnostic Call
             </a>
-            <p className="mt-6 text-sm text-[#EDE8DE] opacity-40">
-              Or email iam@markbuchan.co.uk directly.
-            </p>
           </div>
         </section>
       </main>

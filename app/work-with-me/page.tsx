@@ -26,7 +26,7 @@ export default function WorkWithMePage() {
               Work With Me
             </p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#111110] text-balance mb-6">
-              More humanity.<br />Less PowerPoint.
+              What is the hidden gap costing your organisation?
             </h1>
             <p className="text-xl leading-relaxed text-[#111110] opacity-75 max-w-2xl mx-auto mb-10">
               Senior advisory work for leaders and organisations where the gap between what is declared and what is actually operating has become too costly to ignore.
@@ -42,8 +42,91 @@ export default function WorkWithMePage() {
 
         <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
 
+        {/* THREE OFFERS */}
+        <section className="bg-white py-24">
+          <div className="mx-auto max-w-6xl px-6">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+              Where is the gap showing up?
+            </p>
+            <h2 className="text-2xl font-bold text-[#111110] mb-16">
+              Every organisation has a gap between what it says it values and what is actually driving behaviour.
+
+              Sometimes that gap shows up in organisational performance.
+              Sometimes it shows up in leadership.
+              Sometimes it shows up in teams and culture.
+
+              The first step is recognising where it is costing you.
+            </h2>
+
+            <div className="grid gap-6 md:grid-cols-3">
+
+              {/* DIAGNOSTIC */}
+              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
+                <div className="flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Organisational Performance</p>
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
+                    Why are we still stuck?
+                  </h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    Everything looks reasonable on paper. Yet progress is slower than expected. The same issues keep resurfacing. Failed transformations; poor customer experience; ethical failures with teams pulling in different directions. When capable people keep producing disappointing outcomes, the problem is rarely capability. More often, it is alignment.</p>
+
+                </div>
+                <a
+                  href="/leadership-alignment-diagnostic"
+                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Investigate the Real Problem →
+                </a>
+              </div>
+
+              {/* COACHING */}
+              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
+                <div className="flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Leadership</p>
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
+                    When the map is no longer valid.
+                  </h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    You've achieved results before. But difficult decisions, competing priorities and values conflicts will make even experienced leaders question their direction. This results  in low trust in leadership; management starts to avoid accountability; Sometimes the challenge isn't effort or capability. It's that the assumptions guiding your decisions no longer match the reality you're navigating.
+                  </p>
+
+                </div>
+                <a
+                  href="/coaching"
+                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Navigate Forward →
+                </a>
+              </div>
+
+              {/* WORKSHOPS */}
+              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
+                <div className="flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Team & Culture</p>
+                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
+                    The conversation nobody is having.
+                  </h3>
+                  <p className="text-[#333330] leading-relaxed">
+                    Every organisation has issues everyone senses but nobody quite names. Poor employee engagement; resistance to change; cross-functional conflict. Frustrations hiding in plain sight. Facilitated workshops can create the conditions for honest conversations that lead somewhere useful.
+                  </p>
+
+                </div>
+                <a
+                  href="#diagnostic-conversation"
+                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
+                >
+                  Start a conversation →
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
         {/* THE INTERVIEW TRAP */}
-        <section className="py-24">
+        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+
+        <section className="bg-[#ffff00] py-24">
           <div className="mx-auto max-w-3xl px-6">
             <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
               How I work
@@ -75,93 +158,6 @@ export default function WorkWithMePage() {
             >
               Read the full article: Why I Don't Do Interviews Anymore →
             </a>
-          </div>
-        </section>
-
-        {/* THREE OFFERS */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
-
-        <section className="bg-[#ffff00] py-24">
-          <div className="mx-auto max-w-6xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
-              Where is the gap showing up?
-            </p>
-            <h2 className="text-2xl font-bold text-[#111110] mb-16">
-              Every organisation has a gap between what it says it values and what is actually driving behaviour.
-
-              Sometimes that gap shows up in organisational performance.
-              Sometimes it shows up in leadership.
-              Sometimes it shows up in teams and culture.
-
-              The first step is recognising where it is costing you.
-            </h2>
-
-            <div className="grid gap-6 md:grid-cols-3">
-
-              {/* DIAGNOSTIC */}
-              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Organisational Performance</p>
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    Why are we still stuck?
-                  </h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    Everything looks reasonable on paper.
-
-                    Yet progress is slower than expected. The same issues keep resurfacing. Change initiatives stall. Teams pull in different directions.
-
-                    When capable people keep producing disappointing outcomes, the problem is rarely capability. More often, it is alignment.</p>
-                  
-                </div>
-                <a
-                  href="/leadership-alignment-diagnostic"
-                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Investigate the Real Problem →
-                </a>
-              </div>
-
-              {/* COACHING */}
-              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Leadership</p>
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    When the map no longer works.
-                  </h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    You've achieved results before. But difficult decisions, competing priorities and values conflicts can make even experienced leaders question their direction. Sometimes the challenge isn't effort or capability. It's that the assumptions guiding your decisions no longer match the reality you're navigating.
-                  </p>
-                  
-                </div>
-                <a
-                  href="/coaching"
-                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Navigate Forward →
-                </a>
-              </div>
-
-              {/* WORKSHOPS */}
-              <div className="flex h-full flex-col rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <div className="flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-[#ff3131] mb-3">Team & Culture</p>
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">
-                    The conversation nobody is having.
-                  </h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    Every organisation has issues everyone senses but nobody quite names. Misalignment. Conflicting priorities. Cultural contradictions. Frustrations hiding in plain sight. Facilitated workshops create the conditions for honest conversations that lead somewhere useful.
-                  </p>
-                
-                </div>
-                <a
-                  href="#diagnostic-conversation"
-                  className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Start a conversation →
-                </a>
-              </div>
-
-            </div>
           </div>
         </section>
 

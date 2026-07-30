@@ -1,5 +1,4 @@
 import { Separator } from "@/components/ui/separator"
-import { Button } from "@/components/ui/button"
 
 const footerLinks = [
   { label: "Home", href: "/" },
@@ -19,44 +18,27 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-[#1C1B18] py-16">
+    <footer className="bg-[#EDE8DE] py-16">
       <div className="mx-auto max-w-6xl px-6">
-        {/* CTA */}
-        <div className="flex flex-col items-start gap-6 border-b border-[rgba(58,74,70,0.5)] pb-12 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-xl font-semibold text-[#EDE8DE]">
-              Not sure where to start?
-            </p>
-            <p className="mt-2 max-w-md text-sm leading-relaxed text-[rgba(237,232,222,0.6)]">
-              A free 20-minute conversation is usually enough to see whether there&apos;s something worth working on together.
-            </p>
-          </div>
-          <Button
-            asChild
-            className="shrink-0 bg-[#3A4A46] text-[#EDE8DE] hover:bg-[#2E3B37]"
-            size="lg"
-          >
-            <a href="/work-with-me/#diagnostic-conversation">Book a Free Diagnostic Conversation</a>
-          </Button>
-        </div>
-
-        <div className="flex flex-col gap-10 pt-12 md:flex-row md:justify-between">
+        <div className="flex flex-col gap-10 pt-4 md:flex-row md:justify-between">
           {/* Brand */}
           <div className="flex flex-col gap-4">
-          <p className="text-sm text-[rgba(237,232,222,0.6)] leading-relaxed">
-            Mark Buchan
+          <p className="text-sm text-[rgba(27,75,128,0.65)] leading-relaxed">
+            <span className="font-semibold">Mark Buchan MSc.</span>
             <br />
-            Author of <span className="italic">The Hidden Gap</span>
+            Transformation Advisory for Leaders Facing Complex Change
             <br />
-            Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture.
-            <br />
-            How operating values drive behaviour, conflict and culture.
+            Author of <span className="italic">The Hidden Gap</span> and{" "}
+            <span className="italic">
+              Leaders, it&rsquo;s not how you finish&hellip; it&rsquo;s how
+              you start!
+            </span>
           </p>
           </div>
 
           {/* Navigation */}
           <div className="flex flex-col gap-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[rgba(237,232,222,0.4)]">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[rgba(27,75,128,0.45)]">
               Navigation
             </p>
             <ul className="flex flex-col gap-2">
@@ -66,7 +48,7 @@ export function Footer() {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[rgba(237,232,222,0.6)] transition-colors hover:text-[#EDE8DE]"
+                    className="text-sm text-[rgba(27,75,128,0.65)] transition-colors hover:text-[#1b4b80]"
                   >
                     {link.label}
                   </a>
@@ -77,7 +59,7 @@ export function Footer() {
 
           {/* Social */}
           <div className="flex flex-col gap-3">
-            <p className="text-xs font-semibold uppercase tracking-wider text-[rgba(237,232,222,0.4)]">
+            <p className="text-xs font-semibold uppercase tracking-wider text-[rgba(27,75,128,0.45)]">
               Connect
             </p>
             <ul className="flex flex-col gap-2">
@@ -85,7 +67,7 @@ export function Footer() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm text-[rgba(237,232,222,0.6)] transition-colors hover:text-[#EDE8DE]"
+                    className="text-sm text-[rgba(27,75,128,0.65)] transition-colors hover:text-[#1b4b80]"
                   >
                     {link.label}
                   </a>
@@ -95,13 +77,13 @@ export function Footer() {
           </div>
         </div>
 
-        <Separator className="my-10 bg-[rgba(237,232,222,0.1)]" />
+        <Separator className="my-10 bg-[rgba(27,75,128,0.15)]" />
 
         <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
-          <p className="text-xs text-[rgba(237,232,222,0.4)]">
+          <p className="text-xs text-[rgba(27,75,128,0.45)]">
             &copy; {currentYear} Mark Buchan. All rights reserved.
           </p>
-          <p className="text-xs text-[rgba(237,232,222,0.3)]">
+          <p className="text-xs text-[rgba(27,75,128,0.35)]">
             Built with purpose and alignment.
           </p>
         </div>
