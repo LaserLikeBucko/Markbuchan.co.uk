@@ -4,6 +4,8 @@ import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
+const DIAGNOSTIC_CALL_URL = "https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+
 interface NavChild {
   label: string
   href: string
@@ -22,7 +24,7 @@ const navItems: NavItem[] = [
     href: "/work-with-me",
     children: [
       { label: "Transformation Advisory", href: "/transformation-advisory" },
-      { label: "Leadership Alignment", href: "/leadership-alignment" },
+      { label: "Leadership Alignment & Sponsorship", href: "/leadership-alignment" },
       { label: "Embedding Change", href: "/embedding-change" },
     ],
   },
@@ -33,7 +35,7 @@ const navItems: NavItem[] = [
     children: [
       { label: "Articles", href: "/resources/blog" },
       { label: "Speaking & Media", href: "/speaking-media" },
-      { label: "Books", href: "/book" },
+      { label: "Books & Publications", href: "/books" },
       { label: "Tools & Frameworks", href: "/tools-and-frameworks" },
     ],
   },
@@ -91,9 +93,9 @@ export function Navigation() {
         <Button
           asChild
           className="hidden bg-[#1b4b80] font-bold text-[#EDE8DE] hover:bg-[#163C66] md:inline-flex"
-          size="sm"
+          size="lg"
         >
-          <a href="/work-with-me/#diagnostic-conversation">Book a Diagnostic Call</a>
+          <a href={DIAGNOSTIC_CALL_URL} target="_blank" rel="noopener noreferrer">Discuss Your Transformation</a>
         </Button>
 
         <button
@@ -139,8 +141,8 @@ export function Navigation() {
                 asChild
                 className="w-full bg-[#1b4b80] font-bold text-[#EDE8DE] hover:bg-[#163C66]"
               >
-                <a href="/work-with-me/#diagnostic-conversation" onClick={() => setMobileOpen(false)}>
-                  Book a Diagnostic Call
+                <a href={DIAGNOSTIC_CALL_URL} target="_blank" rel="noopener noreferrer" onClick={() => setMobileOpen(false)}>
+                  Discuss Your Transformation
                 </a>
               </Button>
             </li>

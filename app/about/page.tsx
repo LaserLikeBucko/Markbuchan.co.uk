@@ -1,32 +1,131 @@
+import Image from "next/image"
+import {
+  Globe,
+  Building2,
+  Cpu,
+  Users,
+  Compass,
+  Sparkles,
+  GraduationCap,
+} from "lucide-react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { Separator } from "@/components/ui/separator"
-import Image from "next/image"
 
 export const metadata = {
-  title: "About Mark Buchan MSc — Human Alignment Consultant & Author",
-  description: "Mark Buchan has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.",
+  title: "About Mark Buchan MSc — Transformation Advisory & Leadership",
+  description:
+    "Helping leaders make complex transformation succeed by bringing together technology, leadership and people. 20+ years supporting organisations through complex change.",
   openGraph: {
-    title: "About Mark Buchan MSc — Human Alignment Consultant & Author",
-    description: "Mark Buchan has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named.",
+    title: "About Mark Buchan MSc — Transformation Advisory & Leadership",
+    description:
+      "Helping leaders make complex transformation succeed by bringing together technology, leadership and people.",
     images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],
   },
 }
+
+const DIAGNOSTIC_CALL_URL =
+  "https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+
+const credentials = [
+  {
+    stat: "20+",
+    title: "Years supporting complex transformation",
+    body: "Helping organisations navigate technology change, organisational transformation and new ways of working.",
+  },
+  {
+    icon: Building2,
+    title: "Cross-sector experience",
+    intro: "Experience across:",
+    list: [
+      "Banking & Financial Services",
+      "Telecoms",
+      "Software & IT",
+      "Engineering",
+      "Healthcare",
+      "Aerospace & Defence",
+      "Public Sector",
+    ],
+  },
+  {
+    icon: Globe,
+    title: "International leadership and coaching experience",
+    body: "Training and coaching managers and leaders across Japan, Hong Kong, the United States, Germany and Luxembourg, with extensive experience supporting global teams and partnerships.",
+  },
+  {
+    icon: Cpu,
+    title: "Technology + people expertise",
+    body: "Combining a background in software development, digital transformation and Agile delivery with executive coaching, leadership development and organisational change.",
+  },
+  {
+    icon: Users,
+    title: "Executive coaching and leadership development",
+    intro: "Coaching leaders and teams to:",
+    list: [
+      "Communicate more effectively",
+      "Navigate difficult conversations",
+      "Improve collaboration",
+      "Build stronger relationships",
+      "Increase performance and morale",
+    ],
+  },
+  {
+    icon: Compass,
+    title: "Transformation advisory",
+    intro: "Supporting senior leaders through:",
+    list: [
+      "Resistance to change",
+      "Change fatigue",
+      "Transformation challenges",
+      "Embedding new ways of working",
+    ],
+  },
+  {
+    icon: Sparkles,
+    title: "AI and innovation experience",
+    body: "Co-founder of a SaaS venture developing an AI product for small businesses, providing first-hand experience of technology innovation, experimentation and the challenges of bringing new solutions to market.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Qualifications",
+    list: [
+      "MSc in Executive Coaching, Ashridge Business School",
+      "Master Practitioner, NLP",
+      "BEng in Electronic Engineering",
+    ],
+  },
+]
 
 export default function AboutPage() {
   return (
     <>
       <Navigation />
 
-      <main className="bg-white">
-
+      <main className="bg-[#EDE8DE]">
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20">
-          <div className="mx-auto max-w-5xl px-6 grid gap-14 md:grid-cols-[0.85fr_1.15fr] items-center">
+        <section className="pt-32 pb-20 md:pt-40 md:pb-24">
+          <div className="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-[1.2fr_0.8fr] md:items-start">
+            <div className="text-center md:order-1 md:text-left">
+              <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#1b4b80]">
+                About
+              </p>
+              <h1 className="mt-6 text-3xl md:text-5xl font-semibold leading-tight text-[#1C1B18] text-balance">
+                About Mark
+              </h1>
+              <p className="mt-6 text-xl md:text-2xl font-bold leading-snug text-[#1C1B18]">
+                Helping leaders make complex transformation succeed by
+                bringing together technology, leadership and people.
+              </p>
+              <p className="mt-6 text-lg leading-relaxed text-[#1C1B18]/75">
+                For more than 20 years, I&rsquo;ve worked with organisations
+                navigating complex change. Today, I work with leaders to
+                overcome the barriers that prevent transformation from
+                succeeding and help their organisations create lasting
+                change.
+              </p>
+            </div>
 
-            {/* PHOTO */}
-            <div className="mx-auto w-full max-w-[280px] md:max-w-[320px]">
-              <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(0,0,0,0.2)] ring-2 ring-black/10">
+            <div className="mx-auto w-full max-w-[260px] md:order-2 md:max-w-none">
+              <div className="overflow-hidden rounded-2xl shadow-[0_30px_80px_rgba(28,27,24,0.18)] ring-1 ring-[rgba(28,27,24,0.08)]">
                 <Image
                   src="/images/mb.jpg"
                   alt="Mark Buchan MSc"
@@ -37,170 +136,194 @@ export default function AboutPage() {
                 />
               </div>
             </div>
-
-            {/* INTRO */}
-            <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[#111110] opacity-60 font-medium mb-4">
-                About
-              </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111110] mb-6">
-                Mark Buchan MSc
-              </h1>
-              <p className="text-xl leading-relaxed text-[#111110] opacity-75 mb-4">
-                Author of The Hidden Gap.
-              </p>
-              <p className="text-lg flex-col leading-relaxed text-[#111110] opacity-70 mb-4">
-                Mark works at the intersection of organisational culture, behavioural dynamics, leadership psychology, and complex systems thinking.
-              </p>
-              <p className="text-lg leading-relaxed text-[#111110] opacity-70 mb-4">
-                 Through years spent inside transformation programmes, leadership environments, and coaching conversations, he observed the same recurring pattern across industries: the growing gap between what institutions say they value and what they actually reward.
-              </p>
-              <p className="text-lg leading-relaxed text-[#111110] opacity-70 mb-4">
-                 The Hidden Gap is the name Mark gives to this pattern. He provides a framework for understanding it – and for those ready, a way to begin changing it.
-              </p>
-
-
-              <div className="mt-8">
-                <a
-                  href="https://www.linkedin.com/in/theagileleader/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Connect on LinkedIn →
-                </a>
-              </div>
-            </div>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
-
-        {/* THE WORK */}
-        <section className="py-24">
+        {/* CAREER */}
+        <section className="bg-white py-20">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
-              The work
-            </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl font-bold text-[#111110] mb-8">
-              The work behind The Hidden Gap
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1C1B18]">
+              A career spanning technology, leadership and change
             </h2>
-            <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted-foreground">
+            <div className="mt-8 flex flex-col gap-6 text-lg leading-relaxed text-[#1C1B18]/75">
               <p>
-                Over many years of working with leaders, teams and organisations, the same pattern kept appearing: people talk about values as if they are clear, shared and lived — while behaviour tells a more complicated story.
+                My career has taken me from technology delivery to executive
+                coaching and organisational transformation. Along the way, I
+                have worked with teams, leaders and organisations facing the
+                challenges of adopting new ways of working, delivering
+                change and building the capabilities needed for the future.
               </p>
               <p>
-                That tension became the foundation for what I now call <strong className="text-[#111110]">The Hidden Gap</strong> — and for the wider challenge I describe as the <strong className="text-[#111110]">Human Alignment Problem</strong>.
+                I bridge the gap between technology and people because I
+                have spent my career working on both sides. I understand
+                the systems, processes and technologies that enable
+                transformation—but also the leadership, communication and
+                behavioural shifts required to make change succeed.
               </p>
               <p>
-                My work is about helping people make that gap visible, understand what keeps it in place, and respond to it with greater honesty, intention and alignment.
-              </p>
-              <p className="text-[#111110] font-semibold text-xl border-l-4 border-[#ff3131] pl-6">
-                This is not about changing people. It is about changing what drives behaviour.
+                My early career in software development, business analysis
+                and Agile delivery gave me a practical understanding of how
+                organisations design and implement change. Over time, my
+                focus expanded to the human side of transformation:
+                coaching leaders and teams to improve collaboration,
+                communication and performance.
               </p>
               <p>
-                It sits at the intersection of values, behaviour, conflict, communication, collaboration and change. It is the work I have been doing for more than twenty years — and the book I needed to write.
+                More recently, I co-founded a SaaS venture focused on
+                developing an AI product for small businesses. Although
+                that venture did not continue, the experience gave me
+                first-hand insight into the realities of innovation,
+                technology adoption and leading through uncertainty in a
+                rapidly changing environment.
+              </p>
+              <p className="text-[#1C1B18] font-medium">
+                Today, I bring together my experience across technology,
+                leadership and coaching to help leaders navigate complex
+                transformation challenges and create change that lasts.
               </p>
             </div>
           </div>
         </section>
 
-        {/* QUOTE */}
-        <section className="bg-[#111110] py-16">
-          <div className="mx-auto max-w-2xl px-6 text-center">
-            <p className="text-xl md:text-2xl font-semibold text-[#ffff00] leading-relaxed">
-              "Behaviour is not the problem to be fixed.<br />
-              It is the evidence of the values currently at work."
-            </p>
-            <p className="mt-4 text-sm text-white opacity-40">— The Hidden Gap</p>
-          </div>
-        </section>
-
-        {/* WHAT THIS WORK IS FOR */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
-
-        <section className="bg-[#ffff00] py-24">
-          <div className="mx-auto max-w-3xl px-6">
-            <h2 className="text-3xl font-bold text-[#111110] mb-8">
-              The Purpose of the Hidden Gap
-            </h2>
-            <div className="flex flex-col gap-6 text-lg leading-relaxed text-[#111110] opacity-80">
-              <p>
-                Sometimes the gap shows up as conflict. Sometimes as stalled change, mixed messages, cynicism or energy drain. Sometimes it shows up in a quieter way — as the nagging sense that something is not adding up but nobody can quite name it.
-              </p>
-              <p>
-                The aim is not to fix behaviour at the surface, but to understand what is driving it underneath. This enables leaders to create the conditions for alignment to become possible. That is <strong>why</strong> we do the work.
-              </p>
-              <p>
-                Whether it happens in a one-to-one coaching conversation, a leadership team workshop, a two-week organisational diagnostic, or through a book that gives someone language for what they have been sensing for some time. 
-              </p>
-              <p>
-                That is <strong>how</strong> we do the work.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
-
-        {/* THREE WAYS IN */}
-        <section className="py-24">
+        {/* EXPERIENCE & CREDENTIALS */}
+        <section className="py-20">
           <div className="mx-auto max-w-5xl px-6">
-            <h2 className="text-3xl font-bold text-[#111110] mb-12 text-center">
-              Three ways to go further
+            <h2 className="text-center text-2xl md:text-3xl font-semibold text-[#1C1B18]">
+              Experience & Credentials
             </h2>
-            <div className="grid gap-6 md:grid-cols-3">
 
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Read the book</h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    Explore the core ideas behind <em>The Hidden Gap</em> and join the list for the first chapter and launch updates.
-                  </p>
-                </div>
-                <a
-                  href="/book"
-                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {credentials.map((item) => (
+                <div
+                  key={item.title}
+                  className="flex overflow-hidden rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white shadow-sm"
                 >
-                  Explore the book
-                </a>
-              </div>
+                  {item.stat ? (
+                    <div className="flex w-20 shrink-0 items-start justify-center bg-[#1b4b80]/5 pt-6">
+                      <span className="text-2xl font-black leading-none text-[#1b4b80]">
+                        {item.stat}
+                      </span>
+                    </div>
+                  ) : (
+                    <div className="flex w-20 shrink-0 items-start justify-center bg-[#1b4b80]/5 pt-6">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#1b4b80]/10">
+                        {item.icon && (
+                          <item.icon
+                            className="h-6 w-6 text-[#1b4b80]"
+                            aria-hidden="true"
+                          />
+                        )}
+                      </div>
+                    </div>
+                  )}
 
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Work with me</h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    The Human Alignment Diagnostic, coaching, workshops and facilitated conversations for leaders ready for the honest conversation.
-                  </p>
+                  <div className="flex-1 p-6">
+                    <h3 className="text-xl font-semibold text-[#1C1B18]">
+                      {item.title}
+                    </h3>
+                    {item.body && (
+                      <p className="mt-3 text-base leading-relaxed text-[#1C1B18]/75">
+                        {item.body}
+                      </p>
+                    )}
+                    {item.list && (
+                      <>
+                        {item.intro && (
+                          <p className="mt-3 text-base font-medium text-[#1C1B18]/75">
+                            {item.intro}
+                          </p>
+                        )}
+                        <ul className="mt-3 flex flex-col gap-1.5">
+                          {item.list.map((li) => (
+                            <li
+                              key={li}
+                              className="text-base leading-relaxed text-[#1C1B18]/75"
+                            >
+                              {li}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </div>
                 </div>
-                <a
-                  href="/work-with-me"
-                  className="mt-8 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
-                >
-                  Consider working with me
-                </a>
-              </div>
-
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#111110] mb-4">Free diagnostic</h3>
-                  <p className="text-[#333330] leading-relaxed">
-                    Take the free four-minute Hidden Gap Diagnostic. Locate where your values actually sit using the Values Integrity Model.
-                  </p>
-                </div>
-                <a
-                  href="/the-hidden-gap-diagnostic"
-                  className="mt-8 inline-flex items-center text-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors justify-center"
-                >
-                  Take the free diagnostic
-                </a>
-              </div>
-
+              ))}
             </div>
           </div>
         </section>
 
+        {/* SHARING IDEAS */}
+        <section className="bg-white py-20">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1C1B18]">
+              Sharing ideas on transformation
+            </h2>
+            <div className="mt-6 flex flex-col gap-5 text-lg leading-relaxed text-[#1C1B18]/75">
+              <p>
+                Alongside my consulting work, I write and speak about
+                organisational transformation, leadership and the
+                challenges that determine whether change succeeds.
+              </p>
+              <p>
+                I am the author of two books on organisational
+                transformation, including <span className="italic">The Hidden Gap</span>,
+                and share insights from my experience working with leaders,
+                teams and organisations navigating complex change.
+              </p>
+            </div>
+            <a
+              href="/insights"
+              className="mt-8 inline-flex items-center rounded-md bg-[#1b4b80] px-5 py-3 text-sm font-bold text-[#EDE8DE] hover:bg-[#163C66] transition-colors"
+            >
+              Explore Insights & Media →
+            </a>
+          </div>
+        </section>
+
+        {/* WORK TOGETHER */}
+        <section className="py-20">
+          <div className="mx-auto max-w-3xl px-6">
+            <h2 className="text-2xl md:text-3xl font-semibold text-[#1C1B18]">
+              How we can work together
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-[#1C1B18]/75">
+              Every organisation faces different transformation challenges.
+              Whether you are navigating digital transformation, leading
+              organisational change or embedding new ways of working, I
+              tailor my support to your organisation, your people and your
+              goals.
+            </p>
+            <a
+              href="/work-with-me"
+              className="mt-8 inline-flex items-center rounded-md bg-[#1b4b80] px-5 py-3 text-sm font-bold text-[#EDE8DE] hover:bg-[#163C66] transition-colors"
+            >
+              Explore how I help →
+            </a>
+          </div>
+        </section>
+
+        {/* FINAL CTA */}
+        <section className="bg-[#1b4b80] py-24">
+          <div className="mx-auto max-w-2xl px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-semibold text-[#EDE8DE]">
+              Ready to discuss your transformation challenge?
+            </h2>
+            <p className="mt-6 text-lg leading-relaxed text-[#EDE8DE]/70">
+              A focused conversation to explore your transformation challenges and discuss whether my experience and approach are the right fit for your organisation.
+            </p>
+            <a
+              href={DIAGNOSTIC_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#EDE8DE] px-8 text-lg font-bold text-[#1C1B18] transition-colors hover:bg-[#163C66] hover:text-[#EDE8DE]"
+            >
+              Discuss Your Transformation
+            </a>
+            <p className="mt-6 text-base text-[#EDE8DE]/50">
+              Prefer email? Contact me directly at iam@markbuchan.co.uk
+            </p>
+          </div>
+        </section>
       </main>
 
       <Footer />

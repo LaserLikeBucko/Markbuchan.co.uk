@@ -11,12 +11,12 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --yellow: #ffff00;
-      --red: #ff3131;
-      --black: #111110;
+      --yellow: #EDE8DE;
+      --red: #1b4b80;
+      --black: #1C1B18;
       --white: #ffffff;
       --mid-grey: #888880;
-      --border: rgba(17,17,16,0.15);
+      --border: rgba(28,27,24,0.15);
       --radius: 8px;
     }
 
@@ -75,7 +75,7 @@
 
     .site-header .tagline {
       font-size: 14px;
-      color: rgba(255,255,0,0.6);
+      color: rgba(237,232,222,0.6);
       max-width: 420px;
       margin: 0 auto;
       line-height: 1.6;
@@ -96,7 +96,7 @@
 
     .progress-seg {
       height: 3px; flex: 1;
-      background: rgba(255,255,0,0.15);
+      background: rgba(237,232,222,0.15);
       border-radius: 2px;
       transition: background 0.4s ease;
     }
@@ -142,8 +142,8 @@
 
     .preamble .time-note {
       display: inline-block;
-      background: rgba(255,255,0,0.12);
-      border: 1px solid rgba(255,255,0,0.25);
+      background: rgba(237,232,222,0.12);
+      border: 1px solid rgba(237,232,222,0.25);
       color: var(--yellow);
       font-size: 13px;
       font-weight: 600;
@@ -209,7 +209,7 @@
 
     .context-option {
       background: rgba(255,255,255,0.6);
-      border: 2px solid rgba(17,17,16,0.2);
+      border: 2px solid rgba(28,27,24,0.2);
       border-radius: var(--radius);
       padding: 16px;
       cursor: pointer;
@@ -229,7 +229,7 @@
 
     .context-option.selected .ctx-icon { color: var(--yellow); }
     .context-option.selected .ctx-label { color: var(--yellow); }
-    .context-option.selected .ctx-desc { color: rgba(255,255,0,0.6); }
+    .context-option.selected .ctx-desc { color: rgba(237,232,222,0.6); }
 
     .ctx-icon {
       font-size: 22px;
@@ -267,7 +267,7 @@
       font-size: 15px;
       color: var(--black);
       background: rgba(255,255,255,0.8);
-      border: 2px solid rgba(17,17,16,0.2);
+      border: 2px solid rgba(28,27,24,0.2);
       border-radius: var(--radius);
       padding: 12px 14px;
       transition: border-color 0.2s, background 0.2s;
@@ -293,7 +293,7 @@
     .chip {
       padding: 7px 16px;
       border-radius: 24px;
-      border: 2px solid rgba(17,17,16,0.25);
+      border: 2px solid rgba(28,27,24,0.25);
       font-size: 14px;
       cursor: pointer;
       color: var(--black);
@@ -315,7 +315,7 @@
     /* ── VALUE ROWS ── */
     .value-row {
       background: rgba(255,255,255,0.7);
-      border: 2px solid rgba(17,17,16,0.12);
+      border: 2px solid rgba(28,27,24,0.12);
       border-radius: var(--radius);
       padding: 14px 16px;
       margin-bottom: 10px;
@@ -328,7 +328,7 @@
     .mini-opt {
       padding: 6px 14px;
       border-radius: 20px;
-      border: 1.5px solid rgba(17,17,16,0.25);
+      border: 1.5px solid rgba(28,27,24,0.25);
       font-size: 13px;
       cursor: pointer;
       background: transparent;
@@ -364,7 +364,7 @@
       display: inline-block;
       background: transparent;
       color: var(--black);
-      border: 2px solid rgba(17,17,16,0.3);
+      border: 2px solid rgba(28,27,24,0.3);
       font-family: 'DM Sans', sans-serif;
       font-size: 14px;
       font-weight: 600;
@@ -375,7 +375,7 @@
       margin-top: 1rem;
     }
 
-    .btn-secondary:hover { border-color: var(--black); background: rgba(17,17,16,0.06); }
+    .btn-secondary:hover { border-color: var(--black); background: rgba(28,27,24,0.06); }
 
     /* ── RESULTS ── */
     .result-header {
@@ -394,13 +394,13 @@
       margin-bottom: 0.35rem;
     }
 
-    .result-header p { font-size: 14px; color: rgba(255,255,0,0.65); line-height: 1.5; }
+    .result-header p { font-size: 14px; color: rgba(237,232,222,0.65); line-height: 1.5; }
 
     .vim-grid { display: grid; gap: 10px; margin-bottom: 1.5rem; }
 
     .vim-card {
       background: rgba(255,255,255,0.75);
-      border: 2px solid rgba(17,17,16,0.12);
+      border: 2px solid rgba(28,27,24,0.12);
       border-radius: var(--radius);
       padding: 14px 16px;
       display: flex;
@@ -431,7 +431,7 @@
 
     .analysis-box {
       background: rgba(255,255,255,0.75);
-      border: 2px solid rgba(17,17,16,0.12);
+      border: 2px solid rgba(28,27,24,0.12);
       border-radius: var(--radius);
       padding: 1.5rem;
       margin-bottom: 1.5rem;
@@ -472,7 +472,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .cta-box p { font-size: 14px; color: rgba(255,255,0,0.65); line-height: 1.6; margin-bottom: 1rem; }
+    .cta-box p { font-size: 14px; color: rgba(237,232,222,0.65); line-height: 1.6; margin-bottom: 1rem; }
 
     .discount-code {
       display: inline-block;
@@ -500,9 +500,9 @@
     }
 
     .cta-link.primary { background: var(--red); color: var(--white); }
-    .cta-link.primary:hover { background: #e02020; }
-    .cta-link.secondary { background: rgba(255,255,0,0.12); color: var(--yellow); border: 1px solid rgba(255,255,0,0.25); }
-    .cta-link.secondary:hover { background: rgba(255,255,0,0.22); }
+    .cta-link.primary:hover { background: #1C1B18; }
+    .cta-link.secondary { background: rgba(237,232,222,0.12); color: var(--yellow); border: 1px solid rgba(237,232,222,0.25); }
+    .cta-link.secondary:hover { background: rgba(237,232,222,0.22); }
 
     .error-msg { font-size: 13px; color: var(--red); margin-top: 6px; display: none; font-weight: 600; }
 
@@ -524,11 +524,11 @@
 </head>
 <body>
 
-<div style="background:#111110; padding:12px 24px; display:flex; align-items:center; justify-content:space-between;">
-  <a href="https://markbuchan.co.uk" style="color:#ffff00; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.05em;">
+<div style="background:#1C1B18; padding:12px 24px; display:flex; align-items:center; justify-content:space-between;">
+  <a href="https://markbuchan.co.uk" style="color:#EDE8DE; text-decoration:none; font-family:'DM Sans',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.05em;">
     ← markbuchan.co.uk
   </a>
-  <span style="color:rgba(255,255,0,0.4); font-family:'DM Sans',sans-serif; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">
+  <span style="color:rgba(237,232,222,0.4); font-family:'DM Sans',sans-serif; font-size:12px; letter-spacing:0.1em; text-transform:uppercase;">
     The Hidden Gap Diagnostic
   </span>
 </div>

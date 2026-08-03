@@ -53,11 +53,11 @@ function ReviewCarousel() {
 
   return (
     <div className="relative">
-      <div className="rounded-2xl border-2 border-[#111110] bg-white p-10 flex flex-col gap-6 min-h-[220px]">
-        <p className="text-[#111110] leading-relaxed text-xl flex-1">"{r.quote}"</p>
+      <div className="rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white p-10 shadow-sm flex flex-col gap-6 min-h-[220px]">
+        <p className="text-[#1C1B18] leading-relaxed text-xl flex-1">"{r.quote}"</p>
         <div>
-          <p className="font-bold text-[#111110]">{r.name}</p>
-          <p className="text-sm text-[#111110] opacity-60">{r.title}</p>
+          <p className="font-bold text-[#1C1B18]">{r.name}</p>
+          <p className="text-sm text-[#1C1B18] opacity-60">{r.title}</p>
         </div>
       </div>
       <div className="flex justify-center gap-3 mt-6">
@@ -65,8 +65,8 @@ function ReviewCarousel() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full border-2 border-[#111110] transition-all ${
-              i === current ? "bg-[#111110]" : "bg-transparent"
+            className={`w-3 h-3 rounded-full border-2 border-[#1b4b80] transition-all ${
+              i === current ? "bg-[#1C1B18]" : "bg-transparent"
             }`}
             aria-label={`Go to review ${i + 1}`}
           />
@@ -84,7 +84,15 @@ export default function BookPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20">
+        <section className="bg-[#EDE8DE] pt-32 pb-20">
+          <div className="mx-auto max-w-6xl px-6">
+            <a
+              href="/books"
+              className="inline-flex items-center text-sm font-medium text-[#1C1B18]/60 hover:text-[#1C1B18] transition-colors mb-8"
+            >
+              ← Back to Books & Publications
+            </a>
+          </div>
           <div className="mx-auto max-w-6xl px-6 grid gap-14 md:grid-cols-[0.9fr_1.1fr] items-center">
 
             {/* BOOK COVER */}
@@ -103,20 +111,20 @@ export default function BookPage() {
 
             {/* BOOK INFO */}
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-[#111110] opacity-60 font-medium mb-4">
+              <p className="text-sm uppercase tracking-[0.2em] text-[#1C1B18] opacity-60 font-medium mb-4">
                 Available now
               </p>
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111110] mb-3">
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#1C1B18] mb-3">
                 The Hidden Gap
               </h1>
-              <p className="text-xl md:text-2xl text-[#111110] opacity-75 mb-2">
+              <p className="text-xl md:text-2xl text-[#1C1B18] opacity-75 mb-2">
                 Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </p>
-              <p className="text-base text-[#111110] opacity-60 mb-8">
+              <p className="text-base text-[#1C1B18] opacity-60 mb-8">
                 How operating values drive behaviour, conflict and culture
               </p>
 
-              <div className="flex flex-col gap-4 text-lg leading-relaxed text-[#111110] opacity-80 mb-8">
+              <div className="flex flex-col gap-4 text-lg leading-relaxed text-[#1C1B18] opacity-80 mb-8">
                 <p>
                   Most organisations do not have a dysfunctional behaviour problem. They have a human alignment problem.
                 </p>
@@ -125,150 +133,49 @@ export default function BookPage() {
                 </p>
               </div>
 
-            {/* FREE CHAPTER */}
+            {/* FREE CHAPTER + BUY */}
             <div className="mt-6">
-              <a
-                href="/free-chapter"
-                className="inline-flex items-center justify-center rounded-md bg-[#ff3131] px-6 py-4 text-white text-lg font-semibold hover:bg-[#111110] hover:text-[#ffff00] transition-colors"
-              >
-                Read the first chapter free →
-              </a>
-              <p className="mt-3 text-sm text-[#111110] opacity-50">
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <a
+                  href="/free-chapter"
+                  className="inline-flex items-center justify-center rounded-md bg-[#1b4b80] px-6 py-4 text-white text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
+                >
+                  Read the first chapter free →
+                </a>
+                <a
+                  href="#buy"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    document
+                      .getElementById("buy")
+                      ?.scrollIntoView({ behavior: "smooth", block: "start" })
+                  }}
+                  className="inline-flex items-center justify-center rounded-md border-2 border-[#1C1B18] px-6 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
+                >
+                  Buy the Book
+                </a>
+              </div>
+              <p className="mt-3 text-sm text-[#1C1B18] opacity-50">
                 No email required. Just read.
               </p>
             </div>
 
-              
+
             </div>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
-
-        {/* PRICING CARDS */}
-        <section className="py-24">
-          <div className="mx-auto max-w-4xl px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-[#111110] mb-4">
-                Choose how you want to read it
-              </h2>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-                Buy direct from me and receive exclusive bonuses. Or grab it on Amazon. Either way — thank you!
-              </p>
-            </div>
-
-            <div className="grid gap-6 md:grid-cols-2">
-
-              {/* KINDLE - AMAZON */}
-              <div className="flex flex-col gap-4 rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Amazon Kindle</p>
-                <h3 className="text-2xl font-bold text-[#111110]">Digital</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-[#111110]">$13.99</span>
-                </div>
-                <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#111110] font-bold mt-0.5">✓</span>
-                    Instant delivery
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#111110] font-bold mt-0.5">✓</span>
-                    Read on any device with the Kindle app
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#111110] font-bold mt-0.5">✓</span>
-                    Amazon purchase protection
-                  </li>
-                </ul>
-                <a
-                  href="https://www.amazon.com/dp/B0H2QGH9GM?ref=sp_email"
-                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
-                >
-                  Buy on Amazon →
-                </a>
-              </div>
-
-              {/* DIRECT - RECOMMENDED */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8 shadow-sm relative">
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#ff3131] text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">
-                  Recommended
-                </div>
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Buy Direct</p>
-                <h3 className="text-2xl font-bold text-[#111110]">Digital + Bonuses</h3>
-                <div className="flex items-baseline gap-2">
-                  <span className="text-3xl font-bold text-[#111110]">£13.99</span>
-                </div>
-                <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#ff3131] font-bold mt-0.5">✓</span>
-                    The complete eBook
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#ff3131] font-bold mt-0.5">✓</span>
-                    Access to the Living Appendix
-                  </li>
-                  <li className="flex gap-2 items-start">
-                    <span className="text-[#ff3131] font-bold mt-0.5">✓</span>
-                    You support the work directly
-                  </li>
-                </ul>
-                <a
-                  href="https://buy.stripe.com/6oU00ia9Q7Cke7I4a71VK00"
-                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#ff3131] px-5 py-3 text-white font-semibold hover:bg-[#111110] transition-colors"
-                >
-                  Buy Direct — £13.99 →
-                </a>
-              </div>
-
-            </div>
-
-            <div className="mt-8 text-center">
-              <p className="text-sm text-muted-foreground">
-                📚 Paperback edition coming soon. I'll announce it on Substack and LinkedIn when it's ready.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* WHY BUY DIRECT */}
-        <section className="bg-[#111110] py-24">
-          <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-3xl font-bold text-[#ffff00] mb-4 text-center">
-              Why buy direct?
-            </h2>
-            <p className="text-lg text-white opacity-65 text-center mb-16 max-w-xl mx-auto">
-              When you buy direct you support the work, get exclusive bonuses, and join the community of people doing this work.
-            </p>
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="flex flex-col gap-3">
-                <span className="text-3xl">🔑</span>
-                <h3 className="font-bold text-[#ffff00]">Access to the Living Appendix</h3>
-                <p className="text-sm text-white opacity-60 leading-relaxed">
-                  The hidden page for readers — exercises, tools, downloads and resources that grow as the work grows. Not listed anywhere on the site.
-                </p>
-              </div>
-              <div className="flex flex-col gap-3">
-                <span className="text-3xl">🤝</span>
-                <h3 className="font-bold text-[#ffff00]">You support the work directly</h3>
-                <p className="text-sm text-white opacity-60 leading-relaxed">
-                  Buying direct means more of your money goes to the work and less to the platform. It also means we stay connected.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* WHAT THE BOOK HELPS YOU SEE */}
         <section className="py-24">
           <div className="mx-auto max-w-5xl px-6">
             <div className="mx-auto max-w-3xl text-center mb-16">
-              <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+              <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
                 What the book covers
               </p>
-              <Separator className="mb-8 max-w-16 bg-accent/40 mx-auto" />
-              <h2 className="text-3xl font-bold text-[#111110]">
+              <Separator className="mb-8 max-w-16 bg-[#1b4b80]/40 mx-auto" />
+              <h2 className="text-3xl font-bold text-[#1C1B18]">
                 What the book helps you see
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
@@ -277,20 +184,20 @@ export default function BookPage() {
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">
-              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-[#111110] mb-4">The gap</h3>
+              <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-[#1C1B18] mb-4">The gap</h3>
                 <p className="text-[#333330] leading-relaxed">
                   The difference between declared values and operating values — between what is said and what is actually reinforced when pressure rises.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-[#111110] mb-4">The cost</h3>
+              <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-[#1C1B18] mb-4">The cost</h3>
                 <p className="text-[#333330] leading-relaxed">
                   How misalignment shows up as conflict, cynicism, stalled change, energy drain and hidden patterns that keep repeating regardless of intervention.
                 </p>
               </div>
-              <div className="rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-[#111110] mb-4">The response</h3>
+              <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-[#1C1B18] mb-4">The response</h3>
                 <p className="text-[#333330] leading-relaxed">
                   A clearer way of understanding what is really going on — and a more intentional, practical way of working with it.
                 </p>
@@ -300,9 +207,9 @@ export default function BookPage() {
         </section>
 
         {/* QUOTE */}
-        <section className="bg-[#111110] py-16">
+        <section className="bg-[#1b4b80] py-16">
           <div className="mx-auto max-w-2xl px-6 text-center">
-            <p className="text-xl md:text-2xl font-semibold text-[#ffff00] leading-relaxed">
+            <p className="text-xl md:text-2xl font-semibold text-[#EDE8DE] leading-relaxed">
               "The gap does not close because people try harder.<br />
               It closes because they see more clearly."
             </p>
@@ -314,10 +221,10 @@ export default function BookPage() {
         <section className="py-24 bg-white">
           <div className="mx-auto max-w-3xl px-6">
             <div className="text-center mb-16">
-              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 mb-4">
+              <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60 mb-4">
                 Early readers
               </p>
-              <h2 className="text-3xl font-bold text-[#111110]">
+              <h2 className="text-3xl font-bold text-[#1C1B18]">
                 What people are saying
               </h2>
             </div>
@@ -328,11 +235,11 @@ export default function BookPage() {
             </div>
             <div className="md:hidden flex flex-col gap-6">
               {REVIEWS.map((r, i) => (
-                <div key={i} className="rounded-2xl border-2 border-[#111110] bg-white p-8 flex flex-col gap-6">
-                  <p className="text-[#111110] leading-relaxed text-lg">"{r.quote}"</p>
+                <div key={i} className="rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white p-8 flex flex-col gap-6 shadow-sm">
+                  <p className="text-[#1C1B18] leading-relaxed text-lg">"{r.quote}"</p>
                   <div className="mt-auto">
-                    <p className="font-bold text-[#111110]">{r.name}</p>
-                    <p className="text-sm text-[#111110] opacity-60">{r.title}</p>
+                    <p className="font-bold text-[#1C1B18]">{r.name}</p>
+                    <p className="text-sm text-[#1C1B18] opacity-60">{r.title}</p>
                   </div>
                 </div>
               ))}
@@ -341,11 +248,11 @@ export default function BookPage() {
         </section>
 
         {/* FIVE PARTS */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-24">
+        <section className="bg-[#EDE8DE] py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <h2 className="text-3xl font-bold text-[#111110] mb-16 text-center">
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-16 text-center">
               Four parts. One through line.
             </h2>
             <div className="flex flex-col gap-6">
@@ -355,13 +262,13 @@ export default function BookPage() {
                 { part: "Part 3", title: "When Values Become Shared", desc: "What happens when values work moves from the individual into teams and organisations." },
                 { part: "Part 4", title: "Working with the Gap in Real Time", desc: "The Inner Coach, the Choice Triangle, and how to spot and respond to the gap as it appears." },
               ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start bg-white rounded-2xl border-2 border-[#111110] p-6">
-                  <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#111110] text-[#ffff00] font-bold text-sm">
+                <div key={i} className="flex gap-6 items-start bg-white rounded-2xl border border-[rgba(28,27,24,0.1)] p-6 shadow-sm">
+                  <span className="flex-shrink-0 flex items-center justify-center w-10 h-10 rounded-full bg-[#1b4b80] text-[#EDE8DE] font-bold text-sm">
                     {i + 1}
                   </span>
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{item.part}</p>
-                    <h3 className="font-bold text-[#111110] mb-2">{item.title}</h3>
+                    <h3 className="font-bold text-[#1C1B18] mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
@@ -370,17 +277,17 @@ export default function BookPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* NEXT STEPS */}
         <section className="py-24">
           <div className="mx-auto max-w-5xl px-6">
-            <h2 className="text-3xl font-bold text-[#111110] mb-12 text-center">
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-12 text-center">
               Go further
             </h2>
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-[#111110] mb-4">
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-[#1C1B18] mb-4">
                   Take the free diagnostic
                 </h3>
                 <p className="text-[#333330] leading-relaxed flex-1">
@@ -388,13 +295,13 @@ export default function BookPage() {
                 </p>
                 <a
                   href="/the-hidden-gap-diagnostic"
-                  className="mt-6 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#1C1B18] px-5 py-3 text-[#EDE8DE] font-semibold hover:bg-[#1b4b80] transition-colors"
                 >
                   Take the diagnostic →
                 </a>
               </div>
-              <div className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-[#111110] mb-4">
+              <div className="flex h-full flex-col rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-[#1C1B18] mb-4">
                   Work with me directly
                 </h3>
                 <p className="text-[#333330] leading-relaxed flex-1">
@@ -402,10 +309,148 @@ export default function BookPage() {
                 </p>
                 <a
                   href="/leadership-alignment-diagnostic"
-                  className="mt-6 inline-flex items-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#1C1B18] px-5 py-3 text-[#EDE8DE] font-semibold hover:bg-[#1b4b80] transition-colors"
                 >
                   Learn more →
                 </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
+
+        {/* PRICING CARDS */}
+        <section id="buy" className="py-24 scroll-mt-24">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-[#1C1B18] mb-4">
+                Choose how you want to read it
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto">
+                Buy direct from me and receive exclusive bonuses. Or grab it on Amazon. Either way — thank you!
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-3">
+
+              {/* PAPERBACK - AMAZON */}
+              <div className="flex flex-col gap-4 rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Amazon</p>
+                <h3 className="text-2xl font-bold text-[#1C1B18]">Paperback</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-[#1C1B18]">£19.99</span>
+                </div>
+                <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Physical copy, delivered to your door
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Highlight, annotate, lend it out
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Amazon purchase protection
+                  </li>
+                </ul>
+                <a
+                  href="https://www.amazon.co.uk/Hidden-Gap-Alignment-Conflict-Behaviour/dp/B0H6F77H2R/ref=sr_1_1?crid=2E7BGPFVDVNJ&dib=eyJ2IjoiMSJ9.XP2h05xUEtSCoXIG7cNdLg.mhrFFZjzJ0KOpjdtXjiWRR_DTmztOqcZ7W2XTQNH62s&dib_tag=se&keywords=the+hidden+gap+mark+buchan&qid=1785578022&sprefix=%2Caps%2C133&sr=8-1"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1C1B18] px-5 py-3 text-[#EDE8DE] font-semibold hover:bg-[#1b4b80] transition-colors"
+                >
+                  Buy on Amazon →
+                </a>
+              </div>
+
+              {/* KINDLE - AMAZON */}
+              <div className="flex flex-col gap-4 rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Amazon Kindle</p>
+                <h3 className="text-2xl font-bold text-[#1C1B18]">Digital</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-[#1C1B18]">$13.99</span>
+                </div>
+                <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Instant delivery
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Read on any device with the Kindle app
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1C1B18] font-bold mt-0.5">✓</span>
+                    Amazon purchase protection
+                  </li>
+                </ul>
+                <a
+                  href="https://www.amazon.com/dp/B0H2QGH9GM?ref=sp_email"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1C1B18] px-5 py-3 text-[#EDE8DE] font-semibold hover:bg-[#1b4b80] transition-colors"
+                >
+                  Buy on Amazon →
+                </a>
+              </div>
+
+              {/* DIRECT - RECOMMENDED */}
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] bg-white p-8 shadow-sm relative">
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#1b4b80] text-white text-xs font-bold uppercase tracking-wider px-4 py-1 rounded-full">
+                  Recommended
+                </div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Buy Direct</p>
+                <h3 className="text-2xl font-bold text-[#1C1B18]">Digital + Bonuses</h3>
+                <div className="flex items-baseline gap-2">
+                  <span className="text-3xl font-bold text-[#1C1B18]">£13.99</span>
+                </div>
+                <ul className="flex flex-col gap-2 text-sm text-muted-foreground flex-1">
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1b4b80] font-bold mt-0.5">✓</span>
+                    The complete eBook
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1b4b80] font-bold mt-0.5">✓</span>
+                    Access to the Living Appendix
+                  </li>
+                  <li className="flex gap-2 items-start">
+                    <span className="text-[#1b4b80] font-bold mt-0.5">✓</span>
+                    You support the work directly
+                  </li>
+                </ul>
+                <a
+                  href="https://buy.stripe.com/6oU00ia9Q7Cke7I4a71VK00"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1b4b80] px-5 py-3 text-white font-semibold hover:bg-[#1C1B18] transition-colors"
+                >
+                  Buy Direct — £13.99 →
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* WHY BUY DIRECT */}
+        <section className="bg-[#1b4b80] py-24">
+          <div className="mx-auto max-w-4xl px-6">
+            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-4 text-center">
+              Why buy direct?
+            </h2>
+            <p className="text-lg text-white opacity-65 text-center mb-16 max-w-xl mx-auto">
+              When you buy direct you support the work, get exclusive bonuses, and join the community of people doing this work.
+            </p>
+            <div className="grid gap-8 md:grid-cols-2">
+              <div className="flex flex-col gap-3">
+                <span className="text-3xl">🔑</span>
+                <h3 className="font-bold text-[#EDE8DE]">Access to the Living Appendix</h3>
+                <p className="text-sm text-white opacity-60 leading-relaxed">
+                  The hidden page for readers — exercises, tools, downloads and resources that grow as the work grows. Not listed anywhere on the site.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <span className="text-3xl">🤝</span>
+                <h3 className="font-bold text-[#EDE8DE]">You support the work directly</h3>
+                <p className="text-sm text-white opacity-60 leading-relaxed">
+                  Buying direct means more of your money goes to the work and less to the platform. It also means we stay connected.
+                </p>
               </div>
             </div>
           </div>

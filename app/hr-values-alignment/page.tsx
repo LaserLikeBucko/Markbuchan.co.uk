@@ -253,6 +253,8 @@ export default function ForHRLeadersPage() {
             </p>
             <a
               href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
             >
               Book Your Diagnostic Conversation →

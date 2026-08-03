@@ -30,14 +30,14 @@ const supportAreas = [
 
 const challenges = [
   {
-    label: "Leadership Alignment & Sponsorship",
-    body: "Your transformation strategy is clear. But are your leaders truly aligned on the priorities, decisions and actions needed to make it succeed?",
-    cta: "Explore Leadership Alignment",
-  },
-  {
     label: "Change Fatigue",
     body: "Your organisation has been through wave after wave of change. People are tired, sceptical and struggling to engage with the next transformation.",
     cta: "Explore Transformation Advisory",
+  },
+  {
+    label: "Leadership Alignment & Sponsorship",
+    body: "Your transformation strategy is clear. But are your leaders truly aligned on the priorities, decisions and actions needed to make it succeed?",
+    cta: "Explore Leadership Alignment",
   },
   {
     label: "Capability Gaps",
@@ -54,9 +54,9 @@ const services = [
     cta: "Explore Transformation Support",
   },
   {
-    label: "Leadership Alignment",
+    label: "Leadership Alignment & Sponsorship",
     strap: "Helping leadership teams create alignment for change",
-    body: "Helping leadership teams create clarity, confidence and shared direction through complex change.",
+    body: "Helping leadership teams align around change, strengthen sponsorship and create the conditions for lasting transformation.",
     cta: "Explore Leadership Support",
   },
   {
@@ -69,15 +69,15 @@ const services = [
 
 const trustPoints = [
   {
-    headline: "20+ years",
+    headline: "20+ Years",
     body: ["Helping senior leaders deliver complex organisational transformation and navigate critical moments of change."],
   },
   {
-    headline: "International & cross-sector",
+    headline: "International & Cross-Sector",
     body: ["Supporting transformation across Fintech, Aerospace, Telecoms and Technology, working with organisations facing significant change challenges."],
   },
   {
-    headline: "Author & speaker",
+    headline: "Author & Speaker",
     body: [
       "Author of two books on organisational transformation, including The Hidden Gap.",
       "Trusted speaker on leadership, organisational change and transformation.",
@@ -89,13 +89,13 @@ const trustPoints = [
 const steps = [
   {
     number: "1",
-    title: "Diagnostic Call",
+    title: "Initial Diagnostic Conversation",
     body: "A focused conversation to understand your current transformation challenge, what is getting in the way, and what success needs to look like. We'll explore whether my experience and approach are the right fit for your situation.",
   },
   {
     number: "2",
     title: "Transformation Diagnostic",
-    body: "I work with you to understand the wider picture — leadership alignment, ways of working, team dynamics and the barriers preventing progress. You gain clarity on what needs to change and where to focus attention.",
+    body: "I work with you to understand the wider picture — leadership alignment, sponsorship, ways of working, team dynamics and the barriers preventing progress. You gain clarity on what needs to change and where to focus attention.",
   },
   {
     number: "3",
@@ -119,13 +119,13 @@ const testimonials = [
   },
   {
     quote:
-      "Mark was part of an agile transformation team that delivered additional support and coaching to the Senior Delivery Managers at AXA Direct & Partnerships in 2013. As one of the senior managers, I benefited from 1:1 coaching with Mark. We built a trusted and professional relationship to create the opportunities for me to develop my agile skillset. Mark is a true professional and had a personal and intelligent approach to coaching individuals; is confident, confidential and demonstrated a challenging and empathic approach without 'letting me off the hook'... I would recommend Mark in any coaching engagement to assist in exploring individuals in their quest for personal growth.",
+      "Mark was part of an organisational transformation team that delivered additional support and coaching to the Senior Delivery Managers at AXA Direct & Partnerships in 2013. As one of the senior managers, I benefited from 1:1 coaching with Mark. We built a trusted and professional relationship to create the opportunities for me to develop my change skillset. Mark is a true professional and had a personal and intelligent approach to coaching individuals; is confident, confidential and demonstrated a challenging and empathic approach without 'letting me off the hook'... I would recommend Mark in any coaching engagement to assist in exploring individuals in their quest for personal growth.",
     name: "John Botting",
     title: "IT Delivery Partner, AXA (at the time of engagement)",
   },
   {
     quote:
-      "Mark is a well rounded individual that I would class as extremely knowledgable in the Agile space. He managed to give very sound guidance, knowledge and direction to a programme going through huge change. His facilitation skills are excellent and the way he interacts, teaches and mentors people is exceptional. Mark can operate at all levels and talks in language that is understandable and adapted to the audience. I would have no hesitation hiring or recommending Mark in the future. A real asset to any company on the Agile journey.",
+      "Mark is a well rounded individual that I would class as extremely knowledgable. He managed to give very sound guidance, knowledge and direction to a programme going through huge change. His facilitation skills are excellent and the way he interacts, teaches and mentors people is exceptional. Mark can operate at all levels and talks in language that is understandable and adapted to the audience. I would have no hesitation hiring or recommending Mark in the future. A real asset to any company on a transformation journey.",
     name: "Mick Power",
     title: "Programme Manager, BUPA (at the time of engagement)",
   },
@@ -178,9 +178,11 @@ export default function HomeV2Page() {
               <div className="mt-8">
                 <a
                   href={DIAGNOSTIC_CALL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex h-12 items-center justify-center rounded-md bg-[#1b4b80] px-8 text-base font-bold text-[#EDE8DE] transition-colors hover:bg-[#1C1B18]"
                 >
-                  Book a Diagnostic Call
+                  Discuss Your Transformation
                 </a>
               </div>
 
@@ -293,9 +295,14 @@ export default function HomeV2Page() {
             <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               Why it matters
             </p>
-            <h2 className="mt-4 text-2xl md:text-4xl font-semibold leading-snug text-[#1C1B18]">
+            <h2 className="mt-4 text-xl md:text-2xl font-semibold leading-snug text-[#1C1B18]">
               Why transformation needs more than a strategy
             </h2>
+
+            <p className="mt-4 text-2xl md:text-4xl font-bold leading-snug text-[#1C1B18]">
+              Transformation succeeds when technology, leadership and people
+              move together.
+            </p>
 
             <div className="mx-auto mt-8 flex flex-col gap-5 text-lg leading-relaxed text-[#1C1B18]/75">
               <p>
@@ -346,7 +353,7 @@ export default function HomeV2Page() {
                   key={service.label}
                   className="flex h-full flex-col rounded-2xl border border-[rgba(28,27,24,0.1)] bg-[#EDE8DE] p-6 shadow-sm"
                 >
-                  <div className="min-h-[190px]">
+                  <div className="min-h-[230px]">
                     <p className="text-xs font-semibold uppercase tracking-wider text-[#1b4b80]">
                       {service.label}
                     </p>
@@ -461,7 +468,7 @@ export default function HomeV2Page() {
               The first step
             </p>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-[#EDE8DE]">
-              Book a Diagnostic Call
+              Initial Diagnostic Conversation
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-[#EDE8DE]/70">
               A focused 30-minute conversation to understand your
@@ -475,9 +482,11 @@ export default function HomeV2Page() {
             </p>
             <a
               href={DIAGNOSTIC_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#EDE8DE] px-8 text-lg font-bold text-[#1C1B18] transition-colors hover:bg-[#163C66] hover:text-[#EDE8DE]"
             >
-              Book a Diagnostic Call
+              Discuss Your Transformation
             </a>
           </div>
         </section>

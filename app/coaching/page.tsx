@@ -171,6 +171,8 @@ export default function CoachingPage() {
                 </div>
                 <a
                   href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-white font-semibold hover:bg-[#ff3131] transition-colors"
                 >
                   Register interest →
@@ -192,6 +194,8 @@ export default function CoachingPage() {
                 </div>
                 <a
                   href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
                 >
                   Book now →
@@ -219,6 +223,8 @@ export default function CoachingPage() {
                 </div>
                 <a
                   href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center justify-center rounded-md bg-[#ff3131] px-5 py-3 text-white font-semibold hover:bg-[#111110] transition-colors"
                 >
                   Book Exploratory Chat →
@@ -237,6 +243,8 @@ export default function CoachingPage() {
               </p>
               <a
                 href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-md bg-[#111110] px-6 py-3 text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors"
               >
                 Let's talk →
@@ -303,6 +311,8 @@ export default function CoachingPage() {
             </p>
             <a
               href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] transition-colors"
             >
               Book a Diagnostic Conversation →

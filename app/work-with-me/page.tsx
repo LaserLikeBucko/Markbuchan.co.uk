@@ -20,19 +20,19 @@ const DIAGNOSTIC_CALL_URL =
 const areas = [
   {
     label: "Transformation Advisory",
-    body: "When transformation is not delivering the expected results, I help leaders understand what is getting in the way and identify the right interventions.",
+    body: "Helping leaders diagnose why transformation has stalled and identify the right interventions to move it forward.",
     cta: "Explore Transformation Advisory",
     href: "/transformation-advisory",
   },
   {
-    label: "Leadership Alignment",
-    body: "Helping leadership teams create clarity, confidence and shared direction through complex change.",
+    label: "Leadership Alignment & Sponsorship",
+    body: "Helping leadership teams build clarity, alignment and active sponsorship for successful transformation.",
     cta: "Explore Leadership Alignment",
     href: "/leadership-alignment",
   },
   {
     label: "Embedding Change",
-    body: "Helping organisations ensure new ways of working are adopted, sustained and become part of everyday practice.",
+    body: "Helping organisations embed new ways of working so they are adopted, sustained and become part of everyday practice.",
     cta: "Explore Embedding Change",
     href: "/embedding-change",
   },
@@ -51,14 +51,14 @@ export default function WorkWithMePage() {
               Work With Me
             </p>
             <h1 className="mt-6 text-3xl md:text-5xl font-semibold leading-tight text-[#1C1B18] text-balance">
-              Senior advisory support for leaders navigating complex
-              transformation.
+              Strategic transformation advisory for leaders navigating
+              complex change.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-[#1C1B18]/75">
-              Whether you&rsquo;re diagnosing what&rsquo;s getting in the
-              way, aligning your leadership team, or embedding new ways of
-              working, I help leaders create the clarity and momentum
-              transformation needs to succeed.
+              Transformation succeeds when technical change and people
+              change move together. I help leaders understand what&rsquo;s
+              getting in the way, align their leadership teams and create
+              the conditions for lasting adoption.
             </p>
           </div>
         </section>
@@ -100,15 +100,23 @@ export default function WorkWithMePage() {
               Book a Diagnostic Call
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-[#EDE8DE]/70">
-              A focused 30-minute conversation to discuss your
-              transformation challenges and potential next steps.
+              Every organisation&rsquo;s transformation challenges are
+              different. A diagnostic call gives us the opportunity to
+              explore your situation, identify what&rsquo;s getting in the
+              way, and discuss where focused support could make the
+              greatest difference.
             </p>
             <a
               href={DIAGNOSTIC_CALL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-8 inline-flex h-12 items-center justify-center rounded-md bg-[#EDE8DE] px-8 text-lg font-bold text-[#1C1B18] transition-colors hover:bg-[#163C66] hover:text-[#EDE8DE]"
             >
-              Book a Diagnostic Call
+              Discuss Your Transformation
             </a>
+            <p className="mt-4 text-sm text-[#EDE8DE]/50">
+              30-minute introductory conversation. No obligation.
+            </p>
           </div>
         </section>
       </main>

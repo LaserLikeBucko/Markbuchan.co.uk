@@ -19,7 +19,7 @@ const items = [
   {
     icon: FileText,
     label: "Articles",
-    body: "Writing on transformation, leadership and the human side of organisational change.",
+    body: "Perspectives on transformation, organisational change and the human factors that shape lasting change.",
     cta: "Read the Articles",
     href: "/resources/blog",
   },
@@ -32,15 +32,21 @@ const items = [
   },
   {
     icon: BookOpen,
-    label: "Books",
-    body: "The Hidden Gap and Leaders, it's not how you finish… it's how you start! — Mark's two books on transformation and leadership.",
-    cta: "Explore the Books",
-    href: "/book",
+    label: "Books & Publications",
+    body: (
+      <>
+        Author of <span className="italic">The Hidden Gap</span> and{" "}
+        <span className="italic">Leaders, It&rsquo;s Not How You Finish&hellip; It&rsquo;s How You Start!</span>{" "}
+        with further publications on transformation and change.
+      </>
+    ),
+    cta: "Explore Books & Publications",
+    href: "/books",
   },
   {
     icon: Wrench,
     label: "Tools & Frameworks",
-    body: "Practical tools and frameworks for navigating organisational transformation, drawn from years of consulting experience.",
+    body: "Practical tools and frameworks for navigating organisational transformation, developed through years of consulting experience.",
     cta: "Explore Tools & Frameworks",
     href: "/tools-and-frameworks",
   },
@@ -59,11 +65,10 @@ export default function InsightsPage() {
               Insights & Media
             </p>
             <h1 className="mt-6 text-3xl md:text-5xl font-semibold leading-tight text-[#1C1B18] text-balance">
-              Thinking on transformation, leadership and change.
+              Thought leadership on transformation, organisational change and the conditions that enable lasting impact.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-[#1C1B18]/75">
-              Articles, talks, books and practical tools for leaders
-              navigating complex organisational change.
+              Articles, talks, books and practical tools exploring how organisations navigate complex change and build lasting capability.
             </p>
           </div>
         </section>
@@ -83,16 +88,16 @@ export default function InsightsPage() {
                   />
                 </div>
                 <div className="mt-4 flex-1">
-                  <h2 className="text-xl font-semibold text-[#1C1B18]">
+                  <h2 className="text-2xl font-semibold text-[#1C1B18]">
                     {item.label}
                   </h2>
-                  <p className="mt-3 text-sm leading-relaxed text-[#1C1B18]/75">
+                  <p className="mt-3 text-base leading-relaxed text-[#1C1B18]/75">
                     {item.body}
                   </p>
                 </div>
                 <a
                   href={item.href}
-                  className="mt-6 inline-flex items-center rounded-md bg-[#1b4b80] px-4 py-2.5 text-sm font-medium text-[#EDE8DE] hover:bg-[#163C66] transition-colors"
+                  className="mt-6 inline-flex items-center rounded-md bg-[#1b4b80] px-4 py-2.5 text-base font-bold text-[#EDE8DE] hover:bg-[#163C66] transition-colors"
                 >
                   {item.cta} →
                 </a>

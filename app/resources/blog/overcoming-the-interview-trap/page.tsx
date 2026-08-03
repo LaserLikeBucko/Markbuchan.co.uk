@@ -19,42 +19,42 @@ export default function InterviewTrapPage() {
       <main className="bg-white">
 
         {/* ARTICLE HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20">
+        <section className="bg-[#EDE8DE] pt-32 pb-20">
           <div className="mx-auto max-w-3xl px-6">
             <a
               href="/resources"
-              className="inline-flex items-center text-sm font-medium text-[#111110] opacity-60 hover:opacity-100 transition-opacity mb-8"
+              className="inline-flex items-center text-sm font-medium text-[#1C1B18] opacity-60 hover:opacity-100 transition-opacity mb-8"
             >
               ← Back to Resources
             </a>
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60">
               Leadership · 5 min read
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#111110] text-balance">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#1C1B18] text-balance">
               Overcoming The Interview Trap - Why I Don't Do Interviews Anymore ...
             </h1>
-            <p className="mt-6 text-xl leading-relaxed text-[#111110] opacity-75">
+            <p className="mt-6 text-xl leading-relaxed text-[#1C1B18] opacity-75">
               ... and what I do instead.
             </p>
-            <p className="mt-4 text-sm text-[#111110] opacity-50">
+            <p className="mt-4 text-sm text-[#1C1B18] opacity-50">
               Mark Buchan MSc · May 2026
             </p>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* ARTICLE BODY */}
         <article className="py-24">
           <div className="mx-auto max-w-3xl px-6">
             <div className="prose prose-lg max-w-none">
 
-              <p className="text-xl leading-relaxed text-[#111110] font-medium mb-8">
+              <p className="text-xl leading-relaxed text-[#1C1B18] font-medium mb-8">
                 I stopped doing selection interviews about two years ago, when I finally realised what was actually happening in them. This is what I now call the “Interview Trap”.
 
               </p>
 
-              <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+              <h2 className="text-2xl font-bold text-[#1C1B18] mt-12 mb-6">
                 What is the Interview Trap?
               </h2>
 
@@ -82,13 +82,13 @@ export default function InterviewTrapPage() {
                 The leader would have received some of my thinking, often drawn from years of experience. I would receive a polite email suggesting a follow-up that rarely materialised.  
               </p>
 
-              <div className="border-l-4 border-[#ff3131] pl-6 my-10">
-                <p className="text-xl font-semibold text-[#111110] leading-relaxed">
+              <div className="border-l-4 border-[#1b4b80] pl-6 my-10">
+                <p className="text-xl font-semibold text-[#1C1B18] leading-relaxed">
                   And the real issue — whatever prompted the conversation in the first place — would remain unchanged, even if it had been named. That is what free consulting looks like!
                 </p>
               </div>
 
-              <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+              <h2 className="text-2xl font-bold text-[#1C1B18] mt-12 mb-6">
                 The deeper problem
               </h2>
 
@@ -107,8 +107,8 @@ export default function InterviewTrapPage() {
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                 There was also what I now recognise as the Black Ball Problem. After four rounds of interviews across the whole leadership team — each one a polite exploration, each one an opportunity to give away more free thinking — one person would exercise a veto and the potential engagement would disappear. Weeks in the Interview Trap, and the only output would be a slightly better understanding of their problems — which they now had too — for free.
               </p>
-              <div className="border-l-8 border-[#ffff00] pl-12 my-10 italic opacity-80 bg-gray-100 p-6 rounded-lg">
-                <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+              <div className="border-l-8 border-[#1b4b80] pl-12 my-10 italic opacity-80 bg-[#EDE8DE] p-6 rounded-lg">
+                <h2 className="text-2xl font-bold text-[#1C1B18] mt-12 mb-6">
                   From the Trenches: The Black Ball Problem
                 </h2>
 
@@ -129,7 +129,7 @@ export default function InterviewTrapPage() {
                 </p>
                </div>
 
-              <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+              <h2 className="text-2xl font-bold text-[#1C1B18] mt-12 mb-6">
                 How I Work Differently Now
               </h2>
 
@@ -138,7 +138,7 @@ export default function InterviewTrapPage() {
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The first is a <strong className="text-[#111110]">Working Session.</strong>
+                The first is a <strong className="text-[#1C1B18]">Working Session.</strong>
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -146,7 +146,7 @@ export default function InterviewTrapPage() {
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                The second is a <strong className="text-[#111110]">Diagnostic Conversation</strong>.
+                The second is a <strong className="text-[#1C1B18]">Diagnostic Conversation</strong>.
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -157,7 +157,7 @@ export default function InterviewTrapPage() {
                 That conversation has a purpose. It has a direction. And it treats the leader's time — and mine — as something to be respected.
               </p>
 
-              <h2 className="text-2xl font-bold text-[#111110] mt-12 mb-6">
+              <h2 className="text-2xl font-bold text-[#1C1B18] mt-12 mb-6">
                 Why this matters for leaders
               </h2>
 
@@ -173,7 +173,7 @@ export default function InterviewTrapPage() {
                 If your organisation is stuck in transformation fatigue, leadership misalignment, or that nagging feeling that something is fundamentally off — stop scheduling more meetings.
               </p>
 
-              <p className="text-xl text-center font-semibold text-[#111110] mt-8 mb-6">
+              <p className="text-xl text-center font-semibold text-[#1C1B18] mt-8 mb-6">
                 It is a diagnostic conversation.
               </p>
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -188,9 +188,9 @@ export default function InterviewTrapPage() {
         </article>
 
         {/* CTA */}
-        <section className="bg-[#111110] py-24">
+        <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#ffff00] mb-6">
+            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
               Book a Diagnostic Conversation
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
@@ -198,7 +198,9 @@ export default function InterviewTrapPage() {
             </p>
             <a
               href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
-              className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#163C66] hover:text-[#EDE8DE] transition-colors"
             >
               Book Yours Now
             </a>
@@ -209,26 +211,26 @@ export default function InterviewTrapPage() {
         </section>
 
         {/* RELATED */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         <section className="py-20">
           <div className="mx-auto max-w-3xl px-6">
-            <h3 className="text-xl font-bold text-[#111110] mb-8">Related</h3>
+            <h3 className="text-xl font-bold text-[#1C1B18] mb-8">Related</h3>
             <div className="grid gap-6 md:grid-cols-2">
               <a
                 href="/leadership-alignment-diagnostic"
-                className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#ff3131] transition-colors group"
+                className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#1b4b80] transition-colors group"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Service</p>
-                <h4 className="font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">The Human Alignment Diagnostic →</h4>
+                <h4 className="font-bold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">The Human Alignment Diagnostic →</h4>
                 <p className="text-sm text-muted-foreground">The two-week senior engagement that locates your organisation's hidden gap with precision.</p>
               </a>
               <a
                 href="/the-hidden-gap-diagnostic"
-                className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#ff3131] transition-colors group"
+                className="flex flex-col gap-2 rounded-xl border border-[rgba(17,17,16,0.15)] p-6 hover:border-[#1b4b80] transition-colors group"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Free tool</p>
-                <h4 className="font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">The Hidden Gap Diagnostic →</h4>
+                <h4 className="font-bold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">The Hidden Gap Diagnostic →</h4>
                 <p className="text-sm text-muted-foreground">Four minutes. Locate where your values actually sit using the Values Integrity Model.</p>
               </a>
             </div>

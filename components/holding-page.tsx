@@ -42,9 +42,11 @@ export function HoldingPage({
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
                 href={DIAGNOSTIC_CALL_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex h-12 items-center justify-center rounded-md bg-[#1b4b80] px-8 text-base font-bold text-[#EDE8DE] transition-colors hover:bg-[#163C66]"
               >
-                Book a Diagnostic Call
+                Discuss Your Transformation
               </a>
               <a
                 href={backHref}

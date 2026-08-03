@@ -97,23 +97,6 @@ export default function ResourcesPage() {
 
             <div className="grid gap-6 md:grid-cols-2">
 
-              {/* INTERVIEW TRAP */}
-              <a
-                href="/resources/blog/overcoming-the-interview-trap"
-                className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8 hover:border-[#ff3131] transition-colors group"
-              >
-                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Leadership</p>
-                <h3 className="text-xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
-                  This Is Why I Don't Do Interviews Anymore
-                </h3>
-                <p className="text-muted-foreground leading-relaxed text-sm flex-1">
-                  The interview trap — why exploratory chats become consulting therapy, and what I do instead. On diagnostic conversations, working sessions, and why the first meeting sets the tone for everything that follows.
-                </p>
-                <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
-                  Read article →
-                </span>
-              </a>
-
               {/* IWHAT IS THE HUMAN ALIGNMENT PROBLEM */}
               <a
                 href="/resources/blog/what-is-the-human-alignment-problem"

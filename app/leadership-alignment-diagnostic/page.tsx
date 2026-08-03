@@ -264,6 +264,8 @@ export default function DiagnosticEngagementPage() {
             </p>
             <a
               href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
             >
               Book Your Diagnostic Conversation →

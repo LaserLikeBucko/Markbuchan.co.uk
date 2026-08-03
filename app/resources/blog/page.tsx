@@ -21,76 +21,42 @@ export default function BlogIndexPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20">
+        <section className="bg-[#EDE8DE] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6">
             <a
               href="/resources"
-              className="inline-flex items-center text-sm font-medium text-[#111110] opacity-60 hover:opacity-100 transition-opacity mb-8"
+              className="inline-flex items-center text-sm font-medium text-[#1C1B18]/60 hover:text-[#1C1B18] transition-colors mb-8"
             >
               ← Back to Resources
             </a>
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#1b4b80]">
               Articles
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#111110] text-balance mb-6">
-              From the Work
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#1C1B18] text-balance mb-6">
+              Insights from Transformation Work
             </h1>
-            <p className="text-xl leading-relaxed text-[#111110] opacity-75 max-w-2xl">
-              Thinking on human alignment, values, leadership and the gap between what organisations declare and what actually drives behaviour.
+            <p className="text-xl leading-relaxed text-[#1C1B18]/75 max-w-2xl">
+              Insights on transformation, leadership and the human factors that determine whether change succeeds.
             </p>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* ARTICLES LIST */}
         <section className="py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-[#1b4b80]">
               All articles
             </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
+            <Separator className="mb-12 max-w-16 bg-[#1b4b80]/40" />
 
             <div className="flex flex-col gap-8">
-
-              {/* INTERVIEW TRAP - LIVE */}
-              <a
-                href="/resources/blog/overcoming-the-interview-trap"
-                className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
-              >
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
-                  <Image
-                    src="/images/og/og-overcoming-the-interview-trap.jpg"
-                    alt="Overcoming the Interview Trap"
-                    width={1920}
-                    height={1080}
-                    className="h-full w-full object-contain"
-                  />
-                </div>
-                <div className="flex flex-col gap-3 p-8 flex-1">
-                  <div className="flex items-center gap-3">
-                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Leadership</p>
-                    <span className="text-xs text-muted-foreground opacity-50">·</span>
-                    <p className="text-xs text-muted-foreground">5 min read</p>
-                    <span className="text-xs text-muted-foreground opacity-50">·</span>
-                    <p className="text-xs text-muted-foreground">May 2026</p>
-                  </div>
-                  <h2 className="text-2xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
-                    Overcoming the Interview Trap
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed text-sm flex-1">
-                    The interview trap — why exploratory chats become consulting therapy, and what I do instead. On diagnostic conversations, working sessions, and why the first meeting sets the tone for everything that follows.
-                  </p>
-                  <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
-                    Read article →
-                  </span>
-                </div>
-              </a>
 
               {/* WHAT IS THE HUMAN ALIGNMENT PROBLEM - LIVE */}
               <a
                 href="/resources/blog/what-is-the-human-alignment-problem"
-                className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
+                className="flex flex-col md:flex-row gap-0 rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white overflow-hidden hover:border-[#1b4b80] transition-colors group"
               >
                 <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
                   <Image
@@ -109,13 +75,13 @@ export default function BlogIndexPage() {
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
                     <p className="text-xs text-muted-foreground">May 2026</p>
                   </div>
-                  <h2 className="text-2xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  <h2 className="text-2xl font-bold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
                     What is the Human Alignment Problem?
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                     Why human systems drift into misalignment, why organisational theatre emerges, and why you cannot automate your way out of a values problem.
                   </p>
-                  <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  <span className="text-sm font-semibold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
                     Read article →
                   </span>
                 </div>
@@ -124,7 +90,7 @@ export default function BlogIndexPage() {
               {/* THATS WHEN CULTURE CHANGES - LIVE */}
               <a
                 href="/resources/blog/thats-when-culture-changes"
-                className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-[#111110] bg-white overflow-hidden hover:border-[#ff3131] transition-colors group"
+                className="flex flex-col md:flex-row gap-0 rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white overflow-hidden hover:border-[#1b4b80] transition-colors group"
               >
                 <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
                   <Image
@@ -143,22 +109,22 @@ export default function BlogIndexPage() {
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
                     <p className="text-xs text-muted-foreground">June 2026</p>
                   </div>
-                  <h2 className="text-2xl font-bold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  <h2 className="text-2xl font-bold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
                     That's When Culture Changes
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                     A story about leadership, values and the question that changed everything — and what actually happens in the moment culture shifts.
                   </p>
-                  <span className="text-sm font-semibold text-[#111110] group-hover:text-[#ff3131] transition-colors">
+                  <span className="text-sm font-semibold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
                     Read article →
                   </span>
                 </div>
               </a>
 
               {/* TRANSFORMATION FATIGUE - COMING SOON */}
-              <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white overflow-hidden opacity-60">
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[rgba(17,17,16,0.06)] flex items-center justify-center flex-shrink-0">
-                  <span className="font-bold text-[#111110] text-base tracking-wide uppercase px-6 text-center opacity-40">
+              <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(28,27,24,0.2)] bg-white overflow-hidden opacity-60">
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[rgba(28,27,24,0.06)] flex items-center justify-center flex-shrink-0">
+                  <span className="font-bold text-[#1C1B18] text-base tracking-wide uppercase px-6 text-center opacity-40">
                     Coming Soon
                   </span>
                 </div>
@@ -168,7 +134,7 @@ export default function BlogIndexPage() {
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Coming Soon</p>
                   </div>
-                  <h2 className="text-2xl font-bold text-[#111110]">
+                  <h2 className="text-2xl font-bold text-[#1C1B18]">
                     Transformation Fatigue Is Not a People Problem
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-sm flex-1">
@@ -181,9 +147,9 @@ export default function BlogIndexPage() {
               </div>
 
               {/* PSYCHOLOGICAL SAFETY - COMING SOON */}
-              <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] bg-white overflow-hidden opacity-60">
-                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[rgba(17,17,16,0.06)] flex items-center justify-center flex-shrink-0">
-                  <span className="font-bold text-[#111110] text-base tracking-wide uppercase px-6 text-center opacity-40">
+              <div className="flex flex-col md:flex-row gap-0 rounded-2xl border-2 border-dashed border-[rgba(28,27,24,0.2)] bg-white overflow-hidden opacity-60">
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto bg-[rgba(28,27,24,0.06)] flex items-center justify-center flex-shrink-0">
+                  <span className="font-bold text-[#1C1B18] text-base tracking-wide uppercase px-6 text-center opacity-40">
                     Coming Soon
                   </span>
                 </div>
@@ -193,7 +159,7 @@ export default function BlogIndexPage() {
                     <span className="text-xs text-muted-foreground opacity-50">·</span>
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Coming Soon</p>
                   </div>
-                  <h2 className="text-2xl font-bold text-[#111110]">
+                  <h2 className="text-2xl font-bold text-[#1C1B18]">
                     You Can't Declare Psychological Safety Into Existence
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-sm flex-1">
@@ -210,14 +176,14 @@ export default function BlogIndexPage() {
         </section>
 
         {/* EMAIL CAPTURE */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-20">
+        <section className="bg-[#EDE8DE] py-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#111110] mb-4">
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-4">
               Get new articles when they land
             </h2>
-            <p className="text-lg text-[#111110] opacity-70 mb-10 max-w-xl mx-auto">
+            <p className="text-lg text-[#1C1B18]/70 mb-10 max-w-xl mx-auto">
               No newsletter. No weekly digest. Just the occasional piece of genuinely useful thinking — when there is something worth saying.
             </p>
             <form
@@ -231,11 +197,11 @@ export default function BlogIndexPage() {
                 name="email"
                 placeholder="Your email address"
                 required
-                className="flex-1 h-12 rounded-md border-2 border-[#111110] bg-white px-4 text-[#111110] placeholder:text-[#111110]/40 focus:outline-none focus:border-[#ff3131]"
+                className="flex-1 h-12 rounded-md border border-[rgba(28,27,24,0.2)] bg-white px-4 text-[#1C1B18] placeholder:text-[#1C1B18]/40 focus:outline-none focus:border-[#1b4b80]"
               />
               <button
                 type="submit"
-                className="h-12 px-6 rounded-md bg-[#111110] text-[#ffff00] font-semibold hover:bg-[#ff3131] transition-colors whitespace-nowrap"
+                className="h-12 px-6 rounded-md bg-[#1b4b80] text-[#EDE8DE] font-bold hover:bg-[#163C66] transition-colors whitespace-nowrap"
               >
                 Keep me posted
               </button>
