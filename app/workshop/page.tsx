@@ -8,11 +8,11 @@ export const metadata = {
   openGraph: {
     title: "Leadership & Team Alignment Workshop UK | The Hidden Gap",
     description: "A 90-minute workshop helping leaders uncover the real cause of team conflict and misalignment. Practical, direct, and immediately applicable.",
-    url: "https://markbuchan.co.uk",
+    url: "https://www.markbuchan.co.uk",
     siteName: "The Human Alignment Co.",
     images: [
       {
-        url: "https://mark.buchan.co.uk/images/og/og-image.jpg",
+        url: "/images/og/og-image.jpg",
         width: 1200,
         height: 630,
       },

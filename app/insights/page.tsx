@@ -4,11 +4,11 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Insights & Media — Mark Buchan MSc",
+  title: "Insights & Media: Articles, Speaking, Books & Frameworks — Mark Buchan MSc",
   description:
     "Articles, speaking, books and tools on organisational transformation, leadership alignment and the human side of change.",
   openGraph: {
-    title: "Insights & Media — Mark Buchan MSc",
+    title: "Insights & Media: Articles, Speaking, Books & Frameworks — Mark Buchan MSc",
     description:
       "Articles, speaking, books and tools on organisational transformation, leadership alignment and the human side of change.",
     images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],

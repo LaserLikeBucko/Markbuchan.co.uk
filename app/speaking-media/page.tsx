@@ -5,13 +5,13 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: "Speaking & Media — Mark Buchan MSc",
+  title: "Leadership & Organisational Change Speaker — Mark Buchan MSc",
   description:
-    "Mark Buchan speaks on organisational transformation, leadership and the human side of change, drawing on his consulting experience and two books.",
+    "Mark Buchan speaks on leadership, transformation and the human side of organisational change — drawing on 20+ years' consulting experience and two published books. Available for keynotes, panels and leadership offsites.",
   openGraph: {
-    title: "Speaking & Media — Mark Buchan MSc",
+    title: "Leadership & Organisational Change Speaker — Mark Buchan MSc",
     description:
-      "Mark Buchan speaks on organisational transformation, leadership and the human side of change, drawing on his consulting experience and two books.",
+      "Mark Buchan speaks on leadership, transformation and the human side of organisational change — drawing on 20+ years' consulting experience and two published books. Available for keynotes, panels and leadership offsites.",
     images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],
   },
 }

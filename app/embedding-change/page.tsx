@@ -5,13 +5,13 @@ import { Separator } from "@/components/ui/separator"
 import { FamiliarChecklist } from "@/components/familiar-checklist"
 
 export const metadata: Metadata = {
-  title: "Embedding Change — Mark Buchan MSc",
+  title: "Embedding & Sustaining Organisational Change — Mark Buchan MSc",
   description:
-    "Helping organisations ensure new ways of working are adopted, sustained and become part of everyday practice.",
+    "Helping organisations make new ways of working stick — beyond the launch, into adoption, reinforcement and lasting change.",
   openGraph: {
-    title: "Embedding Change — Mark Buchan MSc",
+    title: "Embedding & Sustaining Organisational Change — Mark Buchan MSc",
     description:
-      "Helping organisations ensure new ways of working are adopted, sustained and become part of everyday practice.",
+      "Helping organisations make new ways of working stick — beyond the launch, into adoption, reinforcement and lasting change.",
     images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
   },
 }

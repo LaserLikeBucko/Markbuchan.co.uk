@@ -4,11 +4,11 @@ import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata: Metadata = {
-  title: "Leadership Alignment & Sponsorship — Mark Buchan MSc",
+  title: "Leadership Team Alignment & Sponsorship Coaching — Mark Buchan MSc",
   description:
     "Helping leadership teams create clarity, confidence and shared direction through complex change.",
   openGraph: {
-    title: "Leadership Alignment & Sponsorship — Mark Buchan MSc",
+    title: "Leadership Team Alignment & Sponsorship Coaching — Mark Buchan MSc",
     description:
       "Helping leadership teams create clarity, confidence and shared direction through complex change.",
     images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],

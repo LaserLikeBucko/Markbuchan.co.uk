@@ -6,13 +6,13 @@ import { NumberedList } from "@/components/numbered-list"
 import { FamiliarChecklist } from "@/components/familiar-checklist"
 
 export const metadata: Metadata = {
-  title: "Transformation Advisory — Mark Buchan MSc",
+  title: "Transformation Advisory & Change Management Consultant — Mark Buchan MSc",
   description:
-    "An independent, diagnostic approach to complex transformation — helping leaders understand what's getting in the way and identify the interventions that create lasting change.",
+    "Independent transformation advisory for leaders facing complex organisational change — diagnosing what's really getting in the way and identifying the interventions that make change stick.",
   openGraph: {
-    title: "Transformation Advisory — Mark Buchan MSc",
+    title: "Transformation Advisory & Change Management Consultant — Mark Buchan MSc",
     description:
-      "An independent, diagnostic approach to complex transformation — helping leaders understand what's getting in the way and identify the interventions that create lasting change.",
+      "Independent transformation advisory for leaders facing complex organisational change — diagnosing what's really getting in the way and identifying the interventions that make change stick.",
     images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
   },
 }
