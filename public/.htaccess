@@ -1,0 +1,52 @@
+# markbuchan.co.uk — Apache configuration for static export (IONOS Deploy Now)
+#
+# This file lives in /public so Next.js's static export (`output: "export"`)
+# copies it into /out at build time, landing in the actual deployment
+# document root regardless of Deploy Now's internal build pipeline.
+
+DirectoryIndex index.html
+
+# --- Security response headers -------------------------------------------
+<IfModule mod_headers.c>
+  # CSP: default-deny, then explicit allowances for what this site actually
+  # calls out to — Google's gtag.js/Analytics (loaded from googletagmanager.com,
+  # reporting to google-analytics.com), Google Fonts (used by /diagnostic-tool.html),
+  # and Formspree (contact + newsletter forms, called via fetch()).
+  #
+  # LOOSENED FROM A STRICT BASELINE, both required to keep the site working:
+  #   - script-src 'unsafe-inline': Next.js's inline GA bootstrap script
+  #     (app/layout.tsx's <Script id="ga-script">) and the inline <script>
+  #     in public/diagnostic-tool.html both run as inline scripts. Static
+  #     hosting via Apache can't issue a per-request nonce, so there's no
+  #     way to allow just these without 'unsafe-inline' for script-src.
+  #   - style-src 'unsafe-inline': inline style attributes used throughout
+  #     the React components (e.g. the noise-texture background in
+  #     hero-section.tsx, fontFamily overrides) require this — hashing every
+  #     dynamic inline style isn't practical.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'"
+
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=(), magnetometer=(), gyroscope=(), fullscreen=(), interest-cohort=()"
+
+  # HSTS — Deploy Now already enforces HTTPS by default, so this is
+  # belt-and-braces rather than load-bearing.
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Disable ETags (they leak inode/filesystem info and are redundant
+  # alongside Last-Modified/Content-Length for a static site).
+  Header unset ETag
+</IfModule>
+FileETag None
+
+# --- Access hardening ------------------------------------------------------
+# Deny access to dotfiles/dot-directories (.git, .env, .DS_Store, etc.)
+# Note: this also blocks /.well-known/ — not used by this site, since
+# Deploy Now manages TLS certificate issuance at the platform level rather
+# than via an ACME challenge file served from this document root. Revisit
+# if that ever changes (e.g. domain verification files under .well-known).
+RedirectMatch 404 /\..*$
+
+# Disable directory listing.
+Options -Indexes
