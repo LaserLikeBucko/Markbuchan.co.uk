@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
+import { BlogNewsletterForm } from "@/components/blog-newsletter-form"
 
 export const metadata = {
   title: "Blog — Articles on Human Alignment & Leadership | Mark Buchan MSc",
@@ -186,26 +187,7 @@ export default function BlogIndexPage() {
             <p className="text-lg text-[#1C1B18]/70 mb-10 max-w-xl mx-auto">
               No newsletter. No weekly digest. Just the occasional piece of genuinely useful thinking — when there is something worth saying.
             </p>
-            <form
-              action="https://formspree.io/f/xwvnddyz"
-              method="POST"
-              className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
-            >
-              <input type="hidden" name="source" value="blog-index" />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-                className="flex-1 h-12 rounded-md border border-[rgba(28,27,24,0.2)] bg-white px-4 text-[#1C1B18] placeholder:text-[#1C1B18]/40 focus:outline-none focus:border-[#1b4b80]"
-              />
-              <button
-                type="submit"
-                className="h-12 px-6 rounded-md bg-[#1b4b80] text-[#EDE8DE] font-bold hover:bg-[#163C66] transition-colors whitespace-nowrap"
-              >
-                Keep me posted
-              </button>
-            </form>
+            <BlogNewsletterForm />
           </div>
         </section>
 

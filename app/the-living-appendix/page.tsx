@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
+import { LivingAppendixSignupForm } from "@/components/living-appendix-signup-form"
 
 export default function LivingAppendixPage() {
   return (
@@ -159,34 +160,7 @@ export default function LivingAppendixPage() {
             </p>
 
             {/* Email capture */}
-            <form
-              action="https://formspree.io/f/xwvnddyz"
-              method="POST"
-              className="flex flex-col gap-3 max-w-md mx-auto"
-            >
-              <input type="hidden" name="source" value="living-appendix-community" />
-              <input
-                type="text"
-                name="name"
-                placeholder="Your first name"
-                required
-                className="h-12 rounded-md border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#ffff00]"
-              />
-              <input
-                type="email"
-                name="email"
-                placeholder="Your email address"
-                required
-                className="h-12 rounded-md border border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.1)] px-4 text-white placeholder:text-white/40 focus:outline-none focus:border-[#ffff00]"
-              />
-              <button
-                type="submit"
-                className="h-12 rounded-md bg-[#ffff00] text-[#111110] font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
-              >
-                Keep me informed →
-              </button>
-              <p className="text-xs text-white opacity-30 mt-2">No spam. Unsubscribe any time.</p>
-            </form>
+            <LivingAppendixSignupForm />
           </div>
         </section>
 
@@ -196,7 +170,7 @@ export default function LivingAppendixPage() {
         <section className="bg-[#ffff00] py-8">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <p className="text-sm text-[#111110] opacity-60">
-              © 2026 Mark Buchan MSc · <a href="https://markbuchan.co.uk" className="underline hover:opacity-100">markbuchan.co.uk</a>
+              © 2026 Mark Buchan MSc · <a href="https://www.markbuchan.co.uk" className="underline hover:opacity-100">markbuchan.co.uk</a>
             </p>
             <p className="text-xs text-[#111110] opacity-40 mt-1">
               This page is for readers of The Hidden Gap and is not listed in site navigation.
