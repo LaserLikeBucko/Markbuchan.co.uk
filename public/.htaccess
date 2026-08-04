@@ -40,6 +40,31 @@ DirectoryIndex index.html
 </IfModule>
 FileETag None
 
+# --- Caching -----------------------------------------------------------
+# No Cache-Control was set before, so browsers fell back to heuristic
+# caching off Last-Modified and could sit on a stale HTML page for a
+# while after a deploy (this is part of what caused the site to look
+# "old" even after the new build was live).
+<IfModule mod_headers.c>
+  # HTML documents aren't content-hashed, so a new deploy needs every
+  # visitor's browser to revalidate rather than trust a cached copy.
+  # (Cheap: revalidation is a conditional GET off Last-Modified, since
+  # ETags are disabled above — a 304 if nothing changed, not a full
+  # re-download.)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+
+  # Everything under /_next/static/ is content-hashed by Next.js — the
+  # filename itself changes on every build, so the old file at the old
+  # URL never gets overwritten and is safe to cache forever. Confirmed
+  # no other file in this export uses .js/.css/.woff2, so matching by
+  # extension alone is safe here (no path-prefix trick needed).
+  <FilesMatch "\.(js|css|woff2)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
 # --- Access hardening ------------------------------------------------------
 # Deny access to dotfiles/dot-directories (.git, .env, .DS_Store, etc.)
 # Note: this also blocks /.well-known/ — not used by this site, since
