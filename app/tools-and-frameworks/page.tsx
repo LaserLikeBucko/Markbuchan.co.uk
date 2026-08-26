@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -49,7 +50,11 @@ export default function ToolsAndFrameworksPage() {
               </p>
               <h3 className="text-xl font-bold text-[#1C1B18]">The Hidden Gap Diagnostic</h3>
               <p className="text-muted-foreground leading-relaxed text-base">
-                The Hidden Gap Diagnostic uses the Values Integrity Model to reveal where values sit and how they influence behaviour, decision-making and organisational culture. It provides leaders with insight into the alignment between stated values and lived behaviours, helping identify opportunities to strengthen trust, alignment and transformation outcomes.
+                The Hidden Gap Diagnostic uses the{" "}
+                <Link href="/values-integrity-model" className="text-[#1b4b80] font-semibold underline decoration-[rgba(27,75,128,0.35)] hover:decoration-[#1b4b80] hover:text-[#1C1B18] transition-colors">
+                  Values Integrity Model
+                </Link>
+                {" "}to reveal where values sit and how they influence behaviour, decision-making and organisational culture. It provides leaders with insight into the alignment between stated values and lived behaviours, helping identify opportunities to strengthen trust, alignment and transformation outcomes.
               </p>
               <a
                 href="/the-hidden-gap-diagnostic"

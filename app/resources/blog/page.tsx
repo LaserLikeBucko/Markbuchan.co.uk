@@ -54,6 +54,40 @@ export default function BlogIndexPage() {
 
             <div className="flex flex-col gap-8">
 
+              {/* THE ILLUSION OF AGREEMENT - LIVE */}
+              <a
+                href="/resources/blog/organisational-values-and-strategy-execution"
+                className="flex flex-col md:flex-row gap-0 rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white overflow-hidden hover:border-[#1b4b80] transition-colors group"
+              >
+                <div className="w-full md:w-64 md:min-w-[16rem] h-48 md:h-auto flex-shrink-0 overflow-hidden">
+                  <Image
+                    src="/images/og/og-organisational-values-and-strategy-execution.jpg"
+                    alt="The Illusion of Agreement"
+                    width={1200}
+                    height={630}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div className="flex flex-col gap-3 p-8 flex-1">
+                  <div className="flex items-center gap-3">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Leadership</p>
+                    <span className="text-xs text-muted-foreground opacity-50">·</span>
+                    <p className="text-xs text-muted-foreground">7 min read</p>
+                    <span className="text-xs text-muted-foreground opacity-50">·</span>
+                    <p className="text-xs text-muted-foreground">August 2026</p>
+                  </div>
+                  <h2 className="text-2xl font-bold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
+                    The Illusion of Agreement: Why &ldquo;Aligned&rdquo; Teams Still Fail
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed text-sm flex-1">
+                    Teams that vote yes in the boardroom still drift apart in execution. Why organisational values and strategy execution fall apart, and the leadership playbook that fixes it.
+                  </p>
+                  <span className="text-sm font-semibold text-[#1C1B18] group-hover:text-[#1b4b80] transition-colors">
+                    Read article →
+                  </span>
+                </div>
+              </a>
+
               {/* WHAT IS THE HUMAN ALIGNMENT PROBLEM - LIVE */}
               <a
                 href="/resources/blog/what-is-the-human-alignment-problem"
