@@ -15,13 +15,11 @@ const pages: { path: string; lastModified: string }[] = [
   { path: "/embedding-change", lastModified: "2026-08-03" },
   { path: "/executive-burnout-coaching", lastModified: "2026-08-03" },
   { path: "/free-chapter", lastModified: "2026-07-02" },
-  { path: "/hidden-gap", lastModified: "2026-08-04" },
   { path: "/hr-values-alignment", lastModified: "2026-08-03" },
   { path: "/insights", lastModified: "2026-08-03" },
   { path: "/leaders-its-not-how-you-finish", lastModified: "2026-08-03" },
   { path: "/leadership-alignment", lastModified: "2026-08-03" },
   { path: "/leadership-alignment-diagnostic", lastModified: "2026-08-03" },
-  { path: "/organisations-are-lying", lastModified: "2026-08-04" },
   { path: "/resources", lastModified: "2026-08-03" },
   { path: "/resources/blog", lastModified: "2026-08-04" },
   { path: "/resources/blog/organisational-values-and-strategy-execution", lastModified: "2026-08-26" },
@@ -35,7 +33,6 @@ const pages: { path: string; lastModified: string }[] = [
   { path: "/tools-and-frameworks", lastModified: "2026-08-03" },
   { path: "/transformation-advisory", lastModified: "2026-08-03" },
   { path: "/values-integrity-model", lastModified: "2026-08-26" },
-  { path: "/why-values-fail", lastModified: "2026-08-04" },
   { path: "/work-with-me", lastModified: "2026-08-03" },
   { path: "/workshop", lastModified: "2026-06-17" },
 ]
@@ -43,7 +40,10 @@ const pages: { path: string; lastModified: string }[] = [
 // Deliberately excluded: /pre-order (client-side redirect to /book),
 // /from-linkedin and /thanks-linkedin (campaign-specific landing/thank-you
 // pages, not meant for general search discovery), /thank-you (post-download
-// confirmation page).
+// confirmation page), /hidden-gap, /why-values-fail and
+// /organisations-are-lying (retired workshop-experiment pages, permanently
+// removed and served with HTTP 410 Gone via .htaccess — see
+// archive/workshop-experiments/README.md).
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return pages.map(({ path, lastModified }) => ({

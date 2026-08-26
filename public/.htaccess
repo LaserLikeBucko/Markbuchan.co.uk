@@ -65,6 +65,22 @@ FileETag None
   </FilesMatch>
 </IfModule>
 
+# --- Retired pages (410 Gone) -----------------------------------------
+# These three early A/B-test workshop landing pages were permanently
+# retired (near-duplicate content, no clear winner, never linked
+# externally). Their source is archived at
+# archive/workshop-experiments/ rather than deleted. This is a real
+# HTTP 410, not a redirect or a plain 404 — a static export via
+# `output: "export"` has no Next.js server at runtime (middleware and
+# dynamic route-handler status codes are both no-ops under static
+# export; confirmed via `next build`'s own warning), so this has to be
+# handled at the Apache layer rather than in the Next.js app.
+<IfModule mod_alias.c>
+  RedirectMatch gone ^/hidden-gap/?$
+  RedirectMatch gone ^/why-values-fail/?$
+  RedirectMatch gone ^/organisations-are-lying/?$
+</IfModule>
+
 # --- Access hardening ------------------------------------------------------
 # Deny access to dotfiles/dot-directories (.git, .env, .DS_Store, etc.)
 # Note: this also blocks /.well-known/ — not used by this site, since

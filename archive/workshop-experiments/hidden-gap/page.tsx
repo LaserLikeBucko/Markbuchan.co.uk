@@ -1,42 +1,52 @@
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { WorkshopLeadForm } from "@/components/workshop-lead-form"
+import { WorkshopLeadForm } from "../components/workshop-lead-form"
 
-export default function OrganisationsAreLyingPage() {
+export const metadata = {
+  title: "The Hidden Gap Workshop: Values Integrity Model Case Study | Mark Buchan MSc",
+  description: "A 90-minute workshop using a practical case study to surface the gap between declared and operating values with the Values Integrity Model — and make that gap discussable.",
+  openGraph: {
+    title: "The Hidden Gap Workshop: Values Integrity Model Case Study | Mark Buchan MSc",
+    description: "A 90-minute workshop using a practical case study to surface the gap between declared and operating values with the Values Integrity Model — and make that gap discussable.",
+    images: [{ url: "/images/og/og-image-book.jpg", width: 1920, height: 1080 }],
+  },
+}
+
+export default function HiddenGapWorkshopPage() {
   return (
     <>
       <Navigation />
 
       <main>
-        <section className="bg-[#1b4b80] text-white border-b border-stone-800">
+        <section className="bg-white border-b border-[rgba(28,27,24,0.15)]">
           <div className="max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-stone-400">
-                Workshop with Mark Buchan
+              <p className="text-sm uppercase tracking-[0.2em] text-stone-600">
+                90-Minute Workshop with Mark Buchan
               </p>
-              <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight">
-                Most organisations are lying to themselves
+              <h1 className="mt-4 text-4xl md:text-6xl font-bold leading-tight text-[#1C1B18]">
+                The Hidden Gap:
+                <br />
+                Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture
               </h1>
-              <p className="mt-6 text-xl leading-relaxed text-stone-300">
-                Not deliberately. But it happens every day in the gap between
-                what is said and what is actually done.
+              <p className="mt-6 text-xl leading-relaxed text-stone-700">
+                The gap between what we say matters… and what actually drives behaviour.
               </p>
-              <p className="mt-6 text-lg leading-relaxed text-stone-300">
-                That gap is where trust erodes, conflict grows and change
-                efforts quietly die.
+              <p className="mt-6 text-lg leading-relaxed text-stone-700">
+                Organisations do not have a behaviour problem. They have a human alignment problem.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
                   href="#register"
-                  className="inline-flex items-center rounded-md bg-[#EDE8DE] px-6 py-3 text-[#1C1B18] hover:bg-[#1C1B18] hover:text-[#EDE8DE]"
+                  className="inline-flex items-center rounded-md bg-[#1b4b80] px-6 py-3 text-white hover:bg-[#1C1B18]"
                 >
                   Register interest
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex items-center rounded-md border border-stone-600 px-6 py-3 text-white hover:bg-[#1C1B18]"
+                  className="inline-flex items-center rounded-md border border-[rgba(28,27,24,0.2)] px-6 py-3 text-[#1C1B18] hover:bg-white"
                 >
                   About Mark
                 </a>
@@ -44,13 +54,13 @@ export default function OrganisationsAreLyingPage() {
             </div>
 
             <div className="relative">
-              <div className="overflow-hidden rounded-2xl border border-stone-700 bg-stone-800 shadow-sm">
+              <div className="overflow-hidden rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white shadow-sm">
                 <Image
                   src="/images/workshop-image.jpg"
                   alt="Mark Buchan workshop"
                   width={1200}
                   height={900}
-                  className="h-full w-full object-cover opacity-95"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -60,20 +70,23 @@ export default function OrganisationsAreLyingPage() {
         <section className="max-w-5xl mx-auto px-6 py-20">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-semibold text-[#1C1B18]">
-              The uncomfortable truth
+              What goes wrong
             </h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
               <p>
-                Many organisations proudly declare values such as openness,
-                honesty, respect and collaboration.
+                Values are defined, published and repeated. Yet behaviour often tells a different story.
               </p>
               <p>
-                Yet in practice, people learn very quickly what is really
-                rewarded, what gets punished and what must not be said out loud.
+                Leaders say one thing. Teams experience another. Conflict grows. Trust weakens. Change stalls.
               </p>
               <p>
-                Over time, the spoken values become theatre. The real values go
-                underground. Behaviour follows the underground ones.
+                The issue is rarely intent. It is alignment.
+              </p>
+              <p>
+                The real problem is the gap between declared values and the values that are actually operating day to day.
+              </p>
+              <p>
+                Over time, that gap becomes the system.
               </p>
             </div>
           </div>
@@ -81,49 +94,46 @@ export default function OrganisationsAreLyingPage() {
           <div className="mt-12 grid md:grid-cols-3 gap-6">
             <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-6 shadow-sm">
               <h3 className="text-xl font-semibold text-[#1C1B18]">
-                Values theatre
+                Declared values
               </h3>
               <p className="mt-3 text-[#333330] leading-relaxed">
-                The polished version of the culture that sounds right but fails
-                to guide behaviour.
+                The words on the wall, the website and the leadership slide deck.
               </p>
             </div>
             <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-6 shadow-sm">
               <h3 className="text-xl font-semibold text-[#1C1B18]">
-                Underground values
+                Operating values
               </h3>
               <p className="mt-3 text-[#333330] leading-relaxed">
-                The unspoken rules people follow because they know they are the
-                ones that really matter.
+                The values people learn through what gets rewarded, tolerated and reinforced.
               </p>
             </div>
             <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-6 shadow-sm">
               <h3 className="text-xl font-semibold text-[#1C1B18]">
-                Repeating patterns
+                The hidden gap
               </h3>
               <p className="mt-3 text-[#333330] leading-relaxed">
-                The games, tensions and defensive routines that keep the system
-                exactly where it is.
+                The space where tension, mistrust and stalled change quietly take hold.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="bg-red-50 border-y border-red-100">
+        <section className="bg-amber-50 border-y border-amber-100">
           <div className="max-w-5xl mx-auto px-6 py-20">
             <h2 className="text-3xl font-semibold text-[#1C1B18]">
-              What this workshop exposes
+              What you will start to see differently
             </h2>
             <div className="mt-8 grid md:grid-cols-2 gap-6">
               {[
-                "The gap between declared values and lived reality",
-                "The hidden patterns that keep the gap in place",
-                "Why behaviour change programmes often fail",
-                "How leaders can begin to bring integrity back into the system",
+                "Why behaviour does not match stated values",
+                "How declared and operating values drift apart",
+                "The hidden games, tensions and incentives that keep the gap alive",
+                "What leaders can do to begin realignment",
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-2xl bg-white border border-red-100 p-6 shadow-sm"
+                  className="rounded-2xl bg-white border border-amber-100 p-6 shadow-sm"
                 >
                   <p className="text-lg leading-relaxed text-[#1C1B18]">{item}</p>
                 </div>
@@ -140,33 +150,42 @@ export default function OrganisationsAreLyingPage() {
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
                 <p>
-                  Through the <strong>Values Integrity Model</strong>,
-                  participants learn to identify theatre values, underground
-                  values and the real drivers of behaviour inside their
-                  organisation.
+                  You will be introduced to the <strong>Values Integrity Model</strong>,
+                  a practical way of mapping the difference between what
+                  organisations say they value and what they actually reward,
+                  tolerate and reinforce.
                 </p>
                 <p>
-                  A key exercise, <em>If Organisations Couldn’t Lie</em>,
-                  creates a breakthrough moment by inviting people to describe
-                  their organisation honestly rather than aspirationally.
+                  Through a practical case study, participants use the <strong>Values Integrity Model</strong> to surface the gap between declared and operating values and begin making that gap discussable.
                 </p>
                 <p>
-                  The workshop also draws on organisational games, defensive
-                  routines and competing value tensions to explain why the gap
-                  persists even when intentions are good.
+                  The workshop also explores the hidden patterns that sustain
+                  misalignment, including organisational games, defensive
+                  routines and unresolved value tensions.
+                </p>
+                <p>
+                  You will also be introduced to a practical way of working in
+                  the moment when the gap appears, using the <strong>Inner Coach</strong>
+                  and the <strong>Choice Triangle</strong>. The aim is not just to see the
+                  gap more clearly, but to respond to it with more intention.
                 </p>
               </div>
             </div>
 
             <div className="rounded-2xl border border-[rgba(28,27,24,0.15)] bg-[#1b4b80] p-8 text-white shadow-sm">
               <p className="text-sm uppercase tracking-[0.2em] text-white/70">
-                Why it matters
+                Signature ideas
               </p>
-              <p className="mt-6 text-lg leading-relaxed text-stone-300">
-                Most leaders try to fix behaviour directly. But behaviour is
-                downstream. Until the underlying values are surfaced and aligned,
-                the same tensions keep repeating.
-              </p>
+              <ul className="mt-6 space-y-4 text-lg leading-relaxed">
+                <li>Values Integrity Model (VIM)</li>
+                <li>Sandra’s case study</li>
+                <li>Games Organisations Play</li>
+                <li>Inner Coach (The Pause)</li>
+                <li>Choice Triangle</li>
+                <li>Espoused values vs values in use</li>
+                <li>Operating in the gap</li>
+                <li>Value tensions inside real organisations</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -196,13 +215,14 @@ export default function OrganisationsAreLyingPage() {
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
                 <p>
                   Mark Buchan is a leadership psychologist, coach and workshop
-                  facilitator whose work explores why values misalignment sits
-                  underneath so much organisational tension, defensiveness and
-                  stalled change.
+                  facilitator focused on what he calls the <strong>human alignment problem</strong>:
+                  the gap between what individuals, teams and organisations say matters
+                  and what actually gets lived in practice.
                 </p>
                 <p>
-                  He helps leaders see beyond surface behaviour and understand
-                  the hidden values patterns shaping culture in practice.
+                  His work helps leaders and teams understand why behaviour,
+                  conflict and stalled change so often trace back to unclear,
+                  conflicting or misaligned operating values.
                 </p>
               </div>
             </div>
@@ -216,17 +236,17 @@ export default function OrganisationsAreLyingPage() {
                 Forthcoming book
               </p>
               <h2 className="mt-3 text-3xl font-semibold text-[#1C1B18]">
-                A book is coming that goes deeper into these ideas
+                The thinking behind the workshop is becoming a book
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
                 <p>
-                  This workshop draws on the thinking behind Mark’s forthcoming
-                  book on values, behaviour, organisational tension and why
-                  change efforts so often fail when the real drivers remain
-                  hidden.
+                  This workshop draws on the ideas behind Mark’s forthcoming book
+                  on values, behaviour, conflict and culture.
                 </p>
                 <p>
-                  Title and subtitle are still under wraps for now.
+                  <strong>The Hidden Gap: Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture</strong>
+                  <br />
+                  <em>How operating values drive behaviour, conflict and culture</em>
                 </p>
               </div>
             </div>
@@ -234,7 +254,7 @@ export default function OrganisationsAreLyingPage() {
             <div className="overflow-hidden rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white shadow-sm">
               <Image
                 src="/images/book-cover.jpg"
-                alt="Forthcoming book teaser"
+                alt="The Hidden Gap book cover"
                 width={900}
                 height={1200}
                 className="h-full w-full object-cover"
@@ -250,15 +270,15 @@ export default function OrganisationsAreLyingPage() {
                 Register your interest
               </h2>
               <p className="mt-5 text-lg leading-relaxed text-stone-300">
-                I am currently opening conversations around a small number of
-                early workshops. If this resonates, register your interest
-                below.
+                If you are seeing this gap in your organisation — or feeling it in
+                your own day-to-day work — this session will give you a new way
+                of understanding it and working with it.
               </p>
             </div>
 
             <WorkshopLeadForm
-              source="organisations-are-lying"
-              buttonText="Find out what's really going on"
+              source="hidden-gap-workshop"
+              buttonText="Join the first workshop cohort"
             />
           </div>
         </section>

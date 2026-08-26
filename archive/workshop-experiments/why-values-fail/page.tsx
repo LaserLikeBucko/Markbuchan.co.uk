@@ -1,7 +1,18 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
-import { WorkshopLeadForm } from "@/components/workshop-lead-form"
+import { WorkshopLeadForm } from "../components/workshop-lead-form"
+
+export const metadata = {
+  title: "Why Values Fail to Operate: The Hidden Gap Workshop | Mark Buchan MSc",
+  description: "A 90-minute workshop exploring why declared values fail to operate in practice — using the 'If Organisations Couldn't Lie' exercise and the Values Integrity Model to surface what's really driving behaviour.",
+  openGraph: {
+    title: "Why Values Fail to Operate: The Hidden Gap Workshop | Mark Buchan MSc",
+    description: "A 90-minute workshop exploring why declared values fail to operate in practice — using the 'If Organisations Couldn't Lie' exercise and the Values Integrity Model to surface what's really driving behaviour.",
+    images: [{ url: "/images/og/og-image-book.jpg", width: 1920, height: 1080 }],
+  },
+}
 
 export default function HiddenGapWorkshopPage() {
   return (
@@ -140,13 +151,15 @@ export default function HiddenGapWorkshopPage() {
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
                 <p>
-                  You will be introduced to the <strong>Values Integrity Model</strong>,
+                  You will be introduced to the <Link href="/values-integrity-model" className="font-semibold text-[#1b4b80] underline decoration-[rgba(27,75,128,0.35)] hover:decoration-[#1b4b80] hover:text-[#1C1B18] transition-colors">Values Integrity Model</Link>,
                   a practical way of mapping the difference between what
                   organisations say they value and what they actually reward,
                   tolerate and reinforce.
                 </p>
                 <p>
-                  Through a practical case study, participants use the <strong>Values Integrity Model</strong> to surface the gap between declared and operating values and begin making that gap discussable.
+                  One of the core exercises, <em>If Organisations Couldn’t Lie</em>,
+                  helps participants surface the real operating values of their
+                  organisation quickly and honestly.
                 </p>
                 <p>
                   The workshop also explores the hidden patterns that sustain
@@ -167,13 +180,12 @@ export default function HiddenGapWorkshopPage() {
                 Signature ideas
               </p>
               <ul className="mt-6 space-y-4 text-lg leading-relaxed">
-                <li>Values Integrity Model (VIM)</li>
-                <li>Sandra’s case study</li>
+                <li>Values Integrity Model</li>
+                <li>If Organisations Couldn’t Lie</li>
                 <li>Games Organisations Play</li>
                 <li>Inner Coach (The Pause)</li>
                 <li>Choice Triangle</li>
                 <li>Espoused values vs values in use</li>
-                <li>Operating in the gap</li>
                 <li>Value tensions inside real organisations</li>
               </ul>
             </div>
