@@ -20,36 +20,36 @@ export default function DiagnosticEngagementPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#ffff00] pt-32 pb-20">
+        <section className="bg-[#EDE8DE] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60">
               The Human Alignment Co.
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#111110] text-balance">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#1C1B18] text-balance">
               The Human Alignment Diagnostic
             </h1>
-            <p className="mt-6 text-xl md:text-2xl leading-relaxed text-[#111110] opacity-75 max-w-2xl mx-auto">
+            <p className="mt-6 text-xl md:text-2xl leading-relaxed text-[#1C1B18] opacity-75 max-w-2xl mx-auto">
               More humanity. Less PowerPoint.
             </p>
             <a
               href="#contact"
-              className="mt-10 inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] transition-colors"
+              className="mt-10 inline-flex items-center rounded-md bg-[#1b4b80] px-8 py-4 text-[#EDE8DE] text-lg font-semibold hover:bg-[#1C1B18] transition-colors"
             >
               Book a Diagnostic Conversation →
             </a>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* OPENING PROBLEM */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               The real problem
             </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#111110] text-balance mb-8">
+            <Separator className="mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#1C1B18] text-balance mb-8">
               Is your organisation performing below its potential — and nobody can quite explain why?
             </h2>
             <div className="flex flex-col gap-6 text-lg leading-relaxed text-muted-foreground">
@@ -57,24 +57,24 @@ export default function DiagnosticEngagementPage() {
                 The presenting problem is rarely the real problem.
               </p>
               <p>
-                Poor collaboration. Stalled change. Cultural friction. 
-                Communication that goes in circles. Teams pulling in 
-                different directions. Change initiatives that launch 
-                with energy and quietly disappear. Your best people 
+                Poor collaboration. Stalled change. Cultural friction.
+                Communication that goes in circles. Teams pulling in
+                different directions. Change initiatives that launch
+                with energy and quietly disappear. Your best people
                 leaving without fully explaining why.
               </p>
               <p>
-                These are not communication problems. They are not 
-                personality problems. They are not even leadership 
-                problems — at least not in the way most consultants 
+                These are not communication problems. They are not
+                personality problems. They are not even leadership
+                problems — at least not in the way most consultants
                 frame them.
               </p>
               <p>
-                These are symptoms. Beneath every one of them, in more 
-                than twenty years of working inside organisations at 
+                These are symptoms. Beneath every one of them, in more
+                than twenty years of working inside organisations at
                 every level, the root cause has been the same:
               </p>
-              <p className="text-[#111110] font-semibold text-xl border-l-4 border-[#ff3131] pl-6">
+              <p className="text-[#1C1B18] font-semibold text-xl border-l-4 border-[#1b4b80] pl-6">
                 A gap between the values the organisation declares and the values that are actually running the show.
               </p>
               <p>
@@ -88,40 +88,40 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* WHAT IT IS */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-24">
+        <section className="bg-[#EDE8DE] py-24">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60">
               What this is
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#111110] text-balance mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#1C1B18] text-balance mb-8">
               Not a training programme. Not a culture survey. Not a deck of recommendations left for you to implement alone.
             </h2>
-            <div className="flex flex-col gap-6 text-lg leading-relaxed text-[#111110] opacity-80">
+            <div className="flex flex-col gap-6 text-lg leading-relaxed text-[#1C1B18] opacity-80">
               <p>
                 The Human Alignment Diagnostic is a two-week senior engagement that locates your organisation's hidden gap with precision — and gives you a clear, co-designed path to closing it.
               </p>
               <p>
                 It is a rigorous diagnostic followed by a co-designed solution that your organisation builds with us, not receives from us.
               </p>
-              <p className="font-semibold text-[#111110] opacity-100">
+              <p className="font-semibold text-[#1C1B18] opacity-100">
                 That distinction matters. Solutions imposed from outside rarely stick. Solutions co-created from the inside do.
               </p>
             </div>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* HOW IT WORKS */}
         <section className="py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               How it works
             </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#111110] mb-16">
+            <Separator className="mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#1C1B18] mb-16">
               Two weeks. Two phases. One honest picture.
             </h2>
 
@@ -129,8 +129,8 @@ export default function DiagnosticEngagementPage() {
               {/* Week 1 */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#111110] text-[#ffff00] font-bold text-sm">1</span>
-                  <h3 className="text-xl font-bold text-[#111110]">Week One — The Diagnostic</h3>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1b4b80] text-[#EDE8DE] font-bold text-sm">1</span>
+                  <h3 className="text-xl font-bold text-[#1C1B18]">Week One — The Diagnostic</h3>
                 </div>
                 <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
                   <p>
@@ -148,8 +148,8 @@ export default function DiagnosticEngagementPage() {
               {/* Week 2 */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ff3131] text-white font-bold text-sm">2</span>
-                  <h3 className="text-xl font-bold text-[#111110]">Week Two — The Situation Appraisal</h3>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1b4b80] text-[#EDE8DE] font-bold text-sm">2</span>
+                  <h3 className="text-xl font-bold text-[#1C1B18]">Week Two — The Situation Appraisal</h3>
                 </div>
                 <div className="flex flex-col gap-4 text-muted-foreground leading-relaxed">
                   <p>
@@ -168,30 +168,30 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* DIFFERENTIATORS */}
-        <section className="bg-[#111110] py-24">
+        <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               What makes this different
             </p>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#ffff00] mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#EDE8DE] mb-16">
               Most consultants diagnose and prescribe.<br />We diagnose and co-create.
             </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
               <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold text-[#ffff00]">We speak to everyone</h3>
+                <h3 className="text-lg font-bold text-[#EDE8DE]">We speak to everyone</h3>
                 <p className="text-sm leading-relaxed text-white opacity-60">
                   Not just leadership. We speak to everyone — and trust what we hear. The most important intelligence in your organisation is usually sitting three levels below the boardroom.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold text-[#ffff00]">We present options, not answers</h3>
+                <h3 className="text-lg font-bold text-[#EDE8DE]">We present options, not answers</h3>
                 <p className="text-sm leading-relaxed text-white opacity-60">
                   We present options in a conversation and build the solution together. You own it because you built it — which is the only reason change ever sticks.
                 </p>
               </div>
               <div className="flex flex-col gap-3">
-                <h3 className="text-lg font-bold text-[#ffff00]">We come with a framework</h3>
+                <h3 className="text-lg font-bold text-[#EDE8DE]">We come with a framework</h3>
                 <p className="text-sm leading-relaxed text-white opacity-60">
                   The Values Integrity Model — developed over twenty years and documented in The Hidden Gap — gives us a diagnostic precision most consultants don't have. We don't just describe the problem. We locate it.
                 </p>
@@ -203,11 +203,11 @@ export default function DiagnosticEngagementPage() {
         {/* WHO IT'S FOR */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               Who this is for
             </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#111110] mb-10">
+            <Separator className="mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight text-[#1C1B18] mb-10">
               CEOs, MDs, and executive teams who are ready for the honest conversation.
             </h2>
 
@@ -219,7 +219,7 @@ export default function DiagnosticEngagementPage() {
                 "Are ready to do the work rather than buy the answer.",
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 items-start">
-                  <span className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#ffff00] border-2 border-[#111110] flex items-center justify-center text-xs font-bold text-[#111110]">✓</span>
+                  <span className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-[#EDE8DE] border-2 border-[#1b4b80] flex items-center justify-center text-xs font-bold text-[#1b4b80]">✓</span>
                   <p className="text-lg leading-relaxed text-muted-foreground">{item}</p>
                 </div>
               ))}
@@ -228,15 +228,15 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* ABOUT MARK */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-24">
+        <section className="bg-[#EDE8DE] py-24">
           <div className="mx-auto max-w-3xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60">
               Who you are working with
             </p>
-            <h2 className="text-3xl font-bold text-[#111110] mb-6">Mark Buchan MSc</h2>
-            <div className="flex flex-col gap-4 text-lg leading-relaxed text-[#111110] opacity-80">
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-6">Mark Buchan MSc</h2>
+            <div className="flex flex-col gap-4 text-lg leading-relaxed text-[#1C1B18] opacity-80">
               <p>
                 Mark has spent more than twenty years working inside organisations where the gap between declared and operating values was costing more than anyone had named. As a consultant, coach, and facilitator he has worked with leadership teams across industries — surfacing what is actually driving behaviour and creating the conditions for honest, lasting change.
               </p>
@@ -251,9 +251,9 @@ export default function DiagnosticEngagementPage() {
         </section>
 
         {/* CTA */}
-        <section id="contact" className="bg-[#111110] py-24">
+        <section id="contact" className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#ffff00] mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#EDE8DE] mb-6">
               Start With A Conversation
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-60 mb-4 max-w-xl mx-auto">
@@ -266,12 +266,12 @@ export default function DiagnosticEngagementPage() {
               href="https://calendly.com/thehumanalignmentco/diagnostic-conversation"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
+              className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
             >
               Book Your Diagnostic Conversation →
             </a>
             <p className="text-sm leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              You will be taken to Calendly to book your session 
+              You will be taken to Calendly to book your session
             </p>
             <p className="mt-6 text-sm text-white opacity-30">
               Or email iam@markbuchan.co.uk directly.

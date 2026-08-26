@@ -12,11 +12,12 @@ Direct, second-person, punchy short sentences mixed with longer reflective ones.
 
 ## Design system (reuse, don't reinvent)
 
-- Colors: near-black `#111110` (primary text/bg), yellow `#ffff00` (hero sections, accents), red `#ff3131` (CTAs, emphasis, hover states). Use exact hex values as seen in existing pages, not Tailwind's default palette.
-- Section pattern: hero section on `#ffff00` background with uppercase tracked eyebrow text, bold headline, then a glowing `<hr>` divider (see any existing page for the exact box-shadow values), then alternating white / `#111110` sections.
-- Components: `<Navigation />` and `<Footer />` wrap every page. Use `<Separator />` from `@/components/ui/separator` for section dividers within content, not `<hr>` (the glowing `<hr>` is only for full-width section breaks).
-- Every page exports a `metadata` object (title, description, openGraph with a dedicated `/images/og/og-*.jpg`) — follow the exact pattern in `app/coaching/page.tsx` or `app/work-with-me/page.tsx`.
-- Cards: `rounded-2xl border p-8` grid layouts for offer comparisons (see `app/coaching/page.tsx` "COACHING OPTIONS" section).
+- Colors: navy `#1b4b80` (primary accent — CTAs, dark section backgrounds, emphasis), ivory `#EDE8DE` (hero/light section backgrounds, page chrome), near-black `#1C1B18` (primary text). Use exact hex values as seen in existing pages, not Tailwind's default palette.
+- **Rebrand note (as of Aug 2026):** the site moved off an earlier yellow `#ffff00` / near-black `#111110` / red `#ff3131` palette to this navy/ivory scheme. That old palette is deprecated — never use it for new work. Migration is page-by-page and incomplete: `<Navigation />`, `<Footer />`, and most pages are already on navy/ivory, but a few (e.g. `app/coaching/page.tsx`) haven't been converted yet. Before copying patterns from an existing page, check which palette it's actually using — don't assume every page is current.
+- Section pattern: hero section on `#EDE8DE` background with uppercase tracked eyebrow text, bold headline, then a flat full-width divider (`<div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />`), then alternating white / `#1b4b80` sections.
+- Components: `<Navigation />` and `<Footer />` wrap every page. Use `<Separator />` from `@/components/ui/separator` for section dividers within content, not the full-width `<div>` divider (that's only for full-width section breaks).
+- Every page exports a `metadata` object (title, description, openGraph with a dedicated `/images/og/og-*.jpg`) — follow the exact pattern in `app/work-with-me/page.tsx` or `app/leadership-alignment/page.tsx` (both on the current navy/ivory palette).
+- Cards: `rounded-2xl border p-8` grid layouts for offer comparisons (see `app/book/page.tsx` pricing cards or `app/leadership-alignment/page.tsx` "ENGAGEMENT OPTIONS" section).
 
 ## Existing page inventory (check before creating anything new)
 

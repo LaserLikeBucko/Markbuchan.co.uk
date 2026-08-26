@@ -19,46 +19,46 @@ export default function FreeChapterPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#111110] pt-32 pb-20">
+        <section className="bg-[#1b4b80] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               Free Chapter
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#ffff00] text-balance mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#EDE8DE] text-balance mb-6">
               Read the first chapter free.
             </h1>
             <p className="text-xl leading-relaxed text-white opacity-75 max-w-2xl mx-auto">
-              The Hidden Gap opens with a story about a leadership team whose 
-              internal culture told a very different story from their stated values. 
+              The Hidden Gap opens with a story about a leadership team whose
+              internal culture told a very different story from their stated values.
               When the author named it, his contract with the organisation ended.
             </p>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* DOWNLOAD SECTION */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               Chapter One
             </p>
-            <Separator className="mx-auto mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl font-bold text-[#111110] mb-6">
+            <Separator className="mx-auto mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-6">
               When Values Compete
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground mb-6 max-w-xl mx-auto">
-              Most leadership advice assumes the problem lies in execution. 
+              Most leadership advice assumes the problem lies in execution.
               More discipline. Better communication. Clearer strategy.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground mb-12 max-w-xl mx-auto">
-              The Hidden Gap asks a different question. What if the values 
+              The Hidden Gap asks a different question. What if the values
               you think are running the show — aren't?
             </p>
             <a
               href="/downloads/the-hidden-gap-free-chapter.pdf"
               download
-              className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
+              className="inline-flex items-center rounded-md bg-[#1b4b80] px-8 py-4 text-[#EDE8DE] text-lg font-semibold hover:bg-[#1C1B18] transition-colors"
             >
               Download Chapter One — Free →
             </a>
@@ -69,56 +69,56 @@ export default function FreeChapterPage() {
         </section>
 
         {/* ABOUT THE BOOK */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-24">
+        <section className="bg-[#EDE8DE] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60">
               About the book
             </p>
-            <Separator className="mx-auto mb-12 max-w-16 bg-[#111110]/40" />
-            <h2 className="text-3xl font-bold text-[#111110] mb-6">
+            <Separator className="mx-auto mb-12 max-w-16 bg-[#1C1B18]/40" />
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-6">
               The Hidden Gap
             </h2>
-            <p className="text-lg leading-relaxed text-[#111110] opacity-75 mb-6 max-w-xl mx-auto">
-              Every organisation has two sets of values. The ones on the wall. 
+            <p className="text-lg leading-relaxed text-[#1C1B18] opacity-75 mb-6 max-w-xl mx-auto">
+              Every organisation has two sets of values. The ones on the wall.
               And the ones that actually drive behaviour when the pressure is on.
             </p>
-            <p className="text-lg leading-relaxed text-[#111110] opacity-75 mb-10 max-w-xl mx-auto">
-              The distance between them is the Hidden Gap. It costs more than 
-              most leaders realise — in energy, in trust, in the people who 
+            <p className="text-lg leading-relaxed text-[#1C1B18] opacity-75 mb-10 max-w-xl mx-auto">
+              The distance between them is the Hidden Gap. It costs more than
+              most leaders realise — in energy, in trust, in the people who
               leave without saying why.
             </p>
             <a
               href="/book"
-              className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
+              className="inline-flex items-center rounded-md bg-[#1b4b80] px-8 py-4 text-[#EDE8DE] text-lg font-semibold hover:bg-[#1C1B18] transition-colors"
             >
               Buy The Book →
             </a>
-            <p className="mt-4 text-sm text-[#111110] opacity-50">
+            <p className="mt-4 text-sm text-[#1C1B18] opacity-50">
               Available now.
             </p>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* SUBSTACK */}
-        <section className="bg-[#111110] py-24">
+        <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#ffff00] mb-6">
+            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
               Enjoyed the chapter?
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              Join the conversation on Substack. Real stories, honest 
-              observations, and a community for people navigating the gap 
+              Join the conversation on Substack. Real stories, honest
+              observations, and a community for people navigating the gap
               between declared values and operating reality.
             </p>
             <a
               href="https://thehumanalignmentco.substack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
+              className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
             >
               Join From Our Trenches →
             </a>
