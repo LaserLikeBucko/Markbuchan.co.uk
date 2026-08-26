@@ -1,12 +1,10 @@
-"use client"
-
 import Image from "next/image"
-import { useState, useEffect } from "react"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
+import { ReviewCarousel, type BookReview } from "@/components/book-review-carousel"
 
-const REVIEWS = [
+const REVIEWS: BookReview[] = [
   {
     quote: "Mark Buchan has written a thoughtful and insightful book that challenges us to look beyond what people say and examine the deeper forces that drive behaviour. The Hidden Gap offers valuable perspectives on leadership, culture, change and human systems, while also providing practical advice for recognising and addressing the gaps that can emerge between intention and action. It will leave many readers reflecting on their own assumptions long after they have finished the final chapter.",
     name: "Jason Wright",
@@ -39,41 +37,14 @@ const REVIEWS = [
  },
 ]
 
-function ReviewCarousel() {
-  const [current, setCurrent] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % REVIEWS.length)
-    }, 5000)
-    return () => clearInterval(timer)
-  }, [])
-
-  const r = REVIEWS[current]
-
-  return (
-    <div className="relative">
-      <div className="rounded-2xl border border-[rgba(28,27,24,0.1)] bg-white p-10 shadow-sm flex flex-col gap-6 min-h-[220px]">
-        <p className="text-[#1C1B18] leading-relaxed text-xl flex-1">"{r.quote}"</p>
-        <div>
-          <p className="font-bold text-[#1C1B18]">{r.name}</p>
-          <p className="text-sm text-[#1C1B18] opacity-60">{r.title}</p>
-        </div>
-      </div>
-      <div className="flex justify-center gap-3 mt-6">
-        {REVIEWS.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full border-2 border-[#1b4b80] transition-all ${
-              i === current ? "bg-[#1C1B18]" : "bg-transparent"
-            }`}
-            aria-label={`Go to review ${i + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  )
+export const metadata = {
+  title: "The Hidden Gap | Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture | Mark Buchan MSc",
+  description: "Most organisations don't have a dysfunctional behaviour problem — they have a human alignment problem. The Hidden Gap explores the distance between what people and organisations say matters and what actually drives behaviour when pressure rises.",
+  openGraph: {
+    title: "The Hidden Gap | Solving the Human Alignment Problem Behind Conflict, Behaviour and Culture | Mark Buchan MSc",
+    description: "Most organisations don't have a dysfunctional behaviour problem — they have a human alignment problem. The Hidden Gap explores the distance between what people and organisations say matters and what actually drives behaviour when pressure rises.",
+    images: [{ url: "/images/og/og-image-book.jpg", width: 1920, height: 1080 }],
+  },
 }
 
 export default function BookPage() {
@@ -144,12 +115,6 @@ export default function BookPage() {
                 </a>
                 <a
                   href="#buy"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    document
-                      .getElementById("buy")
-                      ?.scrollIntoView({ behavior: "smooth", block: "start" })
-                  }}
                   className="inline-flex items-center justify-center rounded-md border-2 border-[#1C1B18] px-6 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
                 >
                   Buy the Book
@@ -231,7 +196,7 @@ export default function BookPage() {
 
             {/* DESKTOP: CAROUSEL — MOBILE: STACKED */}
             <div className="hidden md:block">
-              <ReviewCarousel />
+              <ReviewCarousel reviews={REVIEWS} />
             </div>
             <div className="md:hidden flex flex-col gap-6">
               {REVIEWS.map((r, i) => (

@@ -26,7 +26,7 @@ export default function DiagnosticEngagementPage() {
               The Human Alignment Co.
             </p>
             <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#1C1B18] text-balance">
-              The Human Alignment Diagnostic
+              Leadership Alignment Diagnostic
             </h1>
             <p className="mt-6 text-xl md:text-2xl leading-relaxed text-[#1C1B18] opacity-75 max-w-2xl mx-auto">
               More humanity. Less PowerPoint.

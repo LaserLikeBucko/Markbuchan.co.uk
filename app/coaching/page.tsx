@@ -6,7 +6,7 @@ export const metadata = {
   title: "Values-Led Leadership Coaching| Mark Buchan MSc",
   description: "One-to-one and group coaching for leaders who sense something is off but can't quite name it yet. Values-led coaching using the Hidden Gap methodology.",
   openGraph: {
-    title: "Values-Led Leadership Caoching| Mark Buchan MSc",
+    title: "Values-Led Leadership Coaching | Mark Buchan MSc",
     description: "One-to-one and group coaching for leaders who sense something is off but can't quite name it yet.",
     images: [{ url: "/images/og/og-work-with-me.jpg", width: 1920, height: 1080 }],
   },
