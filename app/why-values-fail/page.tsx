@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { WorkshopLeadForm } from "@/components/workshop-lead-form"
@@ -140,7 +141,7 @@ export default function HiddenGapWorkshopPage() {
               </h2>
               <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">
                 <p>
-                  You will be introduced to the <strong>Values Integrity Model</strong>,
+                  You will be introduced to the <Link href="/values-integrity-model" className="font-semibold text-[#1b4b80] underline decoration-[rgba(27,75,128,0.35)] hover:decoration-[#1b4b80] hover:text-[#1C1B18] transition-colors">Values Integrity Model</Link>,
                   a practical way of mapping the difference between what
                   organisations say they value and what they actually reward,
                   tolerate and reinforce.

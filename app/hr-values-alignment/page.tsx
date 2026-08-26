@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/navigation"
+import Link from "next/link"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
@@ -118,7 +119,7 @@ export default function ForHRLeadersPage() {
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xl font-bold text-[#1C1B18]">Precise diagnosis, not vague survey data</h3>
                   <p className="text-lg leading-relaxed text-muted-foreground">
-                    The Values Integrity Model locates exactly where the gap sits — which values are declared but not lived, which are operating underground without accountability, which conflicts are driving the behaviour nobody can explain. Not a heatmap. A precise address.
+                    The <Link href="/values-integrity-model" className="font-semibold text-[#1b4b80] underline decoration-[rgba(27,75,128,0.35)] hover:decoration-[#1b4b80] hover:text-[#1C1B18] transition-colors">Values Integrity Model</Link> locates exactly where the gap sits — which values are declared but not lived, which are operating underground without accountability, which conflicts are driving the behaviour nobody can explain. Not a heatmap. A precise address.
                   </p>
                 </div>
               </div>

@@ -232,7 +232,7 @@ export default function ValuesIntegrityModelPage() {
               <Link href="/book" className="text-[#1b4b80] font-semibold underline decoration-[rgba(27,75,128,0.35)] hover:decoration-[#1b4b80] hover:text-[#1C1B18] transition-colors">
                 <em>The Hidden Gap: Solving the Human Alignment Problem</em>
               </Link>
-              , out June 19th 2026.
+              . Published June 19th 2026 by The Human Alignment Company.
             </p>
 
           </div>
