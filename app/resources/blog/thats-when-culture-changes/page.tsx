@@ -2,11 +2,11 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "That's When Culture Changes | Mark Buchan MSc",
-  description: "A story about leadership, values and the question that changed everything — and what actually happens in the moment culture shifts.",
+  title: "Culture Change in Practice: That's When Culture Changes | Mark Buchan MSc",
+  description: "A story about leadership, values and the question that changed everything — and what culture change actually looks like in the moment it happens.",
   openGraph: {
-    title: "That's When Culture Changes | Mark Buchan MSc",
-    description: "A story about leadership, values and the question that changed everything.",
+    title: "Culture Change in Practice: That's When Culture Changes | Mark Buchan MSc",
+    description: "A story about leadership, values and the question that changed everything — and what culture change actually looks like.",
     images: [{ url: "/images/og/og-when-culture-changes.jpg", width: 1920, height: 1080 }],
   },
 }

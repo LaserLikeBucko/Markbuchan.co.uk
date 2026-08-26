@@ -4,10 +4,10 @@ import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
 export const metadata = {
-  title: "The Illusion of Agreement: Why \"Aligned\" Teams Still Fail | Mark Buchan MSc",
+  title: "Why Strategy Execution Fails: The Illusion of Agreement | Mark Buchan MSc",
   description: "Teams that vote yes in the boardroom still drift apart in execution. Why organisational values and strategy execution fall apart, and the leadership playbook that fixes it.",
   openGraph: {
-    title: "The Illusion of Agreement: Why \"Aligned\" Teams Still Fail | Mark Buchan MSc",
+    title: "Why Strategy Execution Fails: The Illusion of Agreement | Mark Buchan MSc",
     description: "Teams that vote yes in the boardroom still drift apart in execution. Why organisational values and strategy execution fall apart, and the leadership playbook that fixes it.",
     images: [{ url: "/images/og/og-organisational-values-and-strategy-execution.jpg", width: 1200, height: 630 }],
   },

@@ -7,11 +7,11 @@ import { Underline } from "@/components/animated-underline"
 import { AnimatedSteps } from "@/components/animated-steps"
 
 export const metadata: Metadata = {
-  title: "Mark Buchan MSc — Transformation Advisory for Leaders",
+  title: "Organisational Transformation Advisory for Leaders — Mark Buchan MSc",
   description:
     "Helping leaders navigate complex organisational transformation and bring their people with them. Leadership alignment, transformation advisory and change adoption.",
   openGraph: {
-    title: "Mark Buchan MSc — Transformation Advisory for Leaders",
+    title: "Organisational Transformation Advisory for Leaders — Mark Buchan MSc",
     description:
       "Helping leaders navigate complex organisational transformation and bring their people with them.",
     images: [{ url: "/images/og/og-home.jpg", width: 1920, height: 1080 }],

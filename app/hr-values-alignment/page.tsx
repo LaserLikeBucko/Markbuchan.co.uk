@@ -4,11 +4,11 @@ import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata = {
-  title: "Values Misalignment Support for HR Leaders | Mark Buchan MSc",
-  description: "Give HR the language and evidence to help leadership finally see culture as the business problem it actually is. The Human Alignment Diagnostic for HR teams.",
+  title: "Organisational Values Alignment for HR Leaders | Mark Buchan MSc",
+  description: "Give HR the language and evidence to help leadership see organisational values as the business issue they actually represent. The Human Alignment Diagnostic for HR teams.",
 openGraph: {
-  title: "Values Misalignment Support for HR Leaders | Mark Buchan MSc",
-  description: "Give HR the language and evidence to make leadership finally see culture as the business problem it actually is.",
+  title: "Organisational Values Alignment for HR Leaders | Mark Buchan MSc",
+  description: "Give HR the language and evidence to make leadership finally see organisational values as the business issue they actually represent.",
   images: [{ url: "/images/og/og-hr-values-alignment.png", width: 1920, height: 1080 }],
 },
 }
