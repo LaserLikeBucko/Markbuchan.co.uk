@@ -6,6 +6,23 @@
 
 DirectoryIndex index.html
 
+# --- Canonical host (apex -> www) ---------------------------------------
+# markbuchan.co.uk (no www) and www.markbuchan.co.uk were both serving
+# identical content with a plain 200 and no redirect between them, and
+# nothing in the app emits a <link rel="canonical"> tag either — so there
+# was no signal anywhere telling Google which host is authoritative.
+# Confirmed live: diffed the two hosts, byte-identical. www is the
+# verified/primary property in Search Console and everything in the code
+# (BASE_URL in app/sitemap.ts, robots.ts's Sitemap: line) already treats
+# www as canonical, so send apex there. mod_alias's Redirect/RedirectMatch
+# can't condition on the Host header, hence mod_rewrite here instead of
+# extending the mod_alias block below.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_HOST} ^markbuchan\.co\.uk$ [NC]
+  RewriteRule ^(.*)$ https://www.markbuchan.co.uk/$1 [R=301,L]
+</IfModule>
+
 # --- Security response headers -------------------------------------------
 <IfModule mod_headers.c>
   # CSP: default-deny, then explicit allowances for what this site actually
