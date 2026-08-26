@@ -33,7 +33,7 @@ export default function FromLinkedInPage() {
 
   return (
     <>
-      <main className="bg-[#111110]">
+      <main className="bg-[#1b4b80]">
 
         {/* HERO */}
         <section className="pt-32 pb-24 md:pt-40 md:pb-32">
@@ -55,7 +55,7 @@ export default function FromLinkedInPage() {
 
             {/* CONTENT */}
             <div className="text-center md:text-left">
-              <h1 className="leading-tight text-[#ffff00] text-balance mb-6">
+              <h1 className="leading-tight text-[#EDE8DE] text-balance mb-6">
                 <span className="block text-4xl md:text-6xl font-bold">
                   Thanks for connecting.
                 </span>
@@ -70,7 +70,7 @@ export default function FromLinkedInPage() {
 
               <button
                 onClick={handleDownloadClick}
-                className="inline-flex items-center justify-center rounded-md bg-[#ff3131] px-10 py-6 text-white text-2xl font-bold hover:bg-[#ffff00] hover:text-[#111110] transition-colors shadow-[0_0_50px_rgba(255,49,49,0.45)]"
+                className="inline-flex items-center justify-center rounded-md bg-[#EDE8DE] px-10 py-6 text-[#1C1B18] text-2xl font-bold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors shadow-[0_0_50px_rgba(27,75,128,0.45)]"
               >
                 Download Chapter 1 (PDF) →
               </button>

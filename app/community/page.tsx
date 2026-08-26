@@ -15,12 +15,12 @@ export default function CommunityPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#111110] pt-32 pb-20">
+        <section className="bg-[#1b4b80] pt-32 pb-20">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               Community
             </p>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#ffff00] text-balance mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#EDE8DE] text-balance mb-6">
               From Our Trenches
             </h1>
             <p className="text-xl leading-relaxed text-white opacity-75 max-w-2xl mx-auto">
@@ -29,16 +29,16 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* WHAT IT IS */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               What this is
             </p>
-            <Separator className="mx-auto mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl font-bold text-[#111110] mb-8">
+            <Separator className="mx-auto mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-8">
               Most organisations have two sets of values.
             </h2>
             <p className="text-lg leading-relaxed text-muted-foreground mb-6">
@@ -58,40 +58,40 @@ export default function CommunityPage() {
         </section>
 
         {/* WHO IT'S FOR */}
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        <section className="bg-[#ffff00] py-24">
+        <section className="bg-[#EDE8DE] py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 text-center">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60 text-center">
               Who it's for
             </p>
-            <Separator className="mx-auto mb-12 max-w-16 bg-[#111110]/40" />
+            <Separator className="mx-auto mb-12 max-w-16 bg-[#1C1B18]/40" />
             <div className="grid gap-8 md:grid-cols-3">
 
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <h3 className="text-xl font-bold text-[#111110]">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] bg-white p-8">
+                <h3 className="text-xl font-bold text-[#1C1B18]">
                   The leader who senses something is wrong
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  You can't quite name it. The strategy looks right. The team 
-                  seems capable. But something keeps not working. You've tried 
+                  You can't quite name it. The strategy looks right. The team
+                  seems capable. But something keeps not working. You've tried
                   harder. You've tried differently. The gap keeps reopening.
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <h3 className="text-xl font-bold text-[#111110]">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] bg-white p-8">
+                <h3 className="text-xl font-bold text-[#1C1B18]">
                   The person who knows exactly what's wrong
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
-                  You see it clearly. The underground values running the show. 
-                  The theatre on the wall. The gap between them. You just can't 
+                  You see it clearly. The underground values running the show.
+                  The theatre on the wall. The gap between them. You just can't
                   say it out loud without it costing you something real.
                 </p>
               </div>
 
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] bg-white p-8">
-                <h3 className="text-xl font-bold text-[#111110]">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] bg-white p-8">
+                <h3 className="text-xl font-bold text-[#1C1B18]">
                   The coach or practitioner doing this work
                 </h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">
@@ -105,16 +105,16 @@ export default function CommunityPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* JOIN */}
-        <section className="bg-[#111110] py-24">
+        <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               Join us
             </p>
-            <Separator className="mx-auto mb-8 max-w-16 bg-[#ffff00]/40" />
-            <h2 className="text-3xl font-bold text-[#ffff00] mb-6">
+            <Separator className="mx-auto mb-8 max-w-16 bg-[#EDE8DE]/40" />
+            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
               The conversation is already happening.
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-4 max-w-xl mx-auto">
@@ -130,7 +130,7 @@ export default function CommunityPage() {
               href="https://thehumanalignmentco.substack.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-[#ff3131] px-8 py-4 text-white text-lg font-semibold hover:bg-[#ffff00] hover:text-[#111110] transition-colors"
+              className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
             >
               Join From Our Trenches →
             </a>
@@ -143,7 +143,7 @@ export default function CommunityPage() {
         {/* BOOK CTA */}
         <section className="py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h2 className="text-3xl font-bold text-[#111110] mb-4">
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-4">
               Want to go deeper?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-xl mx-auto">
@@ -152,7 +152,7 @@ export default function CommunityPage() {
             </p>
             <a
               href="/book"
-              className="inline-flex items-center rounded-md bg-[#111110] px-8 py-4 text-[#ffff00] text-lg font-semibold hover:bg-[#ff3131] hover:text-white transition-colors"
+              className="inline-flex items-center rounded-md bg-[#1b4b80] px-8 py-4 text-[#EDE8DE] text-lg font-semibold hover:bg-[#1C1B18] transition-colors"
             >
               Buy The Book →
             </a>

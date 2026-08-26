@@ -45,9 +45,9 @@ export default function ThanksLinkedInPage() {
       <main className="bg-white">
 
         {/* HERO */}
-        <section className="bg-[#111110] pt-32 pb-20">
+        <section className="bg-[#1b4b80] pt-32 pb-20">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#ffff00] text-balance mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-[#EDE8DE] text-balance mb-6">
               It&apos;s downloading now;
               <br />
               check your downloads folder.
@@ -58,7 +58,7 @@ export default function ThanksLinkedInPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+<div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* SECONDARY LINKS */}
         <section className="py-24">
@@ -69,15 +69,15 @@ export default function ThanksLinkedInPage() {
                   key={link.title}
                   href={link.href}
                   onClick={() => handleSecondaryClick(link.title)}
-                  className="flex h-full flex-col rounded-2xl border border-[rgba(17,17,16,0.15)] bg-white p-8 shadow-sm hover:border-[#111110] transition-colors"
+                  className="flex h-full flex-col rounded-2xl border border-[rgba(28,27,24,0.15)] bg-white p-8 shadow-sm hover:border-[#1b4b80] transition-colors"
                 >
-                  <h3 className="text-xl font-bold text-[#111110] mb-3">
+                  <h3 className="text-xl font-bold text-[#1C1B18] mb-3">
                     {link.title}
                   </h3>
                   <p className="text-[#333330] leading-relaxed flex-1">
                     {link.description}
                   </p>
-                  <span className="mt-6 text-sm font-semibold text-[#ff3131]">
+                  <span className="mt-6 text-sm font-semibold text-[#1b4b80]">
                     Learn more →
                   </span>
                 </a>
@@ -86,17 +86,17 @@ export default function ThanksLinkedInPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+<div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* SOFT BOOK MENTION */}
-        <section className="bg-[#ffff00] py-16">
+        <section className="bg-[#EDE8DE] py-16">
           <div className="mx-auto max-w-2xl px-6 text-center">
-            <p className="text-lg text-[#111110] leading-relaxed">
+            <p className="text-lg text-[#1C1B18] leading-relaxed">
               If Chapter 1 resonates, the full book is live on Amazon and at{" "}
               <a
                 href="/book"
                 onClick={handleBookMentionClick}
-                className="underline font-semibold hover:text-[#ff3131]"
+                className="underline font-semibold hover:text-[#1b4b80]"
               >
                 markbuchan.co.uk/book
               </a>{" "}

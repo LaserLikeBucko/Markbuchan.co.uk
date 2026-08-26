@@ -11,12 +11,12 @@ export default function LivingAppendixPage() {
       <main className="bg-white min-h-screen">
 
         {/* HEADER */}
-        <section className="bg-[#111110] pt-20 pb-16">
+        <section className="bg-[#1b4b80] pt-20 pb-16">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               The Hidden Gap
             </p>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#ffff00] mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight text-[#EDE8DE] mb-6">
               The Living Appendix
             </h1>
             <p className="text-lg leading-relaxed text-white opacity-65 max-w-xl mx-auto">
@@ -29,39 +29,39 @@ export default function LivingAppendixPage() {
         </section>
 
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* DISCOUNT CODE */}
-        <section className="bg-[#ffff00] py-12">
+        <section className="bg-[#EDE8DE] py-12">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#111110] opacity-60 mb-4">
+            <p className="text-sm font-medium uppercase tracking-[0.2em] text-[#1C1B18] opacity-60 mb-4">
               Reader offer
             </p>
-            <h2 className="text-2xl font-bold text-[#111110] mb-4">
+            <h2 className="text-2xl font-bold text-[#1C1B18] mb-4">
               25% off the workbook — just for you
             </h2>
-            <p className="text-lg text-[#111110] opacity-70 mb-6">
+            <p className="text-lg text-[#1C1B18] opacity-70 mb-6">
               When the companion workbook launches, use this code at checkout for 25% off.
             </p>
-            <div className="inline-block bg-[#111110] text-[#ffff00] font-mono text-2xl font-bold tracking-widest px-8 py-4 rounded-lg border-4 border-[#111110]">
+            <div className="inline-block bg-[#1b4b80] text-[#EDE8DE] font-mono text-2xl font-bold tracking-widest px-8 py-4 rounded-lg border-4 border-[#1b4b80]">
               HIDDENGAP25
             </div>
-            <p className="mt-4 text-sm text-[#111110] opacity-50">
+            <p className="mt-4 text-sm text-[#1C1B18] opacity-50">
               Keep this code safe. It's yours as a reader of the book.
             </p>
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* TOOLS & DOWNLOADS */}
         <section className="py-24">
           <div className="mx-auto max-w-4xl px-6">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#1b4b80]">
               Tools and exercises
             </p>
-            <Separator className="mb-12 max-w-16 bg-accent/40" />
-            <h2 className="text-3xl font-bold text-[#111110] mb-4">
+            <Separator className="mb-12 max-w-16 bg-[#1b4b80]/40" />
+            <h2 className="text-3xl font-bold text-[#1C1B18] mb-4">
               The exercises from the book — ready to use
             </h2>
             <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
@@ -71,70 +71,70 @@ export default function LivingAppendixPage() {
             <div className="grid gap-8 md:grid-cols-2">
 
               {/* Tool 1 - Values Self Exploration */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] p-8 bg-white">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] p-8 bg-white">
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ffff00] border-2 border-[#111110] text-[#111110] font-bold text-sm">1</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#EDE8DE] border-2 border-[#1b4b80] text-[#1C1B18] font-bold text-sm">1</span>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Part 2 — Chapter 9</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#111110]">Values Self-Exploration Exercise</h3>
+                <h3 className="text-xl font-bold text-[#1C1B18]">Values Self-Exploration Exercise</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                   The exercise referenced in Chapter 9. A structured process for surfacing the values already operating in your life — not choosing admirable words from a list, but discovering what is actually governing your decisions. Takes 30–45 minutes across one or two sittings.
                 </p>
                 <a
                   href="/downloads/values-self-exploration.pdf"
-                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] text-sm font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1b4b80] px-5 py-3 text-[#EDE8DE] text-sm font-semibold hover:bg-[#1C1B18] transition-colors"
                 >
                   Download PDF →
                 </a>
               </div>
 
               {/* Tool 2 - Working Agreement */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#111110] p-8 bg-white">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] p-8 bg-white">
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ffff00] border-2 border-[#111110] text-[#111110] font-bold text-sm">2</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#EDE8DE] border-2 border-[#1b4b80] text-[#1C1B18] font-bold text-sm">2</span>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Part 3 — Chapter 15</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#111110]">Creating a Working Agreement</h3>
+                <h3 className="text-xl font-bold text-[#1C1B18]">Creating a Working Agreement</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                   The working agreement template referenced in Chapter 15. A practical guide for creating the shared norms that make values conversations possible — before the first post-it goes on the wall. Includes the key additions for a values session.
                 </p>
                 <a
                   href="/downloads/working-agreement.pdf"
-                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#111110] px-5 py-3 text-[#ffff00] text-sm font-semibold hover:bg-[#ff3131] transition-colors"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1b4b80] px-5 py-3 text-[#EDE8DE] text-sm font-semibold hover:bg-[#1C1B18] transition-colors"
                 >
                   Download PDF →
                 </a>
               </div>
 
               {/* Tool 3 - VIM Diagnostic */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#ff3131] p-8 bg-white">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-[#1b4b80] p-8 bg-white">
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#ff3131] border-2 border-[#ff3131] text-white font-bold text-sm">3</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-[#1b4b80] border-2 border-[#1b4b80] text-white font-bold text-sm">3</span>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Interactive Tool</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#111110]">The Hidden Gap Diagnostic</h3>
+                <h3 className="text-xl font-bold text-[#1C1B18]">The Hidden Gap Diagnostic</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                   The interactive Values Integrity Model diagnostic. Takes about four minutes. Locates where your values actually sit — not where you wish they did — and generates a personalised Hidden Gap profile with a recommended values journey.
                 </p>
                 <a
                   href="/the-hidden-gap-diagnostic"
-                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#ff3131] px-5 py-3 text-white text-sm font-semibold hover:bg-[#111110] transition-colors"
+                  className="mt-auto inline-flex items-center justify-center rounded-md bg-[#1b4b80] px-5 py-3 text-white text-sm font-semibold hover:bg-[#1C1B18] transition-colors"
                 >
                   Take the Diagnostic →
                 </a>
               </div>
 
               {/* Tool 4 - Coming Soon */}
-              <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed border-[rgba(17,17,16,0.2)] p-8 bg-white opacity-70">
+              <div className="flex flex-col gap-4 rounded-2xl border-2 border-dashed border-[rgba(28,27,24,0.2)] p-8 bg-white opacity-70">
                 <div className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-[rgba(17,17,16,0.2)] text-[#111110] font-bold text-sm">4</span>
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-white border-2 border-[rgba(28,27,24,0.2)] text-[#1C1B18] font-bold text-sm">4</span>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Coming Soon</p>
                 </div>
-                <h3 className="text-xl font-bold text-[#111110]">Games Organisations Play</h3>
+                <h3 className="text-xl font-bold text-[#1C1B18]">Games Organisations Play</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm flex-1">
                   The full diagnostic table from Chapter 19 — ten of the most common organisational scripts mapped across declared value, intended behaviour, and actual behaviour. Coming soon as a standalone article and diagnostic tool.
                 </p>
-                <div className="mt-auto inline-flex items-center justify-center rounded-md bg-[rgba(17,17,16,0.08)] px-5 py-3 text-[#111110] text-sm font-semibold opacity-50 cursor-not-allowed">
+                <div className="mt-auto inline-flex items-center justify-center rounded-md bg-[rgba(28,27,24,0.08)] px-5 py-3 text-[#1C1B18] text-sm font-semibold opacity-50 cursor-not-allowed">
                   Coming Soon
                 </div>
               </div>
@@ -144,12 +144,12 @@ export default function LivingAppendixPage() {
         </section>
 
         {/* COMMUNITY */}
-        <section className="bg-[#111110] py-24">
+        <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#ffff00] opacity-60">
+            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
               The community
             </p>
-            <h2 className="text-3xl font-bold text-[#ffff00] mb-6">
+            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
               Recognition without community is fragile.
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-4 max-w-xl mx-auto">
@@ -164,15 +164,15 @@ export default function LivingAppendixPage() {
           </div>
         </section>
 
-        <hr className="w-full h-px bg-white" style={{boxShadow: '0 0 6px 1px rgba(255,255,255,0.8), 0 0 16px 4px rgba(255,49,49,0.5), 0 0 32px 8px rgba(255,49,49,0.2)'}} />
+        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* FOOTER SIMPLE */}
-        <section className="bg-[#ffff00] py-8">
+        <section className="bg-[#EDE8DE] py-8">
           <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="text-sm text-[#111110] opacity-60">
+            <p className="text-sm text-[#1C1B18] opacity-60">
               © 2026 Mark Buchan MSc · <a href="https://www.markbuchan.co.uk" className="underline hover:opacity-100">markbuchan.co.uk</a>
             </p>
-            <p className="text-xs text-[#111110] opacity-40 mt-1">
+            <p className="text-xs text-[#1C1B18] opacity-40 mt-1">
               This page is for readers of The Hidden Gap and is not listed in site navigation.
             </p>
           </div>
