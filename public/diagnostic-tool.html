@@ -667,9 +667,9 @@
       <h3>Go Deeper</h3>
       <p>This diagnostic is the beginning. The Hidden Gap gives you the complete framework — the VIM, ECHO, the Inner Coach, and the Choice Triangle — with the practical tools to close the gap for good.</p>
       <div class="discount-code">HIDDENGAP25</div>
-      <p style="font-size:12px;opacity:0.55;margin-bottom:0;">25% off the book at launch. Just for you.</p>
+      <p style="font-size:12px;opacity:0.55;margin-bottom:0;">25% off the book. Just for you.</p>
       <div class="cta-links">
-        <a href="https://markbuchan.co.uk" class="cta-link primary">Get The Book →</a>
+        <a href="https://www.markbuchan.co.uk/book/" class="cta-link primary">Get The Book →</a>
         <a href="https://markbuchan.co.uk/the-living-appendix" class="cta-link secondary">Free Tools & Resources →</a>
       </div>
     </div>
@@ -703,6 +703,13 @@
     organisation: 'You said the gap shows up most in your organisation — in the distance between what is declared and what actually operates.',
     relationships: 'You said the gap shows up most in your work relationships — in the interactions where values stop being ideas and become behaviour.',
     personal: 'You said the gap shows up most in your personal life — where the values you live outside work reveal themselves most honestly.'
+  };
+
+  const CONTEXT_PHRASES = {
+    leadership: 'in how you lead',
+    organisation: 'in how your organisation operates',
+    relationships: 'in how you work with others',
+    personal: 'in how you live'
   };
 
   let state = {
@@ -835,12 +842,12 @@
   function buildDeclared() {
     const c = document.getElementById('declared-container');
     c.innerHTML = '';
-    state.selectedValues.forEach(v => {
+    state.selectedValues.forEach((v, i) => {
       c.innerHTML += `<div class="value-row">
-        <div class="value-name">${v}</div>
+        <div class="value-name">${escapeHtml(v)}</div>
         <div class="mini-opts">
-          <button class="mini-opt${state.declared[v]==='yes'?' sel':''}" onclick="setAnswer('declared','${v}','yes',this)">Yes — I openly name this</button>
-          <button class="mini-opt${state.declared[v]==='no'?' sel':''}" onclick="setAnswer('declared','${v}','no',this)">No — it operates in the background</button>
+          <button class="mini-opt${state.declared[v]==='yes'?' sel':''}" onclick="setAnswer('declared',${i},'yes',this)">Yes — I openly name this</button>
+          <button class="mini-opt${state.declared[v]==='no'?' sel':''}" onclick="setAnswer('declared',${i},'no',this)">No — it operates in the background</button>
         </div></div>`;
     });
   }
@@ -848,19 +855,19 @@
   function buildOperational() {
     const c = document.getElementById('operational-container');
     c.innerHTML = '';
-    state.selectedValues.forEach(v => {
+    state.selectedValues.forEach((v, i) => {
       c.innerHTML += `<div class="value-row">
-        <div class="value-name">${v}</div>
+        <div class="value-name">${escapeHtml(v)}</div>
         <div class="mini-opts">
-          <button class="mini-opt${state.operational[v]==='yes'?' sel':''}" onclick="setAnswer('operational','${v}','yes',this)">Yes — consistently, even under pressure</button>
-          <button class="mini-opt${state.operational[v]==='sometimes'?' sel':''}" onclick="setAnswer('operational','${v}','sometimes',this)">Sometimes — but not reliably</button>
-          <button class="mini-opt${state.operational[v]==='no'?' sel':''}" onclick="setAnswer('operational','${v}','no',this)">Honestly, not really</button>
+          <button class="mini-opt${state.operational[v]==='yes'?' sel':''}" onclick="setAnswer('operational',${i},'yes',this)">Yes — consistently, even under pressure</button>
+          <button class="mini-opt${state.operational[v]==='sometimes'?' sel':''}" onclick="setAnswer('operational',${i},'sometimes',this)">Sometimes — but not reliably</button>
+          <button class="mini-opt${state.operational[v]==='no'?' sel':''}" onclick="setAnswer('operational',${i},'no',this)">Honestly, not really</button>
         </div></div>`;
     });
   }
 
-  function setAnswer(type, value, val, el) {
-    state[type][value] = val;
+  function setAnswer(type, index, val, el) {
+    state[type][state.selectedValues[index]] = val;
     el.closest('.mini-opts').querySelectorAll('.mini-opt').forEach(s => s.classList.remove('sel'));
     el.classList.add('sel');
     if (type === 'declared') document.getElementById('btn-3').disabled = !allAnswered('declared');
@@ -885,9 +892,31 @@
     core: { label: 'Core', cls: 'q-core', desc: 'Declared and lived — holds even when it costs you something. This is your foundation.' },
     theatre: { label: 'Theatre', cls: 'q-theatre', desc: 'Declared but not consistently lived — a gap between the claim and the behaviour.' },
     aspirational: { label: 'Aspirational', cls: 'q-aspirational', desc: 'Declared and genuinely wanted — you are travelling toward this, not performing it.' },
-    underground: { label: 'Underground', cls: 'q-underground', desc: 'Operating without being named — running the show without declaration or accountability.' },
+    underground: { label: 'Underground', cls: 'q-underground', desc: 'Operating without being named — showing up in your behaviour, but unclaimed and therefore not fully chosen.' },
     void: { label: 'Void', cls: 'q-void', desc: 'Not currently declared or operational. Neutral territory.' }
   };
+
+  // "A" / "A and B" / "A, B and C"
+  function joinNames(list) {
+    if (list.length <= 1) return list.join('');
+    return list.slice(0, -1).join(', ') + ' and ' + list[list.length - 1];
+  }
+
+  // Pick the singular or plural form to agree with a list of values
+  function agree(list, singular, plural) {
+    return list.length === 1 ? singular : plural;
+  }
+
+  function escapeHtml(str) {
+    return str.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  function trimSignal(str, max) {
+    if (str.length <= max) return str;
+    const cut = str.slice(0, max);
+    const lastSpace = cut.lastIndexOf(' ');
+    return (lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : cut).replace(/[\s.,;:—-]+$/, '') + '…';
+  }
 
   function generateResults() {
     const vim = {};
@@ -896,12 +925,17 @@
     const counts = { core: 0, theatre: 0, aspirational: 0, underground: 0, void: 0 };
     state.selectedValues.forEach(v => counts[vim[v]]++);
 
-    const underground = state.selectedValues.filter(v => vim[v] === 'underground');
-    const theatre = state.selectedValues.filter(v => vim[v] === 'theatre');
-    const core = state.selectedValues.filter(v => vim[v] === 'core');
-    const aspirational = state.selectedValues.filter(v => vim[v] === 'aspirational');
+    // Escaped names — custom values may contain quotes, ampersands or angle brackets
+    const inQuadrant = q => state.selectedValues.filter(v => vim[v] === q).map(escapeHtml);
+    const underground = inQuadrant('underground');
+    const theatre = inQuadrant('theatre');
+    const core = inQuadrant('core');
+    const aspirational = inQuadrant('aspirational');
+    const total = state.selectedValues.length;
+    const quadrantsUsed = Object.values(counts).filter(n => n > 0).length;
 
     const ctxOpener = CONTEXT_OPENERS[state.context] || '';
+    const ctxPhrase = CONTEXT_PHRASES[state.context] || 'in how you operate';
 
     let profile = '';
 
@@ -909,15 +943,22 @@
     profile += '<h3>What Your Map Is Showing</h3>';
     profile += `<p>${ctxOpener} Here is what the Values Integrity Model reveals about how things are actually sitting.</p>`;
 
-    if (counts.core >= 3) {
+    if (counts.core === total || counts.core >= 3) {
       profile += `<p>Your map shows a strong foundation — most of what you named is genuinely being lived. That is rarer than it sounds and suggests you have already done some of this work, even if not consciously. The question worth sitting with is whether you are being equally honest about what sits in the gaps.</p>`;
+    } else if (counts.void === total) {
+      profile += `<p>None of the values you chose are currently being named or lived consistently. That is not a verdict — it is a starting point. It usually means these values matter to you but have been crowded out by something else that is quietly taking priority. Finding out what that is becomes the first piece of work.</p>`;
     } else if (counts.underground >= 2) {
-      profile += `<p>Your map reveals something significant: there are values operating in your system that you have not fully named or owned. That is not a character flaw — it is exactly how underground values work. They drive behaviour without declaration, which means they drive behaviour without accountability.</p>`;
+      profile += `<p>Your map reveals something significant: there are values operating in your system that you have not fully named or owned. That is not a character flaw — it is exactly how underground values work. They drive behaviour without declaration, which means they drive behaviour without being consciously chosen.</p>`;
     } else if (counts.theatre >= 2) {
       profile += `<p>Your map shows a pattern that most leaders recognise but few name clearly: the gap between what you claim and what you consistently live. The values you identified as Theatre are not lies — they are probably genuine intentions. But intentions and operating values are two different things, and the distance between them is where energy drains.</p>`;
+    } else if (counts.aspirational >= 2 && (theatre.length > 0 || underground.length > 0)) {
+      const strengths = [];
+      if (core.length > 0) strengths.push(`${joinNames(core)} holding firm`);
+      if (aspirational.length > 0) strengths.push(`${joinNames(aspirational)} still in progress and owned as such`);
+      profile += `<p>Some of your values are on solid ground — ${strengths.join(', ')}. But not everything is where it appears to be. Part of your map is pulling in a different direction from what you declare, and that is where the real work sits.</p>`;
     } else if (counts.aspirational >= 2) {
       profile += `<p>Your map shows something genuinely healthy: values you have named honestly as directions you are travelling, not performances you are staging. The Aspirational quadrant is the healthiest starting point for a values journey — because the honesty is already there. The work now is practice under pressure.</p>`;
-    } else {
+    } else if (quadrantsUsed >= 2) {
       profile += `<p>Your map shows a mixed picture — values distributed across quadrants, each sitting somewhere different in terms of what you claim and what you live. This is the most common and most revealing pattern. The gap is not abstract for you. It is specific, locatable, and workable.</p>`;
     }
 
@@ -925,22 +966,31 @@
     profile += '<h3>Where The Gap Lives</h3>';
 
     if (theatre.length > 0 && underground.length > 0) {
-      profile += `<p>${theatre.join(' and ')} sit in Theatre — declared but not consistently backed by behaviour. Meanwhile ${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} operating underground — driving decisions without being named. That combination is the hidden gap in its classic form: what is performed publicly and what is actually running the show are pulling in different directions.</p>`;
+      profile += `<p>${joinNames(theatre)} ${agree(theatre, 'sits', 'sit')} in Theatre — declared but not consistently backed by behaviour. Meanwhile ${joinNames(underground)} ${agree(underground, 'is', 'are')} operating underground — shaping behaviour without being named. That combination is the hidden gap in its classic form: what is performed publicly and what is actually shaping behaviour are pulling in different directions.</p>`;
     } else if (theatre.length > 0) {
-      profile += `<p>${theatre.join(' and ')} ${theatre.length === 1 ? 'sits' : 'sit'} in Theatre — you have named ${theatre.length === 1 ? 'this value' : 'these values'} and believe in ${theatre.length === 1 ? 'it' : 'them'}, but under pressure ${theatre.length === 1 ? 'it does' : 'they do'} not consistently show up in behaviour. The gap here is not dishonesty. It is distance still to travel. The question is what gets in the way when something real is at stake.</p>`;
+      profile += `<p>${joinNames(theatre)} ${theatre.length === 1 ? 'sits' : 'sit'} in Theatre — you have named ${theatre.length === 1 ? 'this value' : 'these values'} and believe in ${theatre.length === 1 ? 'it' : 'them'}, but under pressure ${theatre.length === 1 ? 'it does' : 'they do'} not consistently show up in behaviour. The gap here is not dishonesty. It is distance still to travel. The question is what gets in the way when something real is at stake.</p>`;
     } else if (underground.length > 0) {
-      profile += `<p>${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} operating underground — consistently shaping what you do without being openly named. Underground values are not necessarily dark. Some are simply legitimate drivers that have not been brought into the light yet. But unnamed, they operate without accountability. That is where the cost accumulates.</p>`;
+      profile += `<p>${joinNames(underground)} ${underground.length === 1 ? 'is' : 'are'} operating underground — consistently shaping what you do without being openly named. Underground values are not necessarily dark. Some are simply legitimate drivers that have not been brought into the light yet. But unnamed, they operate without being consciously chosen. That is where the cost accumulates.</p>`;
     } else if (core.length > 0 && aspirational.length > 0) {
-      profile += `<p>The gap in your map is between what you are already living — ${core.join(', ')} — and what you are genuinely working toward — ${aspirational.join(', ')}. That is not a problem to solve. It is a journey to travel. The distance between Aspirational and Core closes through practice under pressure, not through declaration.</p>`;
+      profile += `<p>The gap in your map is between what you are already living — ${joinNames(core)} — and what you are genuinely working toward — ${joinNames(aspirational)}. That is not a problem to solve. It is a journey to travel. The distance between Aspirational and Core closes through practice under pressure, not through declaration.</p>`;
     } else {
       profile += `<p>Your gap appears to be less about dramatic misalignment and more about the slow drift that happens when values are not regularly examined. The work here is clarification — making sure what you say you value is specific enough to actually constrain behaviour when something is at stake.</p>`;
+    }
+
+    // WHAT YOU NOTICED
+    if (state.signal) {
+      profile += '<h3>What You Noticed</h3>';
+      profile += `<blockquote>“${escapeHtml(trimSignal(state.signal, 300))}”</blockquote>`;
+      profile += theatre.length > 0 || underground.length > 0
+        ? `<p>That signal is worth trusting. It is often the first visible sign of the gap your map is showing.</p>`
+        : `<p>That signal is worth trusting. Even on a strong map, it is often where the next piece of work is hiding.</p>`;
     }
 
     // THE UNDERGROUND DYNAMIC
     profile += '<h3>The Underground Dynamic</h3>';
 
     if (underground.length > 0) {
-      profile += `<p>${underground.join(' and ')} ${underground.length === 1 ? 'is' : 'are'} doing real work in your system right now — shaping decisions, influencing what gets said and what stays silent. The task is not to eliminate ${underground.length === 1 ? 'it' : 'them'}. The task is to see ${underground.length === 1 ? 'it' : 'them'} clearly enough to choose consciously what to do with ${underground.length === 1 ? 'it' : 'them'}. Named, ${underground.length === 1 ? 'it' : 'they'} can be honoured or consciously constrained. Unnamed, ${underground.length === 1 ? 'it' : 'they'} simply keep running.</p>`;
+      profile += `<p>${joinNames(underground)} ${agree(underground, 'is', 'are')} already doing real work ${ctxPhrase} — but quietly, without being claimed. Unnamed, ${agree(underground, 'it only shows', 'they only show')} up when conditions allow. Named, ${agree(underground, 'it becomes', 'they become')} something you can choose deliberately, rely on under pressure, and model for others.</p>`;
     } else if (theatre.length > 0) {
       profile += `<p>There are no underground values in your current map — but that does not mean none exist. Theatre values often have underground counterparts: the value you declare can mask the value that is actually operating. It is worth asking honestly: what value is actually governing the decisions that ${theatre[0]} is supposed to govern? That question, sat with honestly, usually surfaces something worth naming.</p>`;
     } else {
@@ -951,7 +1001,7 @@
     profile += '<h3>Your Most Important Journey Right Now</h3>';
 
     if (underground.length > 0) {
-      profile += `<p><strong>Bring It Into the Light</strong> — Underground → Core. The most important move available to you right now is naming what is already operating. For ${underground[0]}, that means bringing it into the open — not necessarily declaring it to everyone, but being honest with yourself about what it is and what it has been doing. Once named, you can decide whether to honour it openly, reframe it, or consciously constrain it. Right now it is making decisions for you.</p>`;
+      profile += `<p><strong>Bring It Into the Light</strong> — Underground → Core. The most important move available to you right now is naming what is already operating. For ${underground[0]}, that means bringing it into the open — not necessarily declaring it to everyone, but being honest with yourself about what it is and what it has been doing. Once named, you can decide whether to honour it openly, reframe it, or consciously constrain it. Right now it shows up by chance rather than by choice.</p>`;
     } else if (theatre.length > 0 && aspirational.length > 0) {
       profile += `<p><strong>Tell the Truth</strong> — Theatre → Aspirational. The most useful move right now is an act of honesty rather than will. Stop claiming ${theatre[0]} as though you are already living it — and start holding it as a genuine direction you are travelling. That is not a demotion. It is more honest. And honest is where the work begins.</p>`;
     } else if (theatre.length > 0) {
@@ -959,14 +1009,14 @@
     } else if (aspirational.length > 0) {
       profile += `<p><strong>Pay the Price</strong> — Aspirational → Core. You have already done the honest work of naming ${aspirational[0]} as something you are genuinely working toward. The journey now is practice under pressure — finding the specific moments where this value costs you something and choosing it anyway. A value is not a preference. It is what you are willing to pay for.</p>`;
     } else {
-      profile += `<p><strong>Clarify Before You Journey.</strong> Your map shows mostly Core values — a strong foundation. Before choosing a journey, the most useful work may be clarification: making sure the values you are living are specific enough to guide behaviour in the moments that matter. Abstract values can be lived in contradictory ways. Clarified values constrain behaviour. That is where practical force comes from.</p>`;
+      profile += `<p><strong>Clarify Before You Journey.</strong> ${counts.core * 2 > total ? 'Your map shows mostly Core values — a strong foundation. ' : ''}Before choosing a journey, the most useful work may be clarification: making sure the values you are living are specific enough to guide behaviour in the moments that matter. Abstract values can be lived in contradictory ways. Clarified values constrain behaviour. That is where practical force comes from.</p>`;
     }
 
     // ONE THING TO NOTICE
     profile += '<h3>One Thing To Notice Today</h3>';
 
     if (underground.length > 0) {
-      profile += `<p>Pay attention today to the moment before a decision — any decision. Notice what value is actually operating in that moment. Not what you intend. What is actually driving it. That fraction of a second before behaviour is where ${underground[0]} tends to win without being named. Just noticing it — without judgement, without performance — is the beginning of everything else.</p>`;
+      profile += `<p>Pay attention today to the moment before a decision — any decision. Notice what value is actually operating in that moment. Not what you intend. What is actually driving it. That fraction of a second before behaviour is where ${joinNames(underground)} either ${agree(underground, 'shows up or quietly steps back', 'show up or quietly step back')}. Just noticing which — without judgement, without performance — is the beginning of everything else.</p>`;
     } else if (theatre.length > 0) {
       profile += `<p>Notice today the moment you use the language of ${theatre[0]} — in a conversation, a decision, a piece of writing. Then ask honestly: am I living this right now, or am I performing it? You do not have to do anything with the answer yet. Just see it clearly. Honest seeing is where agency begins.</p>`;
     } else {
@@ -992,7 +1042,7 @@
       vimDiv.innerHTML += `<div class="vim-card">
         <span class="q-badge ${info.cls}">${info.label}</span>
         <div class="vim-card-content">
-          <div class="vim-value-name">${v}</div>
+          <div class="vim-value-name">${escapeHtml(v)}</div>
           <div class="vim-value-desc">${info.desc}</div>
         </div>
       </div>`;

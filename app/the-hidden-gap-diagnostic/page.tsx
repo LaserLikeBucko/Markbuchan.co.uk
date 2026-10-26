@@ -34,7 +34,7 @@ export default function DiagnosticPage() {
               Takes about four minutes. No login required.
             </p>
             <a
-              href="#start"
+              href="/diagnostic-tool.html"
               className="inline-flex items-center rounded-md bg-[#1b4b80] px-8 py-4 text-[#EDE8DE] text-lg font-semibold hover:bg-[#1C1B18] transition-colors"
             >
               Start the Diagnostic →
