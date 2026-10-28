@@ -521,6 +521,14 @@
       .mini-opts { flex-direction: column; }
     }
   </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5HFCQMSCL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Q5HFCQMSCL');
+</script>
 </head>
 <body>
 
@@ -1072,6 +1080,28 @@
 
   buildProgress();
   buildChips();
+</script>
+<script>
+(function () {
+  var started = false;
+  var origShowStep = window.showStep;
+  window.showStep = function (n) {
+    if (n === 2 && !started) { started = true; gtag('event', 'diagnostic_start'); }
+    gtag('event', 'diagnostic_step', { step_number: n });
+    return origShowStep.apply(this, arguments);
+  };
+  var origRender = window.renderResults;
+  window.renderResults = function () {
+    gtag('event', 'diagnostic_complete');
+    return origRender.apply(this, arguments);
+  };
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    if (a.href.indexOf('/book') > -1) gtag('event', 'diagnostic_book_click');
+    if (a.href.indexOf('the-living-appendix') > -1) gtag('event', 'diagnostic_resources_click');
+  });
+})();
 </script>
 </body>
 </html>
