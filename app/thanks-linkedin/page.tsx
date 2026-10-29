@@ -16,11 +16,6 @@ const SECONDARY_LINKS = [
     href: "https://www.markbuchan.co.uk/the-hidden-gap-diagnostic/",
   },
   {
-    title: "Join From Our Trenches",
-    description: "Fortnightly, honest, no-fluff thinking on values and culture.",
-    href: "https://www.markbuchan.co.uk/community/",
-  },
-  {
     title: "Book a diagnostic conversation",
     description: "Free, 30 minutes, usually surfaces something useful.",
     href: "https://www.markbuchan.co.uk/work-with-me/#diagnostic-conversation",
@@ -63,7 +58,7 @@ export default function ThanksLinkedInPage() {
         {/* SECONDARY LINKS */}
         <section className="py-24">
           <div className="mx-auto max-w-5xl px-6">
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-2">
               {SECONDARY_LINKS.map((link) => (
                 <a
                   key={link.title}

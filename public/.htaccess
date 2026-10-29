@@ -98,6 +98,14 @@ FileETag None
   RedirectMatch gone ^/organisations-are-lying/?$
 </IfModule>
 
+# --- Retired pages (301 redirect) -------------------------------------
+# /community was the landing page for the retired Substack newsletter.
+# Sent permanently to /insights rather than 410'd, since it was linked
+# from other pages and may have inbound links.
+<IfModule mod_alias.c>
+  RedirectMatch 301 ^/community/?$ /insights/
+</IfModule>
+
 # --- Access hardening ------------------------------------------------------
 # Deny access to dotfiles/dot-directories (.git, .env, .DS_Store, etc.)
 # Note: this also blocks /.well-known/ — not used by this site, since

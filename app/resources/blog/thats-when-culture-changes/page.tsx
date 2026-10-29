@@ -168,7 +168,7 @@ export default function ThatsWhenCultureChangesPage() {
               </p>
 
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
-                I have started this community in <a href="https://thehumanalignmentco.substack.com" className="font-semibold text-[#1C1B18] underline underline-offset-4 hover:text-[#1b4b80] transition-colors" target="_blank" rel="noopener noreferrer">From Our Trenches</a> to ponder these and other questions — to allow your voice an opportunity to speak. I hope it works for you.
+                If these questions land for you, I'd love to hear where you've seen the gap play out — <a href="/contact" className="font-semibold text-[#1C1B18] underline underline-offset-4 hover:text-[#1b4b80] transition-colors">drop me a line</a>.
               </p>
 
             </div>

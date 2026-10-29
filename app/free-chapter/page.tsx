@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import { Separator } from "@/components/ui/separator"
@@ -103,28 +104,23 @@ export default function FreeChapterPage() {
 
         <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
-        {/* SUBSTACK */}
+        {/* BOOK */}
         <section className="bg-[#1b4b80] py-24">
           <div className="mx-auto max-w-3xl px-6 text-center">
             <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
               Enjoyed the chapter?
             </h2>
             <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              Join the conversation on Substack. Real stories, honest
-              observations, and a community for people navigating the gap
-              between declared values and operating reality.
+              The rest of the book goes deeper — the patterns, the frameworks,
+              and what to do about the gap between declared values and
+              operating reality.
             </p>
-            <a
-              href="https://thehumanalignmentco.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/books"
               className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
             >
-              Join From Our Trenches →
-            </a>
-            <p className="mt-6 text-sm text-white opacity-30">
-              Free to join. No spam. Unsubscribe any time.
-            </p>
+              Get The Hidden Gap →
+            </Link>
           </div>
         </section>
 

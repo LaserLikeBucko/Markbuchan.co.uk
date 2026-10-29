@@ -135,41 +135,6 @@ export default function ResourcesPage() {
           </div>
         </section>
 
-        {/* COMMUNITY SECTION */}
-        <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
-
-        <section className="bg-[#1b4b80] py-24">
-          <div className="mx-auto max-w-3xl px-6 text-center">
-            <p className="mb-4 text-sm font-medium uppercase tracking-[0.2em] text-[#EDE8DE] opacity-60">
-              Community
-            </p>
-            <Separator className="mx-auto mb-8 max-w-16 bg-[#EDE8DE]/40" />
-            <h2 className="text-3xl font-bold text-[#EDE8DE] mb-6">
-              From Our Trenches
-            </h2>
-            <p className="text-lg leading-relaxed text-white opacity-65 mb-4 max-w-xl mx-auto">
-              Most organisations have two sets of values. The ones on the wall.
-              And the ones that actually run the show.
-            </p>
-            <p className="text-lg leading-relaxed text-white opacity-65 mb-10 max-w-xl mx-auto">
-              From Our Trenches is the space for people who already know what's
-              wrong — but can't say it out loud at work. A community for honest
-              conversation about the gap between the two.
-            </p>
-            <a
-              href="https://thehumanalignmentco.substack.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center rounded-md bg-[#EDE8DE] px-8 py-4 text-[#1C1B18] text-lg font-semibold hover:bg-[#1C1B18] hover:text-[#EDE8DE] transition-colors"
-            >
-              Join the Community →
-            </a>
-            <p className="mt-6 text-sm text-white opacity-30">
-              Free to join. No spam. Unsubscribe any time.
-            </p>
-          </div>
-        </section>
-
         <div className="h-px w-full bg-[rgba(27,75,128,0.25)]" />
 
         {/* BOOK CTA */}
